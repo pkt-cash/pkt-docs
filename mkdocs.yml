@@ -2,3 +2,4 @@ site_name: PKT Documentation
 nav:
     - Home: index.md
     - Second Page: secondpage.md
+    - Electrum Wallet: electrum/index.md
