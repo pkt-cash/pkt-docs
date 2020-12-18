@@ -44,8 +44,10 @@ need to choose a pool.
 
 ## Choosing a mining pools
 There are currently two mining pools:
+
 * Gridfinity: `http://pool.gridfinity.com/master`
 * Flufpool: `http://pool.noworries.tech`
+
 Your mining revenue depends on how high the pool's fee is as well as how much hardware they are
 using in-house. You should test your daily earnings on each pool to see which one is best.
 
@@ -57,6 +59,7 @@ to match all of the block miners - which would is completely untennable. If you 
 in block mining, contact the pool operator and discuss sending hardware to their location.
 
 Starting your own pool requires setting up a number of services:
+
 * *pktd node* (one or more) - One pktd instance is required for the Master to function, each of the
 *Block Handlers* may optionally use separate pktd nodes.
 * *Master* (one) - This node coordinates all of the others and provides work files and configuration
