@@ -2,4 +2,4 @@ site_name: PKT Documentation
 nav:
     - Home: index.md
     - Electrum Wallet: electrum/index.md
-    - Mining: mining.md
+    - Mining: mining/index.md
