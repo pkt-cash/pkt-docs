@@ -37,7 +37,7 @@ compiling will fail. Run the following command *as the user who will be mining*.
     ~/.cargo/bin/cargo build --release
 
 ### Begin Mining
-To begin mining, you will need the address of your [wallet](./electrum/index.md) and you will
+To begin mining, you will need the address of your [wallet](./electrum) and you will
 need to choose a pool.
 
     ./target/release/packetcrypt ann -p <your_wallet_address> http://your.pool.of.choice

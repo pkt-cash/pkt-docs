@@ -3,3 +3,4 @@ nav:
     - Home: index.md
     - Electrum Wallet: electrum/index.md
     - Mining: mining/index.md
+    - Pktd: pktd/index.md
