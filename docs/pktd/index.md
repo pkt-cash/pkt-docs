@@ -49,7 +49,7 @@ Note that pktd requires over 40 GB of disk space to store the blockchain.
 To use pktwallet, you will need a familiarity with the command line and a UNIX based system
 (Linux of Mac).
 
-For an easy-to-use wallet which works on Windows, Mac and Linux, see [PKT Electrum](./electrum) instead.
+For an easy-to-use wallet which works on Windows, Mac and Linux, see [PKT Electrum](../electrum) instead.
 
 To use pktwallet, you first need to follow the process of [Installation](#installation). Then once it is
 installed, you can create your wallet.
