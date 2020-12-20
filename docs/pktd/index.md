@@ -3,9 +3,12 @@ Pktd is the PKT full node blockchain software. It is a fork of btcd, the golang 
 
 ## Running a full node
 If you want to run a full node in the PKT network, you can do so by downloading pktd and compiling
-it on a Linux or Mac server.
+it on a Linux or Mac server. Follow the process in [Installation](#installation) and the simply type
+`./bin/pktd` and it will start up and begin syncing the chain and helping verify the PKT network.
 
-**NOTE**: Running a full node is *not necessary* for participating in the project.
+**NOTE**: Running a full node requires over 40 GB of disk space to store the blockchain and is
+*not necessary* for participating in the project. If you just want to make a wallet, see
+[PKT Electrum](../electrum) (gui) or [PKTWallet](#pktwallet) (command line) wallets.
 
 ### Installation
 
@@ -38,14 +41,7 @@ install pktd, pktwallet and pktctl.
 If you see something like: `Everything looks good` at the end of typing `./do` then you should be
 ready to start using pktd.
 
-## Pktd
-To launch pktd is simple, after you have compiled it using the process in [Installation](#installation)
-simply type `./bin/pktd` and it will start up and begin syncing the chain and helping verify the PKT
-network.
-
-Note that pktd requires over 40 GB of disk space to store the blockchain.
-
-## Pktwallet
+## PKTWallet
 To use pktwallet, you will need a familiarity with the command line and a UNIX based system
 (Linux of Mac).
 
