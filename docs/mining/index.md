@@ -1,3 +1,4 @@
+
 # Mining
 PacketCrypt is a *bandwidth hard proof of work*, this means it requires lots of bandwidth to mine.
 Miners collaborate with one another by sending small messages (called *Announcements*) and the
@@ -13,36 +14,88 @@ PacketCrypt mining is split into two distinct stages:
 Block mining is typically done at the mining pool's datacenter, however Announcement mining can be
 done from anywhere.
 
-## How to Announcement mine
+To use, you can comple from source or run from a [Docker](http://docker.com/) image.
 
-### Install the dependencies
+## Running from Docker
+
+If you want to get up and running quickly, you can run the [PacketCrypt  Docker image](https://hub.docker.com/r/backupbrain/packetcrypt) from your terminal line or command line.
+
+Docker is a virtual machine software that allows users to run software without the hassle of installing that software on their computer directly.
+
+### Installation
+
+
+
+Install docker on your computer. You can follow the [Docker installation instructions](https://docs.docker.com/get-docker/) for your operating system.
+
+
+Next, download the PacketCrypt docker image. Make sure Docker is running on your computer and open a terminal or macOS or Linux, or `cmd` on windows and type:
+
+```
+docker pull backupbrain/packetcrypt
+```
+
+This will download the PacketCrypt binaries and runtime environment onto your computer.
+
+To begin mining, you will need to [choose a mining pool](#choosing-a-mining-pool).
+
+You can mine announcements by passing the `annmine` option and you can mine blocks by passing the `blkmine` option.
+
+The basic syntax for using the PacketCrypt miner is:
+
+```
+docker run pktcrypt-miner [annmine|blkmine] <pool_url>
+```
+
+**Example: Announcement mining:**
+
+To mine announcements on the Gridfinity network, run this command in your terminal or cmd:
+
+```
+docker run pktcrypt-miner annmine http://pool.gridfinity.com/master
+```
+
+**Example: Block mining:**
+
+To mine blocks on the Gridfinity network, run this command in your terminal or cmd:
+
+```
+docker run pktcrypt-miner blkmine http://pool.gridfinity.com/master
+```
+That's it! You'll see status messages about mining scroll through your terminal window as  blocks or announcements are discovered.
+
+## Installing from Source
+
+### How to Announcement mine
+
+##### Install the dependencies
 
 * On Debian or Ubuntu: `sudo apt install gcc git`
 * On Fedora or RedHat: `sudo dnf install gcc git`
 * On Alpine Linux: `sudo apk add gcc git`
 
-### Install Rust
+##### Install Rust
 It is important to install Rust using rustup because packaged Rust is often out of date and
 compiling will fail. Run the following command *as the user who will be mining*.
 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-### Download PacketCrypt
+##### Download PacketCrypt
 
     git clone https://github.com/cjdelisle/packetcrypt_rs
 
-### Compile PacketCrypt
+##### Compile PacketCrypt
 
     cd packetcrypt_rs
     ~/.cargo/bin/cargo build --release
 
-### Begin Mining
+##### Begin Mining
 To begin mining, you will need the address of your [wallet](./electrum) and you will
 need to choose a pool.
 
     ./target/release/packetcrypt ann -p <your_wallet_address> http://your.pool.of.choice
 
-## Choosing a mining pools
+## Choosing a mining pool
 There are currently two mining pools:
 
 * Gridfinity: `http://pool.gridfinity.com/master`
@@ -51,7 +104,7 @@ There are currently two mining pools:
 Your mining revenue depends on how high the pool's fee is as well as how much hardware they are
 using in-house. You should test your daily earnings on each pool to see which one is best.
 
-## Block mining & running a pool
+### Block mining & running a pool
 Because each block miner must use as much bandwidth as all of the announcement miners *combined*,
 block mining is typically done at the location of the pool. Even a pool operator who wanted to
 support external block mining would find that the pool itself would need enough *upload* bandwidth
@@ -74,7 +127,7 @@ submit blocks if
 track of who should be paid. The Paymaker sends configuration to the pktd node which is used by the
 Master in order to make the pool pay out the announcement and block miners 
 
-### PacketCrypt Data Flow
+##### PacketCrypt Data Flow
 ![packetcrypt_data_flow](./packetcrypt_data_flow.png)
 
 * <span style="color:#ff9900">█</span> Orange: Announcements are sent from the Announcement miners
@@ -90,7 +143,7 @@ which pay the people who have been mining
 * <span style="color:#783f04">█</span> Brown: Master gets block templates from pktd instance
 * Black dotted line: All nodes request configuration and block templates from Master node
 
-### More information and PacketCrypt pool code
+##### More information and PacketCrypt pool code
 The code and documentation for running a pool is available on the **C / nodejs** version of the
 [PacketCrypt](https://github.com/cjdelisle/PacketCrypt/blob/master/docs/pool.md) project,
 the new Rust version only contains Announcement Miner and Announcement Handlers.
