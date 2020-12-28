@@ -1,5 +1,8 @@
 # PKT electrum
 
+**NOTE**: Electrum is a good lightweight wallet for making and receiving payments, but it lacks scalability
+and is **not appropriate for mining**, if you are interested in mining PKT, see [pktwallet](../pktd/pktwallet).
+
 ## First setup
 ### MacOS
 1. Download <span style="font-size:large;">[electrum-pkt-4.0.7-1-big-sur.dmg](https://drive.google.com/file/d/1o7qRDAu9w9zBMypey6YczMRDh61U83Kp/view?usp=sharing)</span>

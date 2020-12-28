@@ -4,3 +4,5 @@ nav:
     - Electrum Wallet: electrum/index.md
     - Mining: mining/index.md
     - Pktd: pktd/index.md
+    - PKTWallet: pktd/pktwallet.md
+    - PKTWallet Electrum Import: pktd/migrating_from_electrum.md
