@@ -5,7 +5,7 @@ Documentation for the PKT project
 There are currently two wallets which you can choose from, the easiest to set up is
 [PKT Electrum](./electrum) which has a Graphical UI and supports Windows, Mac and Linux.
 
-You can also setup [PKT Wallet](./pktd#pktwallet) which is command line only but has greater
+You can also setup [PKT Wallet](./pktd/pktwallet) which is command line only but has greater
 scalability and privacy features.
 ## Mining
 PKT is mined using the PacketCrypt bandwidth hard mining algorithm. You can learn how
