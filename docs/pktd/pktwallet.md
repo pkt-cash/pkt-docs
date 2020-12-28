@@ -8,7 +8,7 @@ but **electrum is not appropriate for mining**.
 ## Installation and setup
 ### Microsoft Windows
 If you are on Windows:
-* Download [pktwallet.exe](https://drive.google.com/file/d/1jNxiS5opwEZ28MbVWhMX8a_K3MAHuvOS/view?usp=sharing)
+* Download [pktwallet.exe](https://drive.google.com/file/d/15H-kP3H7MiXS_C6no9PouoNaE7iYypUY/view?usp=sharing)
 * Download [pktctl.exe](https://drive.google.com/file/d/1ixKkHavB8C9Ny8JxJwwT8nIfJ4t9dI__/view?usp=sharing)
 * Open the command prompt
 * Type `cd Downloads`
