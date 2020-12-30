@@ -149,7 +149,7 @@ The code and documentation for running a pool is available on the **C / nodejs**
 the new Rust version only contains Announcement Miner and Announcement Handlers.
 
 ## Announcement Difficulty
-PacketCrypt is designed in such a way that a mining pool can double it's effective power by:
+PacketCrypt is designed in such a way that a mining pool can double its effective power by:
 
 * Doubling the total block mining computation effort
 * Doubling the total announcement mining computation effort, or
