@@ -8,6 +8,7 @@ but **electrum is not appropriate for mining**.
 ## Installation and setup
 ### Microsoft Windows
 If you are on Windows:
+
 * Download [pktwallet.exe](https://drive.google.com/file/d/15H-kP3H7MiXS_C6no9PouoNaE7iYypUY/view?usp=sharing)
 * Download [pktctl.exe](https://drive.google.com/file/d/1ixKkHavB8C9Ny8JxJwwT8nIfJ4t9dI__/view?usp=sharing)
 * Open the command prompt
@@ -17,7 +18,7 @@ If you are on Windows:
   * In place of `./bin/pktctl`, type `pktctl*.exe`
 
 ### Apple and Linux
-Follow the [installation](#installation) process. Then once it is installed, you can create your wallet.
+Follow the [installation](../#installation) process. Then once it is installed, you can create your wallet.
 
 ## Creating a wallet
 To create a new PKT wallet, use the pktwallet --create command:
