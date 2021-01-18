@@ -52,7 +52,7 @@ docker run pktcrypt-miner [annmine|blkmine] <pool_url>
 To mine announcements on Pkteer Pool, run this command in your terminal or cmd:
 
 ```
-docker run pktcrypt-miner annmine ://pool.pkteer.com
+docker run pktcrypt-miner annmine http://pool.pkteer.com
 
 
 ```
