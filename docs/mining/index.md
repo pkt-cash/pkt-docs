@@ -79,6 +79,10 @@ It is important to install Rust using rustup because packaged Rust is often out 
 compiling will fail. Run the following command *as the user who will be mining*.
 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    
+##### Install Make
+
+    apt install make    
 
 #### Download PacketCrypt
 
