@@ -34,7 +34,7 @@ Installation will depend on your system, for debian/ubuntu like systems you will
 Once you have golang and git fully installed and set up, you can use the following commands to
 install pktd, pktwallet and pktctl.
 
-    git clone github.com/pkt-cash/pktd
+    git clone https://github.com/pkt-cash/pktd
     cd pktd
     ./do
 
