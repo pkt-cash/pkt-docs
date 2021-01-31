@@ -109,7 +109,7 @@ using in-house. You should test your daily earnings on each pool to see which on
 Because each block miner must use as much bandwidth as all of the announcement miners *combined*,
 block mining is typically done at the location of the pool. Even a pool operator who wanted to
 support external block mining would find that the pool itself would need enough *upload* bandwidth
-to match all of the block miners - which would is completely untennable. If you are interested
+to match all of the block miners - which would be completely untenable. If you are interested
 in block mining, contact the pool operator and discuss sending hardware to their location.
 
 Starting your own pool requires setting up a number of services:
