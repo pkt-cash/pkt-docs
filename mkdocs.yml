@@ -1,9 +1,9 @@
 site_name: PKT Documentation
 nav:
     - Home: index.md
-    - Electrum Wallet: electrum/index.md
+    - PKT Electrum: electrum/index.md
     - Mining: mining/index.md
-    - Running A Pool: mining/pool_setup_guide.md
+    - Pool Operation: mining/pool_setup_guide.md
     - Pktd: pktd/index.md
     - PKTWallet: pktd/pktwallet.md
-    - PKTWallet Electrum Import: pktd/migrating_from_electrum.md
+    - Electrum Import: pktd/migrating_from_electrum.md
