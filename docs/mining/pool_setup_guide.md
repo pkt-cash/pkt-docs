@@ -103,8 +103,8 @@ npm install
 1. Install the Required tools:
 ```
 sudo apt install gcc git
+sudo apt install curl
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-apt install make
 ```
 2. Clone packetcrypt_rs
 ```
@@ -244,7 +244,7 @@ This number is effectively a bandwidth divisor, every time you double this numbe
 ```
 annMinWork:  Util.annWorkToTarget(128),
 ```
-Average number of shares per block, reducing this number will reduceload on your block handlers, 
+Average number of shares per block, reducing this number will reduce load on your block handlers, 
 but increasing it will allow payment to be spread more evenly between block miners.
 
 This wants to be set to a higher number than one, for the purpose of constantly testing that the block miners are making valid shares. You may have a block miner sitting for hours without a share and then when it wins one, it can become invalid because of misconfiguration 
@@ -484,7 +484,7 @@ cd packetcrypt_rs
 ### AnnMiner
 ```
 ./target/release/packetcrypt ann http://pool.pktpool.io --paymentaddr <your PKT wallet address>
-```
+````
 
 
 
@@ -493,11 +493,12 @@ cd packetcrypt_rs
 # NGINX Setup (For allowing external AnnMining)
 
 ## *Machine 1*
+Update system and install Nginx
 ```
 sudo apt update
 sudo apt install nginx
 ```
-
+Unlink default nginx site
 ```
 unlink /etc/nginx/sites-enabled/default
 cd /etc/nginx/sites-available
@@ -528,20 +529,28 @@ server {
 		} 
 }
 ```
+Link new file to sites-enabled
 ```
 ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 ```
+Remove default config
 ```
 rm default
 ```
+Check reverse proxy config is correct
 ```
 nginx -t
 ```
+Reload nginx to pick up config changes.
 ```
 sudo systemctl reload nginx
 ```
 ## *Machine 2*
 
+```
+unlink /etc/nginx/sites-enabled/default
+cd /etc/nginx/sites-available
+```
 ```
 server { 
     listen 80; 
@@ -552,15 +561,20 @@ server {
     } 
 }
 ```
+
+Link new file to sites-enabled
 ```
 ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
 ```
+Remove default config
 ```
 rm default
 ```
+Check reverse proxy config is correct
 ```
 nginx -t
 ```
+Reload nginx to pick up config changes.
 ```
 sudo systemctl reload nginx
 ```
