@@ -97,10 +97,7 @@ need to choose a pool.
 There are currently three mining pools:
 
 * Pkteer: `http://pool.pkteer.com`
-* Flufpool: `http://pool.noworries.tech`
-* Gridfinity: `http://pool.gridfinity.com/master`
-
-Note: Gridfinity Pool is temporarily down (updated 2021/01/17). 
+* Flufpool: `http://pool.noworries.tech` 
 
 Your mining revenue depends on how high the pool's fee is as well as how much hardware they are
 using in-house. You should test your daily earnings on each pool to see which one is best.
