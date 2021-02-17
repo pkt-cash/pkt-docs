@@ -99,6 +99,7 @@ There are currently three mining pools:
 * Pkteer: `http://pool.pkteer.com`
 * Flufpool: `http://pool.noworries.tech`
 * PKTPool: `http://pool.pktpool.io`
+* Pkt.world: `http://pool.pkt.world`
 
 Your mining revenue depends on how high the pool's fee is as well as how much hardware they are
 using in-house. You should test your daily earnings on each pool to see which one is best.
