@@ -484,7 +484,7 @@ cd packetcrypt_rs
 ### AnnMiner
 ```
 ./target/release/packetcrypt ann http://pool.pktpool.io --paymentaddr <your PKT wallet address>
-````
+```
 
 
 
