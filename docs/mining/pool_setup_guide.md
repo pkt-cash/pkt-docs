@@ -63,7 +63,7 @@ sudo apt install git
 ```
 3. Install the pktd node
 ```
-git clone https://github.com/pkt-cash/pktd 
+git clone --branch develop https://github.com/pkt-cash/pktd 
 cd pktd 
 ./do
 ```
@@ -88,7 +88,7 @@ Restart your shell ### Add here how to get latest stable version of node
 
 2. Clone the source code:
 ```
-git clone https://github.com/cjdelisle/PacketCrypt
+git clone --branch develop https://github.com/cjdelisle/PacketCrypt
 ```
 3. Build the PacketCrypt code
 ```
@@ -108,7 +108,7 @@ apt install make
 ```
 2. Clone packetcrypt_rs
 ```
-git clone https://github.com/cjdelisle/packetcrypt_rs
+git clone --branch develop https://github.com/cjdelisle/packetcrypt_rs
 ```
 3. Compile PacketCrypt
 ```
