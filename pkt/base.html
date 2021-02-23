@@ -2,146 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
-    {% if config.site_author %}<meta name="author" content="{{ config.site_author }}">{% endif %}
-    {% if page.canonical_url %}<link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
-    <link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if config.site_description %}
+  <meta name="description" content="{{ config.site_description }}">{% endif %}
+  {% if config.site_author %}
+  <meta name="author" content="{{ config.site_author }}">{% endif %}
+  {% if page.canonical_url %}
+  <link rel="canonical" href="{{ page.canonical_url }}">{% endif %}
+  <link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">
 
-    {% block htmltitle %}
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
-    {% endblock %}
+  {% block htmltitle %}
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+  {% endblock %}
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
-    <link href='https://rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="{{ 'css/bootstrap-custom.css'|url }}" rel="stylesheet">
-    <link href="{{ 'css/base.css'|url }}" rel="stylesheet">
-    <link href="{{ 'css/pkt.css'|url }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+  <link href='https://rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin'
+    rel='stylesheet' type='text/css'>
+  <link href="{{ 'css/bootstrap-custom.css'|url }}" rel="stylesheet">
+  <link href="{{ 'css/base.css'|url }}" rel="stylesheet">
+  <link href="{{ 'css/pkt.css'|url }}" rel="stylesheet">
 
-    {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %} 
+  {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %}
 
-    {% else %}
-        {% if config.theme.colorscheme %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/{{ config.theme.colorscheme }}.min.css">
-        {% else %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        {% endif %}
-    {% endif %}
+  {% else %}
+  {% if config.theme.colorscheme %}
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/{{ config.theme.colorscheme }}.min.css">
+  {% else %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+  {% endif %}
+  {% endif %}
 
-    {%- for path in config['extra_css'] %}
-    <link href="{{ path|url }}" rel="stylesheet">
-    {%- endfor %}
+  {%- for path in config['extra_css'] %}
+  <link href="{{ path|url }}" rel="stylesheet">
+  {%- endfor %}
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
             <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
 
-    {% block extrahead %} {% endblock %}
+  {% block extrahead %} {% endblock %}
 </head>
 
 <body{% if page and page.is_homepage %} class="homepage" {% endif %}>
 
-    <header class="header">
-        <div class="container-header">
-          <a href="/" class="header__logo">
-            <img src="{{ 'img/logo.svg'|url }}" alt="">
-          </a>
-          <nav class="header__nav">
-            <div class="header__nav--for--mobile">
-              <a href="#" class="link-blue link-blue__down">
-                Whitepaper
-                <img src="{{ 'img/icon/arrow.svg'|url }}" alt="" class="link-blue--arrow">
-              </a>
-            </div>
-            <a href="https://pkt.cash/mining" class="header__nav-link">Mining</a>
-            <a href="https://pkt.cash/network-steward" class="header__nav-link">Network Steward</a>
-            <a href="https://pkt.cash/wallet" class="header__nav-link">Wallet</a>
-            <a href="https://pkt.cash/community/" class="header__nav-link">Community</a>
-            <a href="https://explorer.pkt.cash/" class="header__nav-link">Block Explorer</a>
-          </nav>
-        {%- block search_button %}
-            <div class="header__search" data-toggle="modal" data-target="#mkdocs_search_modal">
-                <img src="{{ 'img/icon/search.svg'|url }}" alt="" class="header__search-img">
-            </div>
-        {%- endblock %}
-          <div class="link-blue link-blue__down dropdown">
+  <header class="header">
+    <div class="container-header">
+      <a href="/" class="header__logo">
+        <img src="{{ 'img/logo.svg'|url }}" alt="">
+      </a>
+      <nav class="header__nav">
+        <div class="header__nav--for--mobile">
+          <a href="#" class="link-blue link-blue__down">
             Whitepaper
             <img src="{{ 'img/icon/arrow.svg'|url }}" alt="" class="link-blue--arrow">
-            <div class="dropdown-content">
-              <a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" target="_blank">Whitepaper</a>
-              <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank">Deck</a>
-              <a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank">PacketCrypt</a>
-            </div>
-          </div>
-          <!-- <a href="#" class="link-blue link-blue__user">
+          </a>
+        </div>
+        <a href="https://pkt.cash/mining" class="header__nav-link">Mining</a>
+        <a href="https://pkt.cash/network-steward" class="header__nav-link">Network Steward</a>
+        <a href="https://pkt.cash/wallet" class="header__nav-link">Wallet</a>
+        <a href="https://pkt.cash/community/" class="header__nav-link">Community</a>
+        <a href="https://explorer.pkt.cash/" class="header__nav-link">Block Explorer</a>
+      </nav>
+      {%- block search_button %}
+      <div class="header__search" data-toggle="modal" data-target="#mkdocs_search_modal">
+        <img src="{{ 'img/icon/search.svg'|url }}" alt="" class="header__search-img">
+      </div>
+      {%- endblock %}
+      <div class="link-blue link-blue__down dropdown">
+        Whitepaper
+        <img src="{{ 'img/icon/arrow.svg'|url }}" alt="" class="link-blue--arrow">
+        <div class="dropdown-content">
+          <a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" target="_blank">Whitepaper</a>
+          <a href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank">Deck</a>
+          <a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank">PacketCrypt</a>
+        </div>
+      </div>
+      <!-- <a href="#" class="link-blue link-blue__user">
             <img src="{{ 'img/icon/user.svg'|url }}" alt="" class="link-blue--user">
             Log in
           </a> -->
-          <button class="header__hum">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </header>
-
-    {% include "nav.html" %}
-
-    <div class="container">
-        {% block content %}
-        {% if page.meta.disable_toc %}
-        <div class="col-md-12" role="main">{% include "content.html" %}</div>
-        {% else %}
-        <div class="col-md-3 sidebar-wrapper">{% include "toc.html" %}</div>
-        <div class="col-md-9" role="main">{% include "content.html" %}</div>
-        {% endif %}
-        {% endblock %}
+      <button class="header__hum">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </header>
 
-    {% if not config.theme.disable_footer %}
-      <footer class="footer">
-          {% block footer %}
-          {% if not config.theme.disable_footer_except_revision %}
-          <div class="container-footer">
-            <div class="footer__wrap">
-              <div class="footer__logo">
-                <img src="{{'img/logo-footer.svg'|url}}" alt="">
-              </div>
-              <div class="footer__links">
-                <div class="footer__links-one">
-                  <h4 class="footer__links-title">Quicklinks</h4>
-                  <a href="https://pkt.cash/cash" class="footer__links-link">PKT</a>
-                  <a href="https://pkt.cash/mining" class="footer__links-link">Mining</a>
-                  <a href="https://pkt.cash/network-steward" class="footer__links-link">Network Steward</a>
-                  <a href="https://pkt.cash/roadmap" class="footer__links-link">Roadmap</a>
-                  <a href="https://pkt.cash/community" class="footer__links-link">Community</a>
-                  <a href="https://pkt.cash/about" class="footer__links-link">About</a>
-                </div>
-                <div class="footer__links-one">
-                  <h4 class="footer__links-title">Github</h4>
-                  <a href="https://github.com/pkt-cash/" class="footer__links-link">ptk.cash</a>
-                  <a href="https://github.com/cjdelisle/cjdns" class="footer__links-link">cjdns</a>
-                  <a href="https://github.com/cjdelisle/PacketCrypt" class="footer__links-link">PacketCrypt</a>
-                </div>
-              </div>
-              <div class="footer__social">
-                <h4 class="footer__social-title">Join the community</h4>
-                <a href="https://t.me/pkt_cash" class="footer__social-link">
-                  <img src="{{'img/icon/telegram.svg'|url}}" alt="" class="footer__social-img">
-                  Telegram
-                </a>
-                <a href="https://matrix.to/#/#pkt:matrix.org" class="footer__social-link">
-                  <img src="{{'img/icon/matrix.svg'|url}}" alt="" class="footer__social-img">
-                  Matrix
-                </a>
-                <!-- <a href="#" class="footer__social-link">
+  {% include "nav.html" %}
+
+  <div class="container">
+    {% block content %}
+    {% if page.meta.disable_toc %}
+    <div class="col-md-12" role="main">{% include "content.html" %}</div>
+    {% else %}
+    <div class="col-md-3 sidebar-wrapper">{% include "toc.html" %}</div>
+    <div class="col-md-9" role="main">{% include "content.html" %}</div>
+    {% endif %}
+    {% endblock %}
+  </div>
+
+  {% if not config.theme.disable_footer %}
+  <footer class="footer">
+    {% block footer %}
+    {% if not config.theme.disable_footer_except_revision %}
+    <div class="container-footer">
+      <div class="footer__wrap">
+        <div class="footer__logo">
+          <img src="{{'img/logo-footer.svg'|url}}" alt="">
+        </div>
+        <div class="footer__links">
+          <div class="footer__links-one">
+            <h4 class="footer__links-title">Quicklinks</h4>
+            <a href="https://pkt.cash/cash" class="footer__links-link">PKT</a>
+            <a href="https://pkt.cash/mining" class="footer__links-link">Mining</a>
+            <a href="https://pkt.cash/network-steward" class="footer__links-link">Network Steward</a>
+            <a href="https://pkt.cash/roadmap" class="footer__links-link">Roadmap</a>
+            <a href="https://pkt.cash/community" class="footer__links-link">Community</a>
+            <a href="https://pkt.cash/about" class="footer__links-link">About</a>
+          </div>
+          <div class="footer__links-one">
+            <h4 class="footer__links-title">Github</h4>
+            <a href="https://github.com/pkt-cash/" class="footer__links-link">ptk.cash</a>
+            <a href="https://github.com/cjdelisle/cjdns" class="footer__links-link">cjdns</a>
+            <a href="https://github.com/cjdelisle/PacketCrypt" class="footer__links-link">PacketCrypt</a>
+          </div>
+        </div>
+        <div class="footer__social">
+          <h4 class="footer__social-title">Join the community</h4>
+          <a href="https://t.me/pktproject" class="footer__social-link">
+            <img src="{{'img/icon/telegram.svg'|url}}" alt="" class="footer__social-img">
+            Telegram
+          </a>
+          <a href="https://matrix.to/#/#pkt:matrix.org" class="footer__social-link">
+            <img src="{{'img/icon/matrix.svg'|url}}" alt="" class="footer__social-img">
+            Matrix
+          </a>
+          <!-- <a href="#" class="footer__social-link">
                   <img src="img/icon/instagram.svg" alt="" class="footer__social-img">
                   Instagram
                 </a>
@@ -149,46 +155,47 @@
                   <img src="img/icon/facebook.svg" alt="" class="footer__social-img footer__social-img--facebook">
                   Facebook
                 </a> -->
-              </div>
-              <div class="footer__copy">
-                @ PKT 2021
-              </div>
-            </div>
-          </div>
-          {% endif %}
-          {% endblock %}
-      </footer>
+        </div>
+        <div class="footer__copy">
+          @ PKT 2021
+        </div>
+      </div>
+    </div>
     {% endif %}
+    {% endblock %}
+  </footer>
+  {% endif %}
 
-    {%- block scripts %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
+  {%- block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{{ 'js/bootstrap-3.0.3.min.js'|url }}"></script>
 
-    {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %}  <!-- default is to include highlightjs -->
-    
-    {% else %}
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
-        {% if config.theme.hljs_languages %}
-            {%- for lang in config.theme.hljs_languages %}
-                <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/{{lang}}.min.js"></script>
-            {%- endfor %}
-        {% endif %}
-    <script>hljs.initHighlightingOnLoad();</script>
-    {% endif %}
+  {% if config.theme.highlightjs is defined and config.theme.highlightjs is sameas false %}
+  <!-- default is to include highlightjs -->
 
-    <script>var base_url = {{ base_url | tojson }}</script>
-    {% if config.shortcuts %}
-        <script>var shortcuts = {{ config.shortcuts | tojson }}</script>
-    {% endif %}
-    <script src="{{ 'js/base.js'|url }}"></script>
-    {%- for path in config['extra_javascript'] %}
-    <script src="{{ path|url }}"></script>
-    {%- endfor %}
-    {%- endblock %}
+  {% else %}
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+  {% if config.theme.hljs_languages %}
+  {%- for lang in config.theme.hljs_languages %}
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/{{lang}}.min.js"></script>
+  {%- endfor %}
+  {% endif %}
+  <script>hljs.initHighlightingOnLoad();</script>
+  {% endif %}
 
-    {% if 'search' in config['plugins'] %}{%- include "search-modal.html" %}{% endif %}
-    {%- include "keyboard-modal.html" %}
-    </body>
+  <script>var base_url = {{ base_url | tojson }}</script>
+  {% if config.shortcuts %}
+  <script>var shortcuts = {{ config.shortcuts | tojson }}</script>
+  {% endif %}
+  <script src="{{ 'js/base.js'|url }}"></script>
+  {%- for path in config['extra_javascript'] %}
+  <script src="{{ path|url }}"></script>
+  {%- endfor %}
+  {%- endblock %}
+
+  {% if 'search' in config['plugins'] %}{%- include "search-modal.html" %}{% endif %}
+  {%- include "keyboard-modal.html" %}
+  </body>
 
 </html>
 {% if page and page.is_homepage %}

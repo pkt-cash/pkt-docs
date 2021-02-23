@@ -8,86 +8,41 @@ Miners who are working in collaboration with one another are members of a mining
 all mining of PacketCrypt is done in pools.
 
 PacketCrypt mining is split into two distinct stages:
+
 * Announcement Mining - Using your CPU to create Announcements
 * Block Mining - Collecting Announcements from Announcement Miners and using them to mine blocks
 
 Block mining is typically done at the mining pool's datacenter, however Announcement mining can be
 done from anywhere.
 
-To use, you can comple from source or run from a [Docker](http://docker.com/) image.
+## How to Announcement mine
 
-## Running from Docker
-
-If you want to get up and running quickly, you can run the [PacketCrypt  Docker image](https://hub.docker.com/r/backupbrain/packetcrypt) from your terminal line or command line.
-
-Docker is a virtual machine software that allows users to run software without the hassle of installing that software on their computer directly.
-
-### Installation
-
-
-
-Install docker on your computer. You can follow the [Docker installation instructions](https://docs.docker.com/get-docker/) for your operating system.
-
-
-Next, download the PacketCrypt docker image. Make sure Docker is running on your computer and open a terminal or macOS or Linux, or `cmd` on windows and type:
-
-```
-docker pull backupbrain/packetcrypt
-```
-
-This will download the PacketCrypt binaries and runtime environment onto your computer.
-
-To begin mining, you will need to [choose a mining pool](#choosing-a-mining-pool).
-
-You can mine announcements by passing the `annmine` option.
-
-The basic syntax for using the PacketCrypt miner is:
-
-```
-docker run pktcrypt-miner [annmine|blkmine] <pool_url>
-```
-
-**Example: Announcement mining:**
-
-To mine announcements on Pkteer Pool, run this command in your terminal or cmd:
-
-```
-docker run pktcrypt-miner annmine http://pool.pkteer.com
-
-
-```
-That's it! You'll see status messages about mining scroll through your terminal window as  blocks or announcements are discovered.
-
-## Installing from Source
-
-### How to Announcement mine
-
-#### Install the dependencies
+### Install the dependencies
 
 * On Debian or Ubuntu: `sudo apt install gcc git`
 * On Fedora or RedHat: `sudo dnf install gcc git`
 * On Alpine Linux: `sudo apk add gcc git`
 
-#### Install Rust
+### Install Rust
 It is important to install Rust using rustup because packaged Rust is often out of date and
 compiling will fail. Run the following command *as the user who will be mining*.
 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     
-##### Install Make
+#### Install Make
 
     apt install make    
 
-#### Download PacketCrypt
+### Download PacketCrypt
 
     git clone https://github.com/cjdelisle/packetcrypt_rs
 
-#### Compile PacketCrypt
+### Compile PacketCrypt
 
     cd packetcrypt_rs
     ~/.cargo/bin/cargo build --release
 
-#### Begin Mining
+### Begin Mining
 To begin mining, you will need the address of your [wallet](./electrum) and you will
 need to choose a pool.
 
