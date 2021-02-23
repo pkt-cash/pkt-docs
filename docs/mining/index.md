@@ -39,7 +39,7 @@ This will download the PacketCrypt binaries and runtime environment onto your co
 
 To begin mining, you will need to [choose a mining pool](#choosing-a-mining-pool).
 
-You can mine announcements by passing the `annmine` option and you can mine blocks by passing the `blkmine` option.
+You can mine announcements by passing the `annmine` option.
 
 The basic syntax for using the PacketCrypt miner is:
 
@@ -49,18 +49,12 @@ docker run pktcrypt-miner [annmine|blkmine] <pool_url>
 
 **Example: Announcement mining:**
 
-To mine announcements on the Gridfinity network, run this command in your terminal or cmd:
+To mine announcements on Pkteer Pool, run this command in your terminal or cmd:
 
 ```
-docker run pktcrypt-miner annmine http://pool.gridfinity.com/master
-```
+docker run pktcrypt-miner annmine http://pool.pkteer.com
 
-**Example: Block mining:**
 
-To mine blocks on the Gridfinity network, run this command in your terminal or cmd:
-
-```
-docker run pktcrypt-miner blkmine http://pool.gridfinity.com/master
 ```
 That's it! You'll see status messages about mining scroll through your terminal window as  blocks or announcements are discovered.
 
@@ -79,6 +73,10 @@ It is important to install Rust using rustup because packaged Rust is often out 
 compiling will fail. Run the following command *as the user who will be mining*.
 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    
+##### Install Make
+
+    apt install make    
 
 #### Download PacketCrypt
 
@@ -96,10 +94,12 @@ need to choose a pool.
     ./target/release/packetcrypt ann -p <your_wallet_address> http://your.pool.of.choice
 
 ## Choosing a mining pool
-There are currently two mining pools:
+There are currently three mining pools:
 
-* Gridfinity: `http://pool.gridfinity.com/master`
+* Pkteer: `http://pool.pkteer.com`
 * Flufpool: `http://pool.noworries.tech`
+* PKTPool: `http://pool.pktpool.io`
+* Pkt.world: `http://pool.pkt.world`
 
 Your mining revenue depends on how high the pool's fee is as well as how much hardware they are
 using in-house. You should test your daily earnings on each pool to see which one is best.
@@ -108,7 +108,7 @@ using in-house. You should test your daily earnings on each pool to see which on
 Because each block miner must use as much bandwidth as all of the announcement miners *combined*,
 block mining is typically done at the location of the pool. Even a pool operator who wanted to
 support external block mining would find that the pool itself would need enough *upload* bandwidth
-to match all of the block miners - which would is completely untennable. If you are interested
+to match all of the block miners - which would be completely untenable. If you are interested
 in block mining, contact the pool operator and discuss sending hardware to their location.
 
 Starting your own pool requires setting up a number of services:

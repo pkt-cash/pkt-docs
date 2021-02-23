@@ -1,8 +1,25 @@
 site_name: PKT Documentation
+site_url: https://docs.pkt.cash/
+site_author: PKT
+site_description: ""
+repo_url: "https://github.com/pkt-cash/pkt-docs"
+
+theme:
+  name: null
+  custom_dir: pkt
+  colorscheme: github
+  highlightjs: true
+
 nav:
-    - Home: index.md
-    - Electrum Wallet: electrum/index.md
-    - Mining: mining/index.md
-    - Pktd: pktd/index.md
-    - PKTWallet: pktd/pktwallet.md
-    - PKTWallet Electrum Import: pktd/migrating_from_electrum.md
+  - Home: index.md
+  - PKT Electrum: electrum/index.md
+  - Mining: mining/index.md
+  - Pool Operation: mining/pool_setup_guide.md
+  - Pktd: pktd/index.md
+  - PKTWallet: pktd/pktwallet.md
+  - Electrum Import: pktd/migrating_from_electrum.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true

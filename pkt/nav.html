@@ -1,0 +1,17 @@
+{%- block site_nav %}
+<section class="posts">
+  <div class="container">
+    <div class="post__category-wrap">
+      <ul class="posts__category">
+        {% for nav_item in nav %}
+        <li
+          class="posts__category-item {% if nav_item.active %} active{% endif %}"
+        >
+          <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{%- endblock %}
