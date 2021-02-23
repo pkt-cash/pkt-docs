@@ -49,7 +49,7 @@ need to choose a pool.
     ./target/release/packetcrypt ann -p <your_wallet_address> http://your.pool.of.choice
 
 ## Choosing a mining pool
-There are currently three mining pools:
+There are currently several mining pools:
 
 * Pkteer: `http://pool.pkteer.com`
 * Flufpool: `http://pool.noworries.tech`
