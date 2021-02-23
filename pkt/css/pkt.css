@@ -109,3 +109,6 @@ pre {
 footer > hr {
     width: 35%;
 }
+.injected {
+    display: none !important;
+}
