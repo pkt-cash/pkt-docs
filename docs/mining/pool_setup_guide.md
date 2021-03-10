@@ -192,7 +192,7 @@ url:  'http://localhost:8081',
 ```
 If allowing external annminers use a resolved address suchas:
 ```
-url: 'http://ann1.pktpool.io
+url: 'http://ann1.pktpool.io'
 ```
 ***Replace the url with your own.***
 
