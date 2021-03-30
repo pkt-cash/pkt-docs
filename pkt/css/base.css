@@ -1170,7 +1170,7 @@ header {
     .footer__social-title,
     .footer__links-title {
       margin-bottom: 14px;
-      font-family: "Poppins";
+      font-family: "TT Norms";
       color: rgba(255, 255, 255, 0.5);
       font-size: 13px;
       line-height: 20px;
@@ -1189,7 +1189,7 @@ header {
   @media (max-width: 600px) {
     .footer__social-link,
     .footer__links-link {
-      font-family: "Poppins";
+      font-family: "TT Norms";
       font-weight: 400;
       font-size: 13px;
       line-height: 30px;
