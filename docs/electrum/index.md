@@ -111,7 +111,7 @@ Setting up multi-signature in PKT Electrum is the same as with Bitcoin Electrum 
 
 
 ## How it works
-PKT Electrum is signnificantly similar to Bitcoin Electrum. It contacts one of a pool of community operated [electrumx](https://electrumx.readthedocs.io/en/latest/protocol.html) servers. Instead of syncing the entire chain it requests information about its addresses from the electrumx server and only downloads enough of the blockchain to verify that the electrumx server is not trying to trick it.
+PKT Electrum is significantly similar to Bitcoin Electrum. It contacts one of a pool of community operated [electrumx](https://electrumx.readthedocs.io/en/latest/protocol.html) servers. Instead of syncing the entire chain it requests information about its addresses from the electrumx server and only downloads enough of the blockchain to verify that the electrumx server is not trying to trick it.
 
 In practice this means the wallet needs to check the proof of work and sync the block *headers* but not the rest of the blocks. Since PKT uses [PacketCrypt](https://github.com/cjdelisle/PacketCrypt) proof of work, the work verification needs to be different. PacketCrypt headers are fairly large, between 4KB and 16KB, even at only 4KB each they make up 2.1GB of data per year. To maintain security without downloading an unacceptably large amount of data, PKT Electrum downloads only a small number of PacketCrypt proofs near the tip of the chain.
 

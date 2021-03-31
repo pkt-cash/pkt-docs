@@ -2,8 +2,10 @@
 Documentation for the PKT project
 
 ## Wallet setup
-There are currently two wallets which you can choose from, the easiest to set up is
-[PKT Electrum](./electrum) which has a Graphical UI and supports Windows, Mac and Linux.
+There are several wallets which you can choose from, the easiest to set up are
+
+* [PKT Electrum](./electrum) which has a Graphical UI and supports Windows, Mac and Linux.
+* [PKT Wallet](./pktwalletgui) which has a Graphical UI and supports MacOS and works great with miners.
 
 You can also setup [PKT Wallet](./pktd/pktwallet) which is command line only but has greater
 scalability and privacy features.
