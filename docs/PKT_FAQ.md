@@ -1,4 +1,4 @@
-# PKT_FAQ.md
+# PKT FAQ
 
 + **What is PKT?**	
 > PKT allows users to monetize their unused internet bandwidth. By participating in the PKT Network you are helping to build a faster, stronger, and more secure, decentralized network.																								
