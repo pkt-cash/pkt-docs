@@ -155,6 +155,7 @@ div[role="main"] a {
         top: 180px;
         max-height: calc(100% - 180px);
         overflow-y: auto;
+        height: 75vh;
     }
     .bs-sidebar.affix-bottom {
         position: absolute; /* Undo the static from mobile first approach */

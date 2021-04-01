@@ -42,24 +42,34 @@ compiling will fail. Run the following command *as the user who will be mining*.
     cd packetcrypt_rs
     ~/.cargo/bin/cargo build --release
 
-### Begin Mining
-To begin mining, you will need the address of your [wallet](./electrum) and you will
-need to choose a pool.
+### Begin Announcement Mining
+To begin mining, you will need the address of your wallet and you will need to choose a pool. You cannot mine into the electrum wallet. You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases). You cannot mine into the electrum wallet, so do not try.
 
     ./target/release/packetcrypt ann -p <your_wallet_address> http://your.pool.of.choice
 
-## Choosing a mining pool
-There are currently three mining pools:
+## Choosing a Mining Pool
+There are currently several mining pools:
 
 * Pkteer: `http://pool.pkteer.com`
 * Flufpool: `http://pool.noworries.tech`
 * PKTPool: `http://pool.pktpool.io`
-* Pkt.world: `http://pool.pkt.world`
+* PktWorld: `http://pool.pkt.world`
 
-Your mining revenue depends on how high the pool's fee is as well as how much hardware they are
-using in-house. You should test your daily earnings on each pool to see which one is best.
+You should test our daily earnings on each pool to see which one is best. Your mining revenue depends non how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. 
 
-## Block mining & running a pool
+## Multi-Pool Announcement Mining
+Announcement mining can be done into a single pool or multiple pools. When you announcement mine into multiple pools, you will be paid by each pool that you submit annoucements to.
+
+If you want to mine into multiple pools, you will need to update your software to the packetcrypt develop branch, as follows:
+
+    git clone https://github.com/cjdelisle/packetcrypt_rs --branch develop
+    cd packetcrypt_rs
+    ~/.cargo/bin/cargo build --release
+    ./target/release/packetcrypt ann -p <your_wallet_address> pool_1 pool_2 pool_3 pool_4
+
+pool_1 is the pool running the highest difficulty. If you notice problems, you can test listing the pools in a different order. The number of pools you mine into is at your discretion. If a pool is down or malfunctioning you will notice the pool is not mining at [100%] in your mining feed and you can choose to remove the under-performing or malfunctioning pool. 
+
+## Block Mining & Running a Pool
 Because each block miner must use as much bandwidth as all of the announcement miners *combined*,
 block mining is typically done at the location of the pool. Even a pool operator who wanted to
 support external block mining would find that the pool itself would need enough *upload* bandwidth
@@ -98,7 +108,7 @@ which pay the people who have been mining
 * <span style="color:#783f04">█</span> Brown: Master gets block templates from pktd instance
 * Black dotted line: All nodes request configuration and block templates from Master node
 
-## More information and PacketCrypt pool code
+## More Information and PacketCrypt Pool Code
 The code and documentation for running a pool is available on the **C / nodejs** version of the
 [PacketCrypt](https://github.com/cjdelisle/PacketCrypt/blob/master/docs/pool.md) project,
 the new Rust version only contains Announcement Miner and Announcement Handlers.

@@ -17,7 +17,7 @@ If you are on Windows:
   * In place of `./bin/pktwallet`, type `pktwallet*.exe`
   * In place of `./bin/pktctl`, type `pktctl*.exe`
 
-### Apple and Linux
+### MacOS and Linux
 Follow the [installation](../#installation) process. Then once it is installed, you can create your wallet.
 
 ## Creating a wallet
