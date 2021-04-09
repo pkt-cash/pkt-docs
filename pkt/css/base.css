@@ -1044,6 +1044,7 @@ header {
 
   .posts__category-item a {
     color: #191944;
+    font-size: 16px;
   }
   
   @media (max-width: 800px) {
@@ -1242,5 +1243,33 @@ header {
       font-size: 13px;
       line-height: 31px;
       opacity: 0.3;
+    }
+  }
+  .nested-drop {
+    display: none;
+    position: absolute;
+    top: 30px;
+    background-color: #fff;
+    padding-left: 0;
+  }
+  .nested-drop li {
+    padding: 15px;
+    list-style: none;
+  }
+
+  .nested-drop li a {
+    font-size: 16px;
+    color: #000;
+  }
+  .drop {
+    position: relative;
+  }
+  .drop:hover > .nested-drop {
+    display: block;
+  }
+  @media (max-width: 600px) {
+    .nested-drop {
+      position: relative;
+      top: 0;
     }
   }

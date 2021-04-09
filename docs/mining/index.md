@@ -54,6 +54,7 @@ There are currently several mining pools:
 * Flufpool: `http://pool.noworries.tech`
 * PKTPool: `http://pool.pktpool.io`
 * PktWorld: `http://pool.pkt.world`
+* Pktminers: `http://dalpool.pktminers.cash`
 
 You should test our daily earnings on each pool to see which one is best. Your mining revenue depends non how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. 
 
