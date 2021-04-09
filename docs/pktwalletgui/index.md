@@ -5,8 +5,8 @@
 
 ## First setup
 ### MacOS
-1. Download <span style="font-size:large;">[pktwallet-(version).dmg
-](https://github.com/artrepreneur/Vodun/releases)</span>
+1. Download **[pktwallet-(version).dmg
+](https://github.com/artrepreneur/Vodun/releases)**
 2. Open Finder
 3. Double-click on your Downloads folder and find and double-click on `pktwallet-(version).dmg` to open the disk image
   * ![pkt_wallet_osx_find_dmg.png](./pkt_wallet_osx_find_dmg.png)
@@ -21,6 +21,10 @@
 
 ## Setting up your wallet
 Before you can begin using PKT, you need to setup your wallet, this means writing down your secret key and setting passwords so your PKT will stay safe.
+
+A video tutorial is available for this method:
+
+[![Set up your wallet](https://img.youtube.com/vi/JqDSlfQuMP8/0.jpg)](https://www.youtube.com/watch?v=JqDSlfQuMP8)
 
 1. You will be asked to create a new wallet. Click "Create Wallet"
 ![pkt_wallet_create_wallet](./pkt_wallet_create_wallet.png)
@@ -39,6 +43,10 @@ Before you can begin using PKT, you need to setup your wallet, this means writin
 
 ## Load Existing Wallet From Seed
 Before you can begin using PKT, you need to setup your wallet, this means writing down your secret key and setting passwords so your PKT will stay safe.
+
+A video tutorial is available for this method:
+
+[![Load your wallet from seet](https://img.youtube.com/vi/c5cgrYDkEzI/0.jpg)](https://youtu.be/c5cgrYDkEzI)
 
 1. You will be asked to create a new wallet. Click "Create Wallet"
 ![pkt_wallet_create_wallet](./pkt_wallet_create_wallet.png)
