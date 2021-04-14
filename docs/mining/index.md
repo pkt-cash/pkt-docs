@@ -185,3 +185,31 @@ will be valid for 3 block periods making the power multiplier `750 ** 2` or 562,
 
 From here, the power output of the power multiplier of the optimal announcement set halves for each
 doubling of the announcement difficulty, making the optimal difficulty `2`.
+
+
+## FAQ for ANN Miners
+### What does overflow mean? 
+When the ann handler receives an announcement, it puts it into a queue, when the queue fills up it responds overflow immediately. The queue can become long, so you may receive "operation timed out" you're still being paid, when you receive "overflow" you are not being paid.
+
+Unfortunately, you may also receive "operation timed out" because the handler is unresponsive, it's not obvious which is the reason from looking at the logs.
+
+For example, what you will see in the AnnMiner Logs:
+
+    1618394538 INFO annmine.rs:519 467 Ke/s   28.56Mb/s   overflow: [0, 0, 3072, 0]      uploading: [0, 0, 17632, 0]                 accept/reject: [26932/0, 0/0, 4856/0, 796/0]                    - goodrate: [100%, 100%, 61%, 100%]
+
+*     467 Ke/s
+467 kilo-encryptions (thousands of encryptions) per second of mining power.
+*     28.56Mb/s
+Total upload bandwidth (to all pools - combined)
+*     overflow: [0, 0, 3072, 0]
+Overflowed the internal queue of the ann miner, before it was even able to upload to the pool, one number for each pool you're mining to. 
+*     3072
+Number of anns which are not uploaded to pool #3.
+*     uploading [0, 0, 17632, 0]
+Number of anns currently in-flight in active http requests, again 3rd pool is a problem, others are doing well (in this example).
+*     accept/reject [26932/0, 0/0, 4856/0, 796/0]
+Anns accepted/rejected by each pool, these numbers are based on the previous 10 seconds, pool #2 is giving a zero accepted which might be an issue, keep watching the next message 10 seconds later for another update.
+*     goodrate [100%, 100%, 61%, 100%]
+Goodrate = number of anns accepted divided by number of anns produced.
+
+
