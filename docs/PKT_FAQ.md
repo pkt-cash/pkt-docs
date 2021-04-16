@@ -29,11 +29,11 @@ There are 2 main wallets for PKT, one is the pktwallet that is in the pktd githu
 
 + **The differentiating factors vs. Bitcoin and other crypto coins?**	
 > The differences from Bitcoin are: 
-  - PacketCrypt bandwidth hard proof of work replaces SHA-256
-  - 1 minute block time
-  - 6 billion coins total
-  - Mining yields decrease 10% every 100 days in what is called the decimation
-  - 20% of each mined block goes to the Network Steward wallet, which funds R&D of the ecosystem
+PacketCrypt bandwidth hard proof of work replaces SHA-256
+1 minute block time
+6 billion coins total
+Mining yields decrease 10% every 100 days in what is called the decimation
+20% of each mined block goes to the Network Steward wallet, which funds R&D of the ecosystem
   
 + **What are the applications and software currently being explored?**	
 > A free to use VPN service is called AnodeVPN will be launched in 2021, and users can pay for their VPN speed with PKT Cash. Internet bandwidth sharing and mesh networking are also currently in the stages of development. 
