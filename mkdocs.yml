@@ -19,6 +19,7 @@ nav:
   - PKTWallet: pktd/pktwallet.md
   - Electrum Import: pktd/migrating_from_electrum.md
   - FAQ: PKT_FAQ.md
+  - Code of Conduct: code_of_conduct.md
 
 markdown_extensions:
   - admonition
