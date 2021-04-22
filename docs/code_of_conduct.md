@@ -5,7 +5,7 @@
 
   2) Not reading the rules is not an excuse for breaking the rules.
 
-  3) No speculation, price discussion, or OTC trading allowed here.
+  3) No speculation, price discussion, or OTC trading allowed of designated areas.
 
   4) This is a place to build the community and create a positive dialogue amongst Pkteers. 
   If the conversation turns negative, the moderators reserves the right to ban or block anyone. A person will not be banned for a single 
@@ -28,5 +28,9 @@
 
   13) Spamming will result in being banned.
 
-**14) Comments that do not comply with the project policy will be deleted. Users that do not adhere to the rules will be be banned. 
-  We thank you for self governing and adhering to these guidelines**
+## Contact people
+If someone has made you feel unsafe or unwelcome, please contact one of the admins of the group.
+We will do our best to address your matter quickly and with descretion.
+
+* Jeremy Berger: email: `jeremy@pktpal.com` / telegram: `@jeremy_berger` / pkt.chat: `@jeremyb`
+* Caleb James DeLisle: email: `cjd@cjdns.fr` / pkt.chat: `@cjd`
