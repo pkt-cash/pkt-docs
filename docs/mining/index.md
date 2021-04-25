@@ -26,21 +26,21 @@ done from anywhere.
 #### Specifics for Azure App Service Linux
 When using [Azure App Service Linux](https://docs.microsoft.com/en-us/azure/app-service/overview#app-service-on-linux) you may need a special process.
 
-    ```
-    apt update
-    apt install apt-utils
-    apt upgrade
-    apt install pkg-config
-    apt install file
-    apt install gcc git
-    ```
+```
+apt update
+apt install apt-utils
+apt upgrade
+apt install pkg-config
+apt install file
+apt install gcc git
+```
 
 On Azure, you may need to remove .bashrc and .profile to resolve [this build error](https://github.com/sodiumoxide/sodiumoxide/issues/460).
 
-    ```
-    rm ~/.bashrc
-    rm ~/.profile
-    ```
+```
+rm ~/.bashrc
+rm ~/.profile
+```
 
 ### Install Rust
 It is important to install Rust using rustup because packaged Rust is often out of date and
