@@ -22,7 +22,10 @@ done from anywhere.
 * On Debian or Ubuntu: `sudo apt install gcc git`
 * On Fedora or RedHat: `sudo dnf install gcc git`
 * On Alpine Linux: `sudo apk add gcc git`
-* On [Azure App Service Linux](https://docs.microsoft.com/en-us/azure/app-service/overview#app-service-on-linux)
+
+#### Specifics for Azure App Service Linux
+When using [Azure App Service Linux](https://docs.microsoft.com/en-us/azure/app-service/overview#app-service-on-linux) you may need a special process.
+
     ```
     apt update
     apt install apt-utils
@@ -31,7 +34,9 @@ done from anywhere.
     apt install file
     apt install gcc git
     ```
-    Remove .bashrc and .profile to resolve [this build error](https://github.com/sodiumoxide/sodiumoxide/issues/460).
+
+On Azure, you may need to remove .bashrc and .profile to resolve [this build error](https://github.com/sodiumoxide/sodiumoxide/issues/460).
+
     ```
     rm ~/.bashrc
     rm ~/.profile
