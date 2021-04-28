@@ -88,7 +88,7 @@ Restart your shell ### Add here how to get latest stable version of node
 
 2. Clone the source code:
 ```
-git clone --branch develop https://github.com/cjdelisle/PacketCrypt
+git clone --branch master https://github.com/cjdelisle/PacketCrypt
 ```
 3. Build the PacketCrypt code
 ```
