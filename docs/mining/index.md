@@ -70,10 +70,10 @@ To begin mining, you will need the address of your wallet and you will need to c
 There are currently several mining pools:
 
 * Pkteer: `http://pool.pkteer.com`
-* Flufpool: `http://pool.noworries.tech`
 * PKTPool: `http://pool.pktpool.io`
 * PktWorld: `http://pool.pkt.world`
 * Pktminers: `http://dalpool.pktminers.cash`
+* Srizbi: `http://pool.srizbi.com`
 
 You should test our daily earnings on each pool to see which one is best. Your mining revenue depends non how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. 
 
