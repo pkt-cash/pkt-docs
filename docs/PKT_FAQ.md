@@ -22,10 +22,10 @@ There are 2 main wallets for PKT, one is the pktwallet that is in the pktd githu
 >As more people mine PacketCrypt, they will need to invest in more network infrastructure which will become useful later on for making the internet faster and more accessible.
 
 + **What is the path towards being publicly listed on exchanges?**
-> PKT is a decentralized project like Bitcoin, not a centralized token. Community members are having conversations with different exchanges and you can do it too. There are not more details about the particular listing initiatives.
+> PKT is a decentralized project like Bitcoin, not a centralized token. Community members are having conversations with different exchanges and you can do it too. There are no more details at this time about the particular listing initiatives.
 
 + **What is value proposition of PKT?**	
-> The PKT project is focues on building a decentralized bandwidth marketplace to decouple the business and technical aspects of internet service from the physical aspect of maintaining infrastructure. The fundamental value is division of labor and lowering the barrier of entry for internet service competition.
+> The PKT project is focused on building a decentralized bandwidth marketplace to decouple the business and technical aspects of internet service from the physical aspect of maintaining infrastructure. The fundamental value is division of labor and lowering the barrier of entry for internet service competition.
 
 + **The differentiating factors vs. Bitcoin and other crypto coins?**	
 > The differences from Bitcoin are: 
@@ -36,20 +36,20 @@ Mining yields decrease 10% every 100 days in what is called the decimation
 20% of each mined block goes to the Network Steward wallet, which funds R&D of the ecosystem
   
 + **What are the applications and software currently being explored?**	
-> A free to use VPN service is called AnodeVPN will be launched in 2021, and users can pay for their VPN speed with PKT Cash. Internet bandwidth sharing and mesh networking are also currently in the stages of development. 
+> A free to use VPN service called AnodeVPN will be launched in 2021, and users can pay for their VPN speed with PKT Cash. Internet bandwidth sharing and mesh networking are also currently in the stages of development. 
 																								
 + **Who stands to benefit the most from growth and adaption?**	
 > The early miners and adopters of PKT will benefit greatly. PKT also benefits everybody because it will lead to a lower cost and highly competitive internet service ecosystem. 
 																						
 + **What is the Network Steward?**
-> The Network Steward is part of the consensus rules of the PKT blockchain. 20% of every newly mined block goes to an wallet address and then those coins are 100% paid out in grants to help build open-source technology and develop the PKT Network. Network Stewards funds must be deployed within 90 days or else they are  burned. This address was initially set to multi-signature group, but it can be changed by a PoS based vote process.
+> The Network Steward is part of the consensus rules of the PKT blockchain. 20% of every newly mined block goes to a wallet address and then those coins are 100% paid out in grants to help build open-source technology and develop the PKT Network. Network Steward funds must be deployed within 90 days or else they are  burned. This address was initially set to a multi-signature group, but it can be changed by a PoS based vote process.
 
 + **Who is the Network Steward currently?**	
 >A group of 5 volunteers including the original author of the code.	More information can be found [here]: (https://pkt.cash/network-steward)
 																					
 + **How is the (current) Nerwork Steward using the funds?**	
 > The Network Steward follows a [project evaluation process.](https://github.com/pkt-cash/ns-projects/)  
-No funds have ever been deployed except to fund projects which were proposed by members of the public in an open competitive process. The Network Steward operates with full transparency. Every transaction made by the Network Steward can be seen in the block explorer and is refered in the Network Steward's github repository explaining the project which that transaction helped to fund.	
+No funds have ever been deployed except to fund projects which were proposed by members of the public in an open competitive process. The Network Steward operates with full transparency. Every transaction made by the Network Steward can be seen in the block explorer and is refered to in the Network Steward's github repository explaining the project which that transaction helped to fund.	
 
 + **Has the Network Steward burned any funds?**	
 >You can check out the stats on burned coins in the block explorer [Network Steward page](https://explorer.pkt.cash/address/pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2).
@@ -79,7 +79,7 @@ No funds have ever been deployed except to fund projects which were proposed by 
 > There are [mining instructions](https://docs.pkt.cash/en/latest/mining/) for mining on the PKT website. [PktPal](https://pktpal.com/) is a business in the community which offers turn-key mining solutions.
 
 + **Do  miners mining on a single pool have any benefit over miners mining on multi pool?**
-> Multi-pool mining means submitting the exact same announcements to multiple pools. So if you have the bandwidth available it will always benefit you to mine all of the major pools.
+> Multi-pool mining means submitting the exact same announcements to multiple pools. So if you have the bandwidth available it will always benefit you to mine to all of the major pools.
 																								
 + **What is a Cloud ISP?**
 > There is [an explanation video](https://twitter.com/pkt_cash/status/1374050101094617091?s=21) about Cloud ISPs on Twitter. The role of a Cloud ISP is to perform the technical and administrative aspects of internet service so that the aspects of infrastructure operation can be done by individuals, small businesses and community groups.
