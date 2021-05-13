@@ -63,9 +63,14 @@ Or:
 
     ./bin/pktctl --wallet getaddressbalances
 
+To show 0 balance addresses, use:
+
+    ./bin/pktctl --wallet getaddressbalances 1 1
+
 For more explanation of the meaning of the output of `getaddressbalances`, use:
 
     ./bin/pktctl --wallet help getaddressbalances
+
 
 ## Sending PKT
 You can send someone PKT using the `sendtoaddress` command, but first you must *unlock* your
