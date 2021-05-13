@@ -79,7 +79,7 @@ No funds have ever been deployed except to fund projects which were proposed by 
 > There are [mining instructions](https://docs.pkt.cash/en/latest/mining/) for mining on the PKT website. [PktPal](https://pktpal.com/) is a business in the community which offers turn-key mining solutions.
 
 + **Do  miners mining on a single pool have any benefit over miners mining on multi pool?**
-> Multi-pool mining means submitting the exact same announcements to multiple pools. So if you have the bandwidth available it will always benefit you to mine to all of the major pools.
+> Multi-pool mining means submitting the exact same announcements to multiple pools. So if you have the bandwidth available it will always benefit you to mine in all of the major pools.
 																								
 + **What is a Cloud ISP?**
 > There is [an explanation video](https://twitter.com/pkt_cash/status/1374050101094617091?s=21) about Cloud ISPs on Twitter. The role of a Cloud ISP is to perform the technical and administrative aspects of internet service so that the aspects of infrastructure operation can be done by individuals, small businesses and community groups.
