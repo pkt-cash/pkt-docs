@@ -72,7 +72,6 @@ There are currently several mining pools:
 * Pkteer: `http://pool.pkteer.com`
 * PKTPool: `http://pool.pktpool.io`
 * PktWorld: `http://pool.pkt.world`
-* Pktminers: `http://dalpool.pktminers.cash`
 * Srizbi: `http://pool.srizbi.com`
 * Flufpool: `http://noworries.tech/pool`
 
