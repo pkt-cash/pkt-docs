@@ -18,8 +18,8 @@ done from anywhere.
 ## How to Announcement mine
 
 You can either:
-* Install on your local machine, or
-* Intall the docker image
+* [Install on your local machine](#install-on-your-local-machine), or
+* [Intall the docker image](#install-the-docker-image)
 
 ### Install on your local machine
 
