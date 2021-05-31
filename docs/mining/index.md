@@ -17,13 +17,19 @@ done from anywhere.
 
 ## How to Announcement mine
 
-### Install the dependencies
+You can either:
+* Install on your local machine, or
+* Intall the docker image
+
+### Install on your local machine
+
+#### Install the dependencies
 
 * On Debian or Ubuntu: `sudo apt install gcc git`
 * On Fedora or RedHat: `sudo dnf install gcc git`
 * On Alpine Linux: `sudo apk add gcc git`
 
-#### Specifics for Azure App Service Linux
+##### Specifics for Azure App Service Linux
 When using [Azure App Service Linux](https://docs.microsoft.com/en-us/azure/app-service/overview#app-service-on-linux) you may need a special process.
 
 ```
@@ -42,29 +48,47 @@ rm ~/.bashrc
 rm ~/.profile
 ```
 
-### Install Rust
+#### Install Rust
 It is important to install Rust using rustup because packaged Rust is often out of date and
 compiling will fail. Run the following command *as the user who will be mining*.
 
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     
-#### Install Make
+##### Install Make
 
     apt install make    
 
-### Download PacketCrypt
+#### Download PacketCrypt
 
     git clone https://github.com/cjdelisle/packetcrypt_rs
 
-### Compile PacketCrypt
+#### Compile PacketCrypt
 
     cd packetcrypt_rs
     ~/.cargo/bin/cargo build --release
 
-### Begin Announcement Mining
+#### Begin Announcement Mining
 To begin mining, you will need the address of your wallet and you will need to choose a pool. You cannot mine into the electrum wallet. You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases). You cannot mine into the electrum wallet, so do not try.
 
     ./target/release/packetcrypt ann -p <your_wallet_address> http://your.pool.of.choice
+
+### Install the Docker image
+
+Installing the Docker image is easy.
+
+First, install [Docker](https://www.docker.com/)
+
+Then, install the [PKT Miner Docker image](https://hub.docker.com/r/backupbrain/packetcrypt) by running this command in your terminal or CMD:
+
+```bash
+$ docker pull backupbrain/packetcrypt
+```
+
+Then, pick a pool and mine. Make sure you have a wallet to mine into.
+
+```bash
+$ docker run backupbrain/packetcrypt ann -p <pkt_address> <pool_url>
+```
 
 ## Choosing a Mining Pool
 There are currently several mining pools:
