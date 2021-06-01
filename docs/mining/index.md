@@ -162,7 +162,7 @@ PacketCrypt is designed in such a way that a mining pool can double its effectiv
 
 * Doubling the total block mining computation effort
 * Doubling the total announcement mining computation effort, or
-* Dubling the amount of bandwidth between announcement miners and the pool
+* Doubling the amount of bandwidth between announcement miners and the pool
 
 The way that a pool operator limits the amount of bandwidth flowing into the pool, to prevent
 overloading of the network, is by setting what is known as the *announcement difficulty*. The
