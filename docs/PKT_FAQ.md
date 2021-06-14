@@ -7,7 +7,7 @@
 > PKT is a native mined coin based on an open source project. There are multiple companies in the PKT ecosystem but no company "behind PKT."
 
 + **What wallets available?**
-There are 2 main wallets for PKT, one is the pktwallet that is in the pktd github. The other wallet is PKT Electrum, which was developed as part of a Network Steward funded project. There is an ongoing project to develop a new wallet based on MatterFi / OpenTransactions. All of these wallets are open source so anyone who wants to continue development of these wallets is free to do so.
+> There are 2 main wallets for PKT, one is the pktwallet that is in the pktd github. The other wallet is PKT Electrum, which was developed as part of a Network Steward funded project. There is an ongoing project to develop a new wallet based on MatterFi / OpenTransactions. All of these wallets are open source so anyone who wants to continue development of these wallets is free to do so.
 
 + **What wallet do I use for mining?**	
 > For mining it's recommended to use the command line [PKTWallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/) due to the amount of mining transactions and it's ability to scale. If you use a Mac then you can also use the [PKT-Cash-Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases) for MacOS.
