@@ -346,8 +346,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 /* Header */
 header {
     padding: 12px 0;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-    height: 80px;
+    height: auto;
     position: sticky;
     top: 0;
     background-color: #fff;
@@ -363,12 +362,14 @@ header {
   @media (max-width: 600px) {
     header {
       padding: 15px 0;
-      height: 60px;
     }
   }
   
   .container-header {
-    margin: 0 80px;
+    width: 100%;
+    max-width: 1255px;
+    margin: 0 auto;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -393,6 +394,11 @@ header {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+  }
+  .header__logo img {
+	height: 45px;
+    width: auto;
+    margin-left: 5px;
   }
   
   @media (max-width: 800px) {
@@ -486,13 +492,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    padding: 10px 20px;
+    padding: 15px 46px;
     margin-left: 10px;
-  
-    font-size: 17px;
-    line-height: 35px;
-    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
     color: #fff;
     background-color: #3CADEF;
     border-radius: 34px;
