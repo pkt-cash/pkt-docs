@@ -17,18 +17,21 @@ done from anywhere.
 
 ## How to Announcement mine
 
-Pre-built packetcrypt binaries (for linux) or installation packages (for macos) and archives (for windows) can be downloaded from [packetcrypt_rs releases page](https://github.com/cjdelisle/packetcrypt_rs/releases/).
+Pre-built packetcrypt binaries (for linux) or installation packages (for macos) and archives (for windows) can be downloaded from [packetcrypt releases page](https://github.com/cjdelisle/packetcrypt_rs/releases/).
 
-For windows, download the zip archive suffixed with `-windows.zip` before extracting its content.
-For macos, download the package suffixed with `.pkg` before clicking on its icon in the Finder for installation.
-For linux, download the binary suffixed with `-linux_amd64` and rename it `packetcrypt`.
+ * For **windows**, download the zip archive suffixed with `-windows.zip`  
+ and extract its content.
+ * For **macos**, download the package suffixed with `.pkg`  
+ and click on its icon in the Finder for installation.
+ * For **linux**, download the binary suffixed with `-linux_amd64` 
+ and rename it `packetcrypt`.
 
 #### Begin Announcement Mining
 To begin mining, you will need the address of your wallet and you will need to choose a pool. You cannot mine into the electrum wallet. You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases). You cannot mine into the electrum wallet, so do not try.
 
     packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
     
-    or for windows
+    [or for windows]
 
     packetcrypt.exe ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
 

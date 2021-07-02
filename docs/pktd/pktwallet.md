@@ -8,24 +8,33 @@ but **electrum is not appropriate for mining**.
 ## Installation and setup
 
 ### Microsoft Windows
- - Download the most recent zip archive suffixed with `-windows.zip` available from [pktd releases page](https://github.com/pkt-cash/pktd/releases)(pktd-v1.3.1-windows.zip, for example)
- - Go to the `Downloads` directory (or where the archive as been saved)
+ - Download the most recent zip archive suffixed with `-windows.zip` available from   
+ [pktd releases page](https://github.com/pkt-cash/pktd/releases) 
+ 
+ For example: `pktd-v1.3.1-windows.zip`
+
+ - Go to the `Downloads` directory
  - Unarchive the content of the zip file
  - Open the command prompt
  - Type `cd Downloads`
- - Follow the instructions but
-   - In place of `./bin/pktwallet`, type `./bin/pktwallet*.exe`
-   - In place of `./bin/pktctl`, type `./bin/pktctl*.exe`
+ - Follow the instructions below but
+    - In place of `./bin/pktwallet`, type `./bin/pktwallet.exe`
+    - In place of `./bin/pktctl`, type `./bin/pktctl.exe`
 
 ### MacOS and Linux
- - Download one of the most recent packages available for linux or macos available from [pktd releases page](https://github.com/pkt-cash/pktd/releases)
+ - Download one of the most recent packages available for linux or macos from  
+ [pktd releases page](https://github.com/pkt-cash/pktd/releases)
   
-  For example and by considering the most recent packages available are those which have been pre-built for `pktd-v1.3.1`:
+  For example, for `pktd-v1.3.1` release:
 
-  For macos, after having downloaded `pktd-v1.3.1-macos.pkg`, click on the package icon in the Finder to install the wallet
+ - For **MacOS**, after having downloaded `pktd-v1.3.1-macos.pkg`,  
+install `pktwallet` and other utilities by clicking on the package icon in the Finder.
 
-  For linux and depending on your distribution `pktd-v1.3.1-linux.deb` (Debian or Ubuntu) or `pkt-v1.3.1-linux.rpm` (Fedora or RedHat) can be downloaded
-  before installing the wallet from the graphical user interface or the command-line.
+ - For **Linux**, after having downloaded one of the following packages:  
+     - `pktd-v1.3.1-linux.deb` (Debian or Ubuntu) or  
+     - `pktd-v1.3.1-linux.rpm` (Fedora or RedHat),  
+    install `pktwallet` and other utilities by clicking
+    on the appropriate package icon or running an installation command
 
 ## Creating a wallet
 To create a new PKT wallet, use the pktwallet --create command:
