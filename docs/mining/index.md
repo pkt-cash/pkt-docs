@@ -17,78 +17,24 @@ done from anywhere.
 
 ## How to Announcement mine
 
-You can either:
-* [Install on your local machine](#install-on-your-local-machine), or
-* [Intall the docker image](#install-the-docker-image)
+Pre-built packetcrypt binaries (for linux) or installation packages (for macos) and archives (for windows) can be downloaded from [packetcrypt_rs releases page](https://github.com/cjdelisle/packetcrypt_rs/releases/).
 
-### Install on your local machine
-
-#### Install the dependencies
-
-* On Debian or Ubuntu: `sudo apt install gcc git`
-* On Fedora or RedHat: `sudo dnf install gcc git`
-* On Alpine Linux: `sudo apk add gcc git`
-
-##### Specifics for Azure App Service Linux
-When using [Azure App Service Linux](https://docs.microsoft.com/en-us/azure/app-service/overview#app-service-on-linux) you may need a special process.
-
-```
-apt update
-apt install apt-utils
-apt upgrade
-apt install pkg-config
-apt install file
-apt install gcc git
-```
-
-On Azure, you may need to remove .bashrc and .profile to resolve [this build error](https://github.com/sodiumoxide/sodiumoxide/issues/460).
-
-```
-rm ~/.bashrc
-rm ~/.profile
-```
-
-#### Install Rust
-It is important to install Rust using rustup because packaged Rust is often out of date and
-compiling will fail. Run the following command *as the user who will be mining*.
-
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    
-##### Install Make
-
-    apt install make    
-
-#### Download PacketCrypt
-
-    git clone https://github.com/cjdelisle/packetcrypt_rs
-
-#### Compile PacketCrypt
-
-    cd packetcrypt_rs
-    ~/.cargo/bin/cargo build --release
+For windows, download the zip archive suffixed with `-windows.zip` before extracting its content.
+For macos, download the package suffixed with `.pkg` before clicking on its icon in the Finder for installation.
+For linux, download the binary suffixed with `-linux_amd64` and rename it `packetcrypt`.
 
 #### Begin Announcement Mining
 To begin mining, you will need the address of your wallet and you will need to choose a pool. You cannot mine into the electrum wallet. You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases). You cannot mine into the electrum wallet, so do not try.
 
-    ./target/release/packetcrypt ann -p <your_wallet_address> http://your.pool.of.choice
+    packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
+    
+    or for windows
 
-### Install the Docker image
+    packetcrypt.exe ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
 
-Installing the Docker image is easy.
+Announcement mining can be done into a single pool or multiple pools. When you announcement mine into multiple pools, you will be paid by each pool that you submit annoucements to.
 
-First, install [Docker](https://www.docker.com/)
-
-Then, install the [PKT Miner Docker image](https://hub.docker.com/r/backupbrain/packetcrypt) by running this command in your terminal or CMD:
-
-```bash
-$ docker pull backupbrain/packetcrypt
-```
-
-Then, pick a pool and mine. Make sure you have a wallet to mine into.
-
-```bash
-$ docker run backupbrain/packetcrypt ann -p <pkt_address> <pool_url>
-```
+pool_1 is the pool running the highest difficulty. If you notice problems, you can test listing the pools in a different order. The number of pools you mine into is at your discretion. If a pool is down or malfunctioning you will notice the pool is not mining at [100%] in your mining feed and you can choose to remove the under-performing or malfunctioning pool. 
 
 ## Choosing a Mining Pool
 There are currently several mining pools:
@@ -100,18 +46,6 @@ There are currently several mining pools:
 * Flufpool: `http://noworries.tech/pool`
 
 You should test our daily earnings on each pool to see which one is best. Your mining revenue depends non how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. 
-
-## Multi-Pool Announcement Mining
-Announcement mining can be done into a single pool or multiple pools. When you announcement mine into multiple pools, you will be paid by each pool that you submit annoucements to.
-
-If you want to mine into multiple pools, you will need to update your software to the packetcrypt develop branch, as follows:
-
-    git clone https://github.com/cjdelisle/packetcrypt_rs --branch develop
-    cd packetcrypt_rs
-    ~/.cargo/bin/cargo build --release
-    ./target/release/packetcrypt ann -p <your_wallet_address> pool_1 pool_2 pool_3 pool_4
-
-pool_1 is the pool running the highest difficulty. If you notice problems, you can test listing the pools in a different order. The number of pools you mine into is at your discretion. If a pool is down or malfunctioning you will notice the pool is not mining at [100%] in your mining feed and you can choose to remove the under-performing or malfunctioning pool. 
 
 ## Block Mining & Running a Pool
 Because each block miner must use as much bandwidth as all of the announcement miners *combined*,
