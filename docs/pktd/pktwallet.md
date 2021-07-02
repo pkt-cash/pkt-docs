@@ -6,19 +6,26 @@ For an easy-to-use wallet which works on Windows, Mac and Linux, see [PKT Electr
 but **electrum is not appropriate for mining**.
 
 ## Installation and setup
-### Microsoft Windows
-If you are on Windows:
 
-* Download [pktwallet.exe](https://drive.google.com/file/d/15H-kP3H7MiXS_C6no9PouoNaE7iYypUY/view?usp=sharing)
-* Download [pktctl.exe](https://drive.google.com/file/d/1ixKkHavB8C9Ny8JxJwwT8nIfJ4t9dI__/view?usp=sharing)
-* Open the command prompt
-* Type `cd Downloads`
-* Follow the instructions but
-  * In place of `./bin/pktwallet`, type `pktwallet*.exe`
-  * In place of `./bin/pktctl`, type `pktctl*.exe`
+### Microsoft Windows
+ - Download the most recent zip archive suffixed with `-windows.zip` available from [pktd releases page](https://github.com/pkt-cash/pktd/releases)(pktd-v1.3.1-windows.zip, for example)
+ - Go to the `Downloads` directory (or where the archive as been saved)
+ - Unarchive the content of the zip file
+ - Open the command prompt
+ - Type `cd Downloads`
+ - Follow the instructions but
+   - In place of `./bin/pktwallet`, type `./bin/pktwallet*.exe`
+   - In place of `./bin/pktctl`, type `./bin/pktctl*.exe`
 
 ### MacOS and Linux
-Follow the [installation](../#installation) process. Then once it is installed, you can create your wallet.
+ - Download one of the most recent packages available for linux or macos available from [pktd releases page](https://github.com/pkt-cash/pktd/releases)
+  
+  For example and by considering the most recent packages available are those which have been pre-built for `pktd-v1.3.1`:
+
+  For macos, after having downloaded `pktd-v1.3.1-macos.pkg`, click on the package icon in the Finder to install the wallet
+
+  For linux and depending on your distribution `pktd-v1.3.1-linux.deb` (Debian or Ubuntu) or `pkt-v1.3.1-linux.rpm` (Fedora or RedHat) can be downloaded
+  before installing the wallet from the graphical user interface or the command-line.
 
 ## Creating a wallet
 To create a new PKT wallet, use the pktwallet --create command:
