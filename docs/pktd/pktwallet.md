@@ -8,35 +8,39 @@ but **electrum is not appropriate for mining**.
 ## Installation and setup
 
 ### Microsoft Windows
- - Download the most recent zip archive suffixed with `-windows.zip` available from   
- [pktd releases page](https://github.com/pkt-cash/pktd/releases) 
- 
- For example: `pktd-v1.3.1-windows.zip`
 
- - Go to the `Downloads` directory
- - Unarchive the content of the zip file
- - Open the command prompt
- - Type `cd Downloads`
- - Follow the instructions below but
-    - In place of `./bin/pktwallet`, type `./bin/pktwallet.exe`
-    - In place of `./bin/pktctl`, type `./bin/pktctl.exe`
+- Download the most recent zip archive suffixed with `-windows.zip` available from  
+  [pktd releases page](https://github.com/pkt-cash/pktd/releases)
+
+For example: `pktd-v1.3.1-windows.zip`
+
+- Go to the `Downloads` directory
+- Unarchive the content of the zip file
+- Open the command prompt
+- Type `cd Downloads`
+- Follow the instructions below but
+  - In place of `./bin/pktwallet`, type `./bin/pktwallet.exe`
+  - In place of `./bin/pktctl`, type `./bin/pktctl.exe`
 
 ### MacOS and Linux
- - Download one of the most recent packages available for linux or macos from  
- [pktd releases page](https://github.com/pkt-cash/pktd/releases)
-  
-  For example, for `pktd-v1.3.1` release:
 
- - For **MacOS**, after having downloaded `pktd-v1.3.1-macos.pkg`,  
-install `pktwallet` and other utilities by clicking on the package icon in the Finder.
+- Download one of the most recent packages available for linux or macos from  
+  [pktd releases page](https://github.com/pkt-cash/pktd/releases)
 
- - For **Linux**, after having downloaded one of the following packages:  
-     - `pktd-v1.3.1-linux.deb` (Debian or Ubuntu) or  
-     - `pktd-v1.3.1-linux.rpm` (Fedora or RedHat),  
+For example, for `pktd-v1.3.1` release:
+
+- For **MacOS**, after having downloaded `pktd-v1.3.1-macos.pkg`,  
+  install `pktwallet` and other utilities by clicking on the package icon in the Finder.
+
+- For **Linux**, after having downloaded one of the following packages:
+  - `pktd-v1.3.1-linux.deb` (Debian or Ubuntu),
+  - `pktd-v1.3.1-linux.rpm` (Fedora or RedHat) or
+  - [pktd AUR package](https://aur.archlinux.org/packages/pktd) (Arch linux or Manjaro),  
     install `pktwallet` and other utilities by clicking
     on the appropriate package icon or running an installation command
 
 ## Creating a wallet
+
 To create a new PKT wallet, use the pktwallet --create command:
 
     ./bin/pktwallet --create
@@ -45,6 +49,7 @@ You will be prompted to follow a few steps, make sure you write your seed words 
 recover your funds even if your computer is damaged.
 
 ## Launching pktwallet
+
 After creating your wallet, you can launch pktwallet with:
 
     ./bin/pktwallet
@@ -59,6 +64,7 @@ Compare the height number in the log line (e.g. 702781) to the number in
 You may leave pktwallet running in the background or start it only when needed.
 
 ## Creating a new PKT address
+
 while pktwallet is running in the background (in another terminal window), use the following command:
 
     ./bin/pktctl --wallet getnewaddress
@@ -70,6 +76,7 @@ can use for receiving coins.
 forever so only use it when you actually need an address.
 
 ## Getting your balance
+
 You can check your current PKT balance using pktwallet, or you can check the balances of each of your
 addresses.
 
@@ -87,9 +94,9 @@ For more explanation of the meaning of the output of `getaddressbalances`, use:
 
     ./bin/pktctl --wallet help getaddressbalances
 
-
 ## Sending PKT
-You can send someone PKT using the `sendtoaddress` command, but first you must *unlock* your
+
+You can send someone PKT using the `sendtoaddress` command, but first you must _unlock_ your
 wallet for sending. In this example, we’re keeping the wallet unlocked for only 60 seconds, you can
 change the number at the end to your liking.
 
@@ -100,11 +107,12 @@ Then send cjd a 10 PKT tip:
     ./bin/pktctl --wallet sendtoaddress pkt1qt8xe7dwpelngtcpsgn5nkj3pwwdm7gf3l4auax 10
 
 ## Sending PKT privately using sendfrom
+
 Pktwallet gives you control over which addresses are used for making a payment. This means you can
 keep different PKT in your wallet separate, for example separating business transactions from personal
 transactions.
 
-**NOTE**: PKT is *not* a "privacy coin", so transactions are still shown in the blockchain
+**NOTE**: PKT is _not_ a "privacy coin", so transactions are still shown in the blockchain
 like with Bitcoin.
 
     ./bin/pktctl --wallet walletpassphrase <password you used when creating wallet> 60
@@ -120,20 +128,22 @@ addresses as the source of a payment. For example:
     ./bin/pktctl --wallet sendfrom <their address> 10 '["<your address>", "<your other address>"]'
 
 ## Sweeping an address
+
 With pktwallet, sending 0 PKT has a special significance that it will send "as much PKT as possible".
 To sweep `<old address>` address into `<new address>`, you can use the following command:
 
     ./bin/pktctl --wallet sendfrom <new address> 0 '["<old address>"]'
 
-**NOTE**: Sweeping an address will send *as much PKT as possible* which is not necessarily all PKT
+**NOTE**: Sweeping an address will send _as much PKT as possible_ which is not necessarily all PKT
 in that address, you may need to sweep multiple times before the address is empty, see Folding coins.
 
 ## Folding coins
+
 If you are the recipient of many transactions, you may not be able to spend all of them at once, just
 like someone who is paid in pennies would not be able to use their pennies to buy a car. To solve this
-issue, you can aggregate all of the coins which were paid to you by *folding*.
+issue, you can aggregate all of the coins which were paid to you by _folding_.
 
-Folding is sweeping an address *to itself*, for example:
+Folding is sweeping an address _to itself_, for example:
 
     ./bin/pktctl --wallet sendfrom <address> 0 '["<address>"]'
 
