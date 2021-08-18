@@ -78,6 +78,7 @@ Everything looks good - use ./bin/pktd to launch
 cd ~
 sudo add-apt-repository universe
 sudo apt install git
+sudo apt install make
 sudo apt install npm
 sudo npm cache clean -f
 sudo npm install -g n
