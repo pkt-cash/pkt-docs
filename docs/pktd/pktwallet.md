@@ -16,11 +16,12 @@ For example: `pktd-v1.3.1-windows.zip`
 
 - Go to the `Downloads` directory
 - Unarchive the content of the zip file
-- Open the command prompt
-- Type `cd Downloads`
+- Open the command prompt and navigate to the bin directory in the extracted archive
+    Example:
+      - Type `cd Downloads\pktd*\bin`
 - Follow the instructions below but
-  - In place of `./bin/pktwallet`, type `./bin/pktwallet.exe`
-  - In place of `./bin/pktctl`, type `./bin/pktctl.exe`
+  - In place of `./bin/pktwallet`, type `pktwallet.exe`
+  - In place of `./bin/pktctl`, type `pktctl.exe`
 
 ### MacOS and Linux
 
@@ -146,6 +147,8 @@ issue, you can aggregate all of the coins which were paid to you by _folding_.
 Folding is sweeping an address _to itself_, for example:
 
     ./bin/pktctl --wallet sendfrom <address> 0 '["<address>"]'
+
+**Windows Users**: pktctl.exe --wallet sendfrom <address> 0 [\"<address>\"]
 
 You will want to fold an address down until there are fewer than 100 unspent outputs, to see the number
 of unspent outputs check `outputcount` from `getaddressbalances` or go to the
