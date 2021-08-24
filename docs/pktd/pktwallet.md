@@ -148,7 +148,7 @@ Folding is sweeping an address _to itself_, for example:
 
     ./bin/pktctl --wallet sendfrom <address> 0 '["<address>"]'
 
-**Windows Users**: pktctl.exe --wallet sendfrom <address> 0 [\"<address>\"]
+**Windows Users**: pktctl.exe --wallet sendfrom <youraddress> 0 [\"<youraddress>\"]
 
 You will want to fold an address down until there are fewer than 100 unspent outputs, to see the number
 of unspent outputs check `outputcount` from `getaddressbalances` or go to the
