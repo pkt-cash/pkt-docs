@@ -160,8 +160,8 @@ You will want to enter in your this in your command terminal:
 
 `pktctl.exe --wallet walletpassphrase <yourwalletpassphrase> <seconds to leave open>`
 
-<yourwalletpassphrase> = your wallet's passphrase
-<seconds to leave open> = How long you want to leave your wallet open, in seconds.
+`<yourwalletpassphrase>` = your wallet's passphrase
+`<seconds to leave open>` = How long you want to leave your wallet open, in seconds.
 
 Example of code:
 	
