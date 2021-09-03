@@ -158,10 +158,11 @@ In the command terminal, navigate to the folder that holds pktcl.exe and run thi
 
 You will want to enter in your this in your command terminal:
 
-`pktctl.exe --wallet walletpassphrase <yourwalletpassphrase> <seconds to leave open>`
-`<yourwalletpassphrase>` = your wallet's passphrase
+`pktctl.exe --wallet walletpassphrase <yourwalletpassphrase> <seconds to leave open>`<br />
+`<yourwalletpassphrase>` = your wallet's passphrase<br />
 
-`<seconds to leave open>` = how long you want to leave your wallet open
+`<seconds to leave open>` = how long you want to leave your wallet open<br />
+
 Example of code:
 	
 `pktctl.exe --wallet walletpassphrase 1234 600`
