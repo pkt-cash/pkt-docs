@@ -148,7 +148,42 @@ Folding is sweeping an address _to itself_, for example:
 
     ./bin/pktctl --wallet sendfrom <address> 0 '["<address>"]'
 
-**Windows Users**:		`pktctl.exe --wallet sendfrom <address> 0 [\"<address>\"]`
+**Windows Users**:		
+
+Step one: Open your wallet
+
+In the command terminal, navigate to the folder that holds pktcl.exe and run this command.
+
+`cd <Path to the folder that holds pktcl.exe>`
+
+You will want to enter in your this in your command terminal:
+
+`pktctl.exe --wallet walletpassphrase <yourwalletpassphrase> <seconds to leave open>`<br />
+`<yourwalletpassphrase>` = your wallet's passphrase<br />
+
+`<seconds to leave open>` = how long you want to leave your wallet open<br />
+
+Example of code:
+	
+`pktctl.exe --wallet walletpassphrase 1234 600`
+
+You will know that it is working, for no errors will show. You will have a new line to enter in commands.
+
+Step 2: Fold coins
+
+Now you can enter in this command to fold your coins. You can do this in the same command termial that you have been using.
+	
+`pktctl.exe --wallet sendfrom <address> 0 [\"<address>\"]`
+
+You will know this is working, for you will get a transaction number. You can match this transaction number up in the pkt block explorer
+
+Or
+
+You can put your wallet number in the [PKT block explorer](https://explorer.pkt.cash/) and search for it. You will see the Transactions table.
+
+A Yellow circle means that the Transactions is taking place. Your balance will drop during this time.
+A Green circle means that the Transactions is complete. Your balance, will return to what is what is was before the folding occured.
+Noticed how your Unconsolidated Txns is lowered. This might take a few mintues for this action to happen.
 
 You will want to fold an address down until there are fewer than 100 unspent outputs, to see the number
 of unspent outputs check `outputcount` from `getaddressbalances` or go to the
