@@ -34,14 +34,14 @@ There is a PacketCrypt Docker image available, which can be used for announcemen
 
 To install:
 
-* Download and install [Docker](https://www.docker.com/) for your operating system.
+1) Download and install [Docker](https://www.docker.com/) for your operating system.
 
-* Download the PacketCrypt Docker image:
+2) Download the PacketCrypt Docker image:
 ```console
 $ docker pull backupbrain/packetcrypt
 ```
 
-* Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
+3) Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
 ```console
 $ packetcrypt
 ```
