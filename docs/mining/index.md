@@ -39,7 +39,6 @@ To install:
 ```console
 $ docker pull backupbrain/packetcrypt
 ```
-
 3. Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
 ```console
 $ packetcrypt
