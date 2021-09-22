@@ -112,3 +112,14 @@ footer > hr {
 .injected {
     display: none !important;
 }
+@media all and (max-width: 768px) {
+    pre, code {
+      display: inline-block;
+      max-width: 100%;
+      overflow: auto;
+    }
+    .header > .container-header {
+        margin: 0;
+        padding: 0 15px;
+    }
+  }

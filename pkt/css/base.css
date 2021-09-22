@@ -3,36 +3,42 @@
     src: url("../fonts/Poppins-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
+    font-display: block;
 }
 @font-face {
     font-family: "Pop";
     src: url("../fonts/Poppins-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
+    font-display: block;
 }
 @font-face {
     font-family: "Pop";
     src: url("../fonts/Poppins-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
+    font-display: block;
 }
 @font-face {
     font-family: "Pop";
     src: url("../fonts/Poppins-LightItalic.ttf") format("truetype");
     font-weight: 300;
     font-style: italic;
+    font-display: block;
 }
 @font-face {
     font-family: "TT Norms";
     src: url("../fonts/TTNorms-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
+    font-display: block;
 }
 @font-face {
     font-family: "TT Norms";
     src: url("../fonts/TTNorms-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
+    font-display: block;
 }
 
 html {
@@ -1277,3 +1283,11 @@ header {
       top: 0;
     }
   }
+
+@media all and (max-width: 768px) {
+  pre, code {
+    display: inline-block;
+    max-width: 100%;
+    overflow: auto;
+  }
+}
