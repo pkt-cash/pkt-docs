@@ -83,3 +83,16 @@ No funds have ever been deployed except to fund projects which were proposed by 
 																								
 + **What is a Cloud ISP?**
 > There is [an explanation video](https://twitter.com/pkt_cash/status/1374050101094617091?s=21) about Cloud ISPs on Twitter. The role of a Cloud ISP is to perform the technical and administrative aspects of internet service so that the aspects of infrastructure operation can be done by individuals, small businesses and community groups.
+
++ **PKT Cube FAQ**
++ 
+> * Can you mine into the wallet with other devices -> YES
+> * Can you make the device mine to another wallet -> NO
+> * The device doesn't work. -> Is it plugged in?
+> *  When pressing the power button, is there light around the button? 
+	* NO -> hardware fault, RMA
+	* There are 2 lights above the ethernet port, are they lit and flashing? -> YES; Cube is up and running.
+> * Can the device uses all of the bandwidth or how to reduce said bandwidth? -> That feature is coming soon.
+> * Can one pair multiple devices with the Pkt Cube? -> 
+> * We can I expect the delivary of the Pkt Cube? -> It takes 30 days for shipping from the original purchase date.
+> * 
