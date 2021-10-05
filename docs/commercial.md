@@ -15,5 +15,5 @@ Make a [Pull Request](https://docs.github.com/en/github/collaborating-with-pull-
 Buy a PKT Cube which will mine PKT with your unused internet and provides easy-to-use PkteerOS wallet.
 
 ## Hosting
-### [Space-hosting.net](https://space-hosting.net)
+### [Space-hosting.net](https://space-hosting.net/pktcash)
 Mining servers for rent
