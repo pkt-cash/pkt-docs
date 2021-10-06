@@ -17,3 +17,6 @@ Buy a PKT Cube which will mine PKT with your unused internet and provides easy-t
 ## Hosting
 ### [Space-hosting.net](https://space-hosting.net/pktcash)
 Mining servers for rent
+
+## PKT Cloud Mining Service
+### [AMAPOOL.com](https://amapool.com/)
