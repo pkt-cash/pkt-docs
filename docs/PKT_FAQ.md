@@ -83,3 +83,11 @@ No funds have ever been deployed except to fund projects which were proposed by 
 																								
 + **What is a Cloud ISP?**
 > There is [an explanation video](https://twitter.com/pkt_cash/status/1374050101094617091?s=21) about Cloud ISPs on Twitter. The role of a Cloud ISP is to perform the technical and administrative aspects of internet service so that the aspects of infrastructure operation can be done by individuals, small businesses and community groups.
+
+## Commercial FAQ
+### How can I contact the PKT Team
+> You *are* the PKT team, PKT is a fully decentralized project like Bitcoin, so everyone is the team. The bad news is there is no central authority who can write you a check, but the good news is there are a few businesses in the PKT ecosystem who might be prepared to buy your services. See [PKT Commercial](https://docs.pkt.cash/en/latest/commercial/) for a (non-exhaustive) list.
+
+### Can I build X with PKT?
+> *YES*, the PKT community encourages all types of (legal, responsible) business activity in the PKT ecosystem. The [ODAPP](https://odapp.io/) bridge was created by a community member and was not in the original PKT vision but this bridge is now an important part of the infrastructure of the PKT ecosystem. You can also build your commercial venture and the we in the PKT community will do what we can to help you be successful.
+
