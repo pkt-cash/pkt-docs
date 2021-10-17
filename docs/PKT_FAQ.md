@@ -104,10 +104,10 @@ No funds have ever been deployed except to fund projects which were proposed by 
 
 ## Communication
 
-## Has any branding or marketing already been completed?
+### Has any branding or marketing already been completed?
 >PKT is a decentralized project so there is no official brand for PKT, however the website pkt.cash, logos, and other materials were developed as part of a Network Steward funded project and are usable under the Creative Commons license.
 
-## Are any brand ambassadors already engaged?
+### Are any brand ambassadors already engaged?
 > PKT is not a centralized project so anybody can be an ambassador. There are a number of companies and initiatives which currently exist in the PKT ecosystem including AnodeVPN and Pkt Pal.
 
 
