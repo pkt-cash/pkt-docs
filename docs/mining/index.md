@@ -80,7 +80,7 @@ There are currently several mining pools:
 - Srizbi: `http://pool.srizbi.com`
 - Pktcoin: `http://pktco.in`
 
-You should test our daily earnings on each pool to see which one is best. Your mining revenue depends non how much each pool allocates towards announcement miners as well as how much hardware they are using in-house.
+You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house.
 
 ## Block Mining & Running a Pool
 
