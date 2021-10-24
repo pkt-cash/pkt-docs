@@ -102,12 +102,12 @@ Before you can begin using PKT, you need to setup your wallet, this means writin
 
 ## Advanced usage
 ### Recover from seed
-You can recover a PKT Electrum wallet from the seed you were given when you set it up. To do this follow the same instructions as for any other Electrum wallet: https://bitcoinelectrum.com/restoring-your-standard-wallet-from-seed/
+You can recover a PKT Electrum wallet from the seed you were given when you set it up. To do this follow the same instructions as for any other Electrum wallet: <https://bitcoinelectrum.com/restoring-your-standard-wallet-from-seed/>
 
 Note that recovery from seed will **not** work to import addresses from other wallets such as a Gridnode.
 
 ### Multi-signature
-Setting up multi-signature in PKT Electrum is the same as with Bitcoin Electrum so you can follow this tutorial: https://electrum.readthedocs.io/en/latest/multisig.html
+Setting up multi-signature in PKT Electrum is the same as with Bitcoin Electrum so you can follow this tutorial: <https://electrum.readthedocs.io/en/latest/multisig.html>
 
 
 ## How it works

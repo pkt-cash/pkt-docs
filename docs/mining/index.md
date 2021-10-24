@@ -17,6 +17,7 @@ done from anywhere.
 
 ## How to Announcement mine
 
+### Installing from source
 Pre-built packetcrypt binaries (for linux) or installation packages (for macos) and archives (for windows) can be downloaded from [packetcrypt releases page](https://github.com/cjdelisle/packetcrypt_rs/releases/).
 
 - For **windows**, download the zip archive suffixed with `-windows.zip`  
@@ -26,6 +27,34 @@ Pre-built packetcrypt binaries (for linux) or installation packages (for macos) 
 - For **linux**, download the binary suffixed with `-linux_amd64`
   and rename it `packetcrypt`.
 - - If you're on Arch linux or Manjaro, you can install the [packetcrypt AUR package](https://aur.archlinux.org/packages/packetcrypt)
+
+### Deploying a Docker Image
+
+There is a PacketCrypt Docker image available, which can be used for announcement mining.
+
+To install:
+
+1) Download and install [Docker](https://www.docker.com/) for your operating system.
+
+2) Download the PacketCrypt Docker image:
+```console
+$ docker pull backupbrain/packetcrypt
+```
+
+3) Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
+```console
+$ packetcrypt
+```
+with this command to run PacketCrypt from Docker:
+```command
+$ docker run backupbrain/packetcrypt
+```
+The final command will be formatted like this:
+```console
+$ docker run backupbrain/packetcrypt ann -p <your_wallet_address> <pool_1>
+```
+
+More information can be found at the [PacketCrypt DockerHub page](https://hub.docker.com/r/backupbrain/packetcrypt)
 
 #### Begin Announcement Mining
 
@@ -51,7 +80,7 @@ There are currently several mining pools:
 - Srizbi: `http://pool.srizbi.com`
 - Pktcoin: `http://pktco.in`
 
-You should test our daily earnings on each pool to see which one is best. Your mining revenue depends non how much each pool allocates towards announcement miners as well as how much hardware they are using in-house.
+You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house.
 
 ## Block Mining & Running a Pool
 

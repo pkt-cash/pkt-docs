@@ -171,6 +171,7 @@ For example:
 
     ./bin/pktctl --wallet sendfrom <address> 0 '["<address>"]'
 
+
 **Windows:**  
 >`pktctl.exe --wallet sendfrom <address> 0 [\"<address>\"]`
 
