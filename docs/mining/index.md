@@ -73,14 +73,22 @@ pool_1 is the pool running the highest difficulty. If you notice problems, you c
 ## Choosing a Mining Pool
 
 There are currently several mining pools:
-
-- Pkteer: `http://pool.pkteer.com`
 - PKTPool: `http://pool.pktpool.io`
 - PktWorld: `http://pool.pkt.world`
 - Srizbi: `http://pool.srizbi.com`
+- Pkteer: `http://pool.pkteer.com`
 - Pktcoin: `http://pktco.in`
 
-You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house.
+Currently winning blocks:
+- PKTPool: `http://pool.pktpool.io`
+- PktWorld: `http://pool.pkt.world`
+- Srizbi: `http://pool.srizbi.com`
+
+Not currently winning blocks:
+- Pkteer: `http://pool.pkteer.com`
+- Pktcoin: `http://pktco.in`
+
+You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks, pointless to do so. 
 
 ## Block Mining & Running a Pool
 
