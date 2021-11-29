@@ -94,7 +94,7 @@ Test servers for pool orders:
 1. Srizbi, PKTPool, PktWorld: http://pkt.world/explorer?wallet=pkt1qae8h2u4mtnnud609yy3xtc6tfjwh5em2gne5ec&minutes=60
 2. PKTPool, PktWorld, Srizbi: http://pkt.world/explorer?wallet=pkt1qcqxkc8m3hpgjqpuyz2f9nwt3204qkfy9yk3hpa&minutes=60
 3. PktWorld, PKTPool, Srizbi: http://pkt.world/explorer?wallet=pkt1q4eq4qampyx36prc9q4jq5x6ltc9hzu4qehtnxm&minutes=60
-4. PktWorld, PKTPool: http://pkt.world/explorer?wallet=pkt1q4eq4qampyx36prc9q4jq5x6ltc9hzu4qehtnxm&minutes=60
+4. PktWorld, PKTPool: http://pkt.world/explorer?wallet=pkt1qrummylfd5hmjak6ggknpy7gw35t3ts6axw2qyh&minutes=60
 
 ## Block Mining & Running a Pool
 
