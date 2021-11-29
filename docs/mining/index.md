@@ -70,33 +70,27 @@ Announcement mining can be done into a single pool or multiple pools. When you a
 
 pool_1 is the pool running the highest difficulty. If you notice problems, you can test listing the pools in a different order. The number of pools you mine into is at your discretion. If a pool is down or malfunctioning you will notice the pool is not mining at [100%] in your mining feed and you can choose to remove the under-performing or malfunctioning pool.
 
-## Choosing a Mining Pool
+## Choosing Pools to mine in
 
-There are currently several mining pools:
-* PKTPool: `http://pool.pktpool.io`
-* PktWorld: `http://pool.pkt.world`
-* Srizbi: `http://pool.srizbi.com`
-* Pkteer: `http://pool.pkteer.com`
-* Pktcoin: `http://pktco.in`
+You can mine in as many pools as you have the bandwidth to supply. The same data will be uploaded so your CPU is only used once. Currently the pools which are active and winning blocks include:
 
-Currently winning blocks:
 * PKTPool: `http://pool.pktpool.io`
 * PktWorld: `http://pool.pkt.world`
 * Srizbi: `http://pool.srizbi.com`
 
-Not currently winning blocks:
+
+In additionn, some more pools are in experimentation or dorment, you may try mining with them if you have extra bandwidth:
+
 * Pkteer: `http://pool.pkteer.com`
 * Pktcoin: `http://pktco.in`
 
 You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks, pointless to do so. 
 
 Test servers for pool orders:
+
 * Srizbi, PKTPool, PktWorld: [Mining statistics for S, P, W](http://pkt.world/explorer?wallet=pkt1qae8h2u4mtnnud609yy3xtc6tfjwh5em2gne5ec&minutes=60)
-
 * PKTPool, PktWorld, Srizbi: [Mining statistics for P, W, S](http://pkt.world/explorer?wallet=pkt1qcqxkc8m3hpgjqpuyz2f9nwt3204qkfy9yk3hpa&minutes=60)
-
 * PktWorld, PKTPool, Srizbi: [Mining statistics for W, P, S](http://pkt.world/explorer?wallet=pkt1q4eq4qampyx36prc9q4jq5x6ltc9hzu4qehtnxm&minutes=60)
-
 * PktWorld, PKTPool: [Mining statistics for W, P](http://pkt.world/explorer?wallet=pkt1qrummylfd5hmjak6ggknpy7gw35t3ts6axw2qyh&minutes=60)
 
 ## Block Mining & Running a Pool
