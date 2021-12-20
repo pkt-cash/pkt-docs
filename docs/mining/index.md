@@ -86,13 +86,6 @@ In additionn, some more pools are in experimentation or dorment, you may try min
 
 You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks, pointless to do so. 
 
-Test servers for pool orders:
-
-* Srizbi, PKTPool, PktWorld: [Mining statistics for S, P, W](http://pkt.world/explorer?wallet=pkt1qae8h2u4mtnnud609yy3xtc6tfjwh5em2gne5ec&minutes=60)
-* PKTPool, PktWorld, Srizbi: [Mining statistics for P, W, S](http://pkt.world/explorer?wallet=pkt1qcqxkc8m3hpgjqpuyz2f9nwt3204qkfy9yk3hpa&minutes=60)
-* PktWorld, PKTPool, Srizbi: [Mining statistics for W, P, S](http://pkt.world/explorer?wallet=pkt1q4eq4qampyx36prc9q4jq5x6ltc9hzu4qehtnxm&minutes=60)
-* PktWorld, PKTPool: [Mining statistics for W, P](http://pkt.world/explorer?wallet=pkt1qrummylfd5hmjak6ggknpy7gw35t3ts6axw2qyh&minutes=60)
-
 ## Block Mining & Running a Pool
 
 Because each block miner must use as much bandwidth as all of the announcement miners _combined_,
