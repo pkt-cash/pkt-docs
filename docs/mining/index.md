@@ -38,7 +38,7 @@ To install:
 
 2) Download the PacketCrypt Docker image:
 ```console
-$ docker pull backupbrain/packetcrypt
+$ docker pull thomasjp0x42/packetcrypt
 ```
 
 3) Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
@@ -47,14 +47,14 @@ $ packetcrypt
 ```
 with this command to run PacketCrypt from Docker:
 ```command
-$ docker run backupbrain/packetcrypt
+$ docker run thomasjp0x42/packetcrypt
 ```
 The final command will be formatted like this:
 ```console
-$ docker run backupbrain/packetcrypt ann -p <your_wallet_address> <pool_1>
+$ docker run thomasjp0x42/packetcrypt ann -p <your_wallet_address> <pool_1>
 ```
 
-More information can be found at the [PacketCrypt DockerHub page](https://hub.docker.com/r/backupbrain/packetcrypt)
+More information can be found at the [PacketCrypt DockerHub page](https://hub.docker.com/r/thomasjp0x42/packetcrypt)
 
 #### Begin Announcement Mining
 
