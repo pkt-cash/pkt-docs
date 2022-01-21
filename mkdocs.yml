@@ -22,6 +22,7 @@ nav:
   - Code of Conduct: code_of_conduct.md
   - Commercial: commercial.md
   - Useful Tools: useful_tools.md
+  - Communication: communication.md
 
 markdown_extensions:
   - admonition
