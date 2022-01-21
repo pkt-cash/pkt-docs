@@ -100,11 +100,11 @@ packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4] -t 4
 ```
 
 #### Limit Bandwidth Usage
-Bandwidth usage is directly related to two main factors:
-1. Mining difficulty of the primary pool (the first pool listed in Packetcrypt pool configuration)
-- A lower difficulty means higher bandwidth usage
-2. The number of pools mined
-- Packetcrypt will send the same Announcements to each pool mined
+Bandwidth usage is directly related to two main factors:  
+1) Mining difficulty of the primary pool (the first pool listed in Packetcrypt pool configuration)  
+- A lower difficulty means higher bandwidth usage  
+2) The number of pools mined  
+- Packetcrypt will send the same Announcements to each pool mined  
 
 Bandwidth usage can therefore be limited by selecting a higher difficulty pool as the primary pool and/or by mining to fewer pools.
 
