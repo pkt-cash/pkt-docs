@@ -66,7 +66,7 @@ To begin mining, you will need the address of your wallet and you will need to c
 
     packetcrypt.exe ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
 
-Announcement mining can be done into a single pool or multiple pools. When you announcement mine into multiple pools, you will be paid by each pool that you submit annoucements to.
+Announcement mining can be done into a single pool or multiple pools. When you announcement mine into multiple pools, you will be paid by each pool that you submit announcements to.
 
 pool_1 is the pool running the highest difficulty. If you notice problems, you can test listing the pools in a different order. The number of pools you mine into is at your discretion. If a pool is down or malfunctioning you will notice the pool is not mining at [100%] in your mining feed and you can choose to remove the under-performing or malfunctioning pool.
 
@@ -76,13 +76,13 @@ You can mine in as many pools as you have the bandwidth to supply. The same data
 
 * PKTPool: `http://pool.pktpool.io`
 * PktWorld: `http://pool.pkt.world`
-* Srizbi: `http://pool.srizbi.com`
+* Srizbi: `https://stratum.zetahash.com/`
+* Pktco.in: `http://pool.pktco.in`
 
 
-In additionn, some more pools are in experimentation or dorment, you may try mining with them if you have extra bandwidth:
+In addition, some more pools are in experimentation or dormant, you may try mining with them if you have extra bandwidth:
 
 * Pkteer: `http://pool.pkteer.com`
-* Pktcoin: `http://pktco.in`
 
 You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks, pointless to do so. 
 
@@ -188,7 +188,7 @@ level of utility value which is based on the amount of work that was done by the
 
 The effective difficulty of an announcement starts off as the actual difficulty of the work done to
 mine it and then decreases by half every block-period until it is less than 1 and the announcement
-is nolonger usable for mining.
+is no longer usable for mining.
 
 The block mining software selects a subset of announcements which which will give it the best
 power multiplier based on the PacketCrypt algorithm:
