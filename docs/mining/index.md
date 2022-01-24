@@ -86,6 +86,28 @@ In addition, some more pools are in experimentation or dormant, you may try mini
 
 You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks, pointless to do so. 
 
+## Limiting System Resources
+
+Limiting the system resources available to Packetcrypt may negatively effect your mining power but can be useful to conserve resources for other processess.
+
+#### Limit CPU Usage
+Announcement mining is a resource intensive process. By default, Packetcrypt will use 100% of the available CPU resources. CPU usage can be limited by assigning a limited number of threads to packetcrypt using the ```-t``` parameter.
+
+Example of assigning four (4) threads to Packetcrypt:
+
+```
+packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4] -t 4
+```
+
+#### Limit Bandwidth Usage
+Bandwidth usage is directly related to two main factors:  
+1) Mining difficulty of the primary pool (the first pool listed in Packetcrypt pool configuration)  
+- A lower difficulty means higher bandwidth usage  
+2) The number of pools mined  
+- Packetcrypt will send the same Announcements to each pool mined  
+
+Bandwidth usage can therefore be limited by selecting a higher difficulty pool as the primary pool and/or by mining to fewer pools.
+
 ## Block Mining & Running a Pool
 
 Because each block miner must use as much bandwidth as all of the announcement miners _combined_,
