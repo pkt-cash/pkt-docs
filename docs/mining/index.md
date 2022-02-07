@@ -18,6 +18,7 @@ done from anywhere.
 ## How to Announcement mine
 
 ### Installing from source
+
 Pre-built packetcrypt binaries (for linux) or installation packages (for macos) and archives (for windows) can be downloaded from [packetcrypt releases page](https://github.com/cjdelisle/packetcrypt_rs/releases/).
 
 - For **windows**, download the zip archive suffixed with `-windows.zip`  
@@ -34,22 +35,30 @@ There is a PacketCrypt Docker image available, which can be used for announcemen
 
 To install:
 
-1) Download and install [Docker](https://www.docker.com/) for your operating system.
+1. Download and install [Docker](https://www.docker.com/) for your operating system.
 
-2) Download the PacketCrypt Docker image:
+2. Download the PacketCrypt Docker image:
+
 ```console
 $ docker pull thomasjp0x42/packetcrypt
 ```
 
-3) Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
+There's also available a PacketCrypt Docker image built without the portable flag (`--no-portable`) which may increase the performance of the announcement mining while reducing CPU compatibility. Image is available at `thomasjp0x42/packetcrypt-amd64`.
+
+3. Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
+
 ```console
 $ packetcrypt
 ```
+
 with this command to run PacketCrypt from Docker:
+
 ```command
 $ docker run thomasjp0x42/packetcrypt
 ```
+
 The final command will be formatted like this:
+
 ```console
 $ docker run thomasjp0x42/packetcrypt ann -p <your_wallet_address> <pool_1>
 ```
@@ -74,24 +83,24 @@ pool_1 is the pool running the highest difficulty. If you notice problems, you c
 
 You can mine in as many pools as you have the bandwidth to supply. The same data will be uploaded so your CPU is only used once. Currently the pools which are active and winning blocks include:
 
-* PKTPool: `http://pool.pktpool.io`
-* PktWorld: `http://pool.pkt.world`
-* Srizbi: `https://stratum.zetahash.com/`
-* Pktco.in: `http://pool.pktco.in`
-
+- PKTPool: `http://pool.pktpool.io`
+- PktWorld: `http://pool.pkt.world`
+- Srizbi: `https://stratum.zetahash.com/`
+- Pktco.in: `http://pool.pktco.in`
 
 In addition, some more pools are in experimentation or dormant, you may try mining with them if you have extra bandwidth:
 
-* Pkteer: `http://pool.pkteer.com`
+- Pkteer: `http://pool.pkteer.com`
 
-You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks, pointless to do so. 
+You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks, pointless to do so.
 
 ## Limiting System Resources
 
 Limiting the system resources available to Packetcrypt may negatively effect your mining power but can be useful to conserve resources for other processess.
 
 #### Limit CPU Usage
-Announcement mining is a resource intensive process. By default, Packetcrypt will use 100% of the available CPU resources. CPU usage can be limited by assigning a limited number of threads to packetcrypt using the ```-t``` parameter.
+
+Announcement mining is a resource intensive process. By default, Packetcrypt will use 100% of the available CPU resources. CPU usage can be limited by assigning a limited number of threads to packetcrypt using the `-t` parameter.
 
 Example of assigning four (4) threads to Packetcrypt:
 
@@ -100,11 +109,16 @@ packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4] -t 4
 ```
 
 #### Limit Bandwidth Usage
-Bandwidth usage is directly related to two main factors:  
-1) Mining difficulty of the primary pool (the first pool listed in Packetcrypt pool configuration)  
-- A lower difficulty means higher bandwidth usage  
-2) The number of pools mined  
-- Packetcrypt will send the same Announcements to each pool mined  
+
+Bandwidth usage is directly related to two main factors:
+
+1. Mining difficulty of the primary pool (the first pool listed in Packetcrypt pool configuration)
+
+- A lower difficulty means higher bandwidth usage
+
+2. The number of pools mined
+
+- Packetcrypt will send the same Announcements to each pool mined
 
 Bandwidth usage can therefore be limited by selecting a higher difficulty pool as the primary pool and/or by mining to fewer pools.
 
