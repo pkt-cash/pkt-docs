@@ -28,6 +28,8 @@
 
   13) Spamming will result in being banned.
 
+  14) No trolling - No antagonizing people or the any of the PKT chats by deliberately posting inflammatory, irrelevant, or offensive comments, images, memes, stickers or other disruptive content. If it doesn't relate to PKT don't post it or you will be banned.
+
 ## Contact people
 If someone has made you feel unsafe or unwelcome, please contact one of the admins of the group.
 We will do our best to address your matter quickly and with discretion.
