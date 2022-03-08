@@ -81,18 +81,25 @@ pool_1 is the pool running the highest difficulty. If you notice problems, you c
 
 ## Choosing Pools to mine in
 
-You can mine in as many pools as you have the bandwidth to supply. The same data will be uploaded so your CPU is only used once. Currently the pools which are active and winning blocks include:
+You can mine in as many pools as you have the bandwidth to supply. The same data will be uploaded so your CPU is only used once. Currently the pools which are regularly winning blocks include:
 
 - PKTPool: `http://pool.pktpool.io`
 - PktWorld: `http://pool.pkt.world`
-- Srizbi: `https://stratum.zetahash.com/`
-- Pktco.in: `http://pool.pktco.in`
+- Zetahash/Srizbi: `https://stratum.zetahash.com/`
 
-In addition, some more pools are in experimentation or dormant, you may try mining with them if you have extra bandwidth:
+If you have bandwidth to spare, you may wish to consider mining with some or all of the new/experimental mining pools listed below. New pools require support from the mining community (in the form of announcements) in order to test their infrastructure and begin to win blocks.
 
+- Distributed Ledger Pool: `http://pool-pkt.dlinodes.com/`
+- K1m3r4: `http://pool.k1m3r4.com/`
+- Oeuf2: `http://oeuf2pool.xyz`
+- Pktco.in: `http://pktco.in`
+- Pkt Digger: `http://p.master.pktdigger.com/`
+- Pkthash: `https://pool.pkthash.com`
 - Pkteer: `http://pool.pkteer.com`
 
-You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks, pointless to do so.
+(Check the relevant channels on Discord for current pool statuses)
+
+You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks.
 
 ## Limiting System Resources
 
@@ -112,13 +119,13 @@ packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4] -t 4
 
 Bandwidth usage is directly related to two main factors:
 
-1. Mining difficulty of the primary pool (the first pool listed in Packetcrypt pool configuration)
+1 - Mining difficulty of the primary pool (the first pool listed in Packetcrypt pool configuration)
 
-- A lower difficulty means higher bandwidth usage
++ A lower difficulty means higher bandwidth usage
 
-2. The number of pools mined
+2 - The number of pools mined
 
-- Packetcrypt will send the same Announcements to each pool mined
++ Packetcrypt will send the same Announcements to each pool mined
 
 Bandwidth usage can therefore be limited by selecting a higher difficulty pool as the primary pool and/or by mining to fewer pools.
 
