@@ -89,7 +89,6 @@ You can mine in as many pools as you have the bandwidth to supply. The same data
 
 If you have bandwidth to spare, you may wish to consider mining with some or all of the new/experimental mining pools listed below. New pools require support from the mining community (in the form of announcements) in order to test their infrastructure and begin to win blocks.
 
-- Distributed Ledger Pool: `http://pool-pkt.dlinodes.com/`
 - K1m3r4: `http://pool.k1m3r4.com/`
 - Oeuf2: `http://oeuf2pool.xyz`
 - Pktco.in: `http://pktco.in`
