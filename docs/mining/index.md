@@ -83,6 +83,7 @@ pool_1 is the pool running the highest difficulty. If you notice problems, you c
 
 You can mine in as many pools as you have the bandwidth to supply. The same data will be uploaded so your CPU is only used once. Currently the pools which are regularly winning blocks include:
 
+- Pkteer: `http://pool.pkteer.com`
 - PKTPool: `http://pool.pktpool.io`
 - PktWorld: `http://pool.pkt.world`
 - Zetahash/Srizbi: `https://stratum.zetahash.com/`
@@ -94,7 +95,6 @@ If you have bandwidth to spare, you may wish to consider mining with some or all
 - Pktco.in: `http://pktco.in`
 - Pkt Digger: `http://p.master.pktdigger.com/`
 - Pkthash: `https://pool.pkthash.com`
-- Pkteer: `http://pool.pkteer.com`
 
 (Check the relevant channels on Discord for current pool statuses)
 
