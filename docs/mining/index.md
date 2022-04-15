@@ -67,13 +67,53 @@ More information can be found at the [PacketCrypt DockerHub page](https://hub.do
 
 #### Begin Announcement Mining
 
-To begin mining, you will need the address of your wallet and you will need to choose a pool. You cannot mine into the electrum wallet. You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases). You cannot mine into the electrum wallet, so do not try.
+!!! danger "Important"
+    **You cannot mine into the electrum wallet**, You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/), the [Pkt.World Wallet](https://www.pkt.world/wallet) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases) .
+
+To begin mining, you will need the address of your wallet and you will need to choose a pool.
+
+There are two ways to configure the announcement miner; by using CLI parameters or by using a configuration file:
+
+**Using the CLI**
 
     packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
 
     [or for windows]
 
     packetcrypt.exe ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
+
+**Using a Configuration File**
+
+A configuration file must be in JSON format. The file can be loaded from the local filesystem or from a web-accessible location.
+
+Any CLI parameters used will overide the corresponding settings in the configuration file.
+
+Example config.json:
+
+```
+{
+  "payment_addr": "<your_wallet_address>",
+  "pools": [
+    "pool_1",
+    "pool_2",
+    "pool_3",
+    "pool_4"
+  ]
+}
+```
+    packetcrypt ann -c "./config.json"
+
+    [or]
+
+    packetcrypt ann -c "https://example.com/config.json"
+
+    [or for windows]
+
+    packetcrypt.exe ann -c "./config.json"
+
+    [or]
+
+    packetcrypt.exe ann -c "https://example.com/config.json"
 
 Announcement mining can be done into a single pool or multiple pools. When you announcement mine into multiple pools, you will be paid by each pool that you submit announcements to.
 
@@ -105,12 +145,20 @@ Limiting the system resources available to Packetcrypt may negatively effect you
 
 #### Limit CPU Usage
 
-Announcement mining is a resource intensive process. By default, Packetcrypt will use 100% of the available CPU resources. CPU usage can be limited by assigning a limited number of threads to packetcrypt using the `-t` parameter.
+Announcement mining is a resource intensive process. By default, Packetcrypt will use 100% of the available CPU resources. CPU usage can be limited by assigning a limited number of threads to packetcrypt using the `-t` CLI parameter or `"threads"` key if using a configuration file.
 
 Example of assigning four (4) threads to Packetcrypt:
 
 ```
 packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4] -t 4
+```
+
+or
+
+```
+{
+  "threads" 4
+}
 ```
 
 #### Limit Bandwidth Usage
