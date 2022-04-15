@@ -67,13 +67,50 @@ More information can be found at the [PacketCrypt DockerHub page](https://hub.do
 
 #### Begin Announcement Mining
 
-To begin mining, you will need the address of your wallet and you will need to choose a pool. You cannot mine into the electrum wallet. You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases). You cannot mine into the electrum wallet, so do not try.
+To begin mining, you will need the address of your wallet and you will need to choose a pool. **You cannot mine into the electrum wallet**. You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases). You cannot mine into the electrum wallet, so do not try.
+
+There are two ways to configure the announcement miner; by using CLI arguments or by using a configuration file:
+
+**Using the CLI**
 
     packetcrypt ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
 
     [or for windows]
 
     packetcrypt.exe ann -p <your_wallet_address> pool_1 [pool_2 pool_3 pool_4]
+
+**Using a Configuration File**
+
+A configuration file must be in JSON format. The file can be loaded from the local filesystem or from a web-accessible location.
+
+Any CLI arguments used will overide the corresponding settings in the configuration file.
+
+Example config.json:
+
+```
+{
+  "payment_addr": "<your_wallet_address>",
+  "pools": [
+    "pool_1",
+    "pool_2",
+    "pool_3",
+    "pool_4"
+  ]
+}
+```
+    packetcrypt ann -c "./config.json"
+
+    [or]
+
+    packetcrypt ann -c "https://example.com/config.json"
+
+    [or for windows]
+
+    packetcrypt.exe ann -c "./config.json"
+
+    [or]
+
+    packetcrypt.exe ann -c "https://example.com/config.json"
 
 Announcement mining can be done into a single pool or multiple pools. When you announcement mine into multiple pools, you will be paid by each pool that you submit announcements to.
 
