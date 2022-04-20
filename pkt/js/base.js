@@ -226,3 +226,15 @@ var keyCodes = {
   221: "&rsqb;",
   222: "&apos;",
 };
+
+$(document).ready(function() {
+  $('#toggle_nav').on('click', function(){
+    $(this).toggleClass('active');
+    $('.header .c-navigation__top').slideToggle();
+    $('.header .header__nav').toggleClass('active').slideToggle();
+    $('body').toggleClass('mobile_active');
+  });
+  $('.header .header__nav ul li a.dropdown').on('click', function(){
+    $(this).parent().find('.sub-menu').toggleClass('active');
+  });
+});
