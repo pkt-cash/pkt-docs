@@ -152,6 +152,7 @@ You can mine in as many pools as you have the bandwidth to supply. The same data
 
 If you have bandwidth to spare, you may wish to consider mining with some or all of the new/experimental mining pools listed below. New pools require support from the mining community (in the form of announcements) in order to test their infrastructure and begin to win blocks.
 
+- Pkt Digger: `http://p.master.pktdigger.com/`
 - Pkthash: `https://pool.pkthash.com`
 
 (Check the relevant channels on Discord for current pool statuses)
