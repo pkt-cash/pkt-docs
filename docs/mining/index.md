@@ -48,7 +48,7 @@ To install:
 $ docker pull thomasjp0x42/packetcrypt
 ```
 
-There's also available a PacketCrypt Docker image built without the portable flag (`--no-portable`) which may increase the performance of the announcement mining while reducing CPU compatibility. Image is available at `thomasjp0x42/packetcrypt-amd64`.
+There are also PacketCrypt Docker images built without the portable flag (`--no-portable`) which may increase the performance of the announcement mining while reducing CPU compatibility. One such image (compiled on AMD 5950x) is available at `thomasjp0x42/packetcrypt-amd64`. Additionally, for ARM devices such as Raspberry Pi, there is an image available at `thomasjp0x42/packetcrypt-arm64`. The arm64 image will also work on Apple silicon such as the M1 and M2 chips.
 
 3. Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
 
