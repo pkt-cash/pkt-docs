@@ -6,12 +6,15 @@
  - General knowledge of git
  - General knowledge of networking
  - General knowledge of blockchain
- - Access to at least 3 machines running ***Ubuntu 18.04 LTS*** or ***20.04 LTS***, to deploy the following services.
-	 - **Machine 1**: PKT node, Master, Paymaker & Blkhander
-	 - **Machine 2**: Blkminer & AnnHandler
-	 - **Machine 3**: AnnMiner
+ - Access to at least 6 machines running ***Ubuntu 18.04 LTS*** or ***20.04 LTS***, to deploy the following services.
+	 - **Machine 1**: PKT node
+	 - **Machine 2**: Master, Paymaker & Blkhander
+	 - **Machine 3**: AnnHandler
+	 - **Machine 4**: AnnHandler
+	 - **Machine 5**: BlkMiner
+	 - **Machine 6**: BlkMiner
 
-It can be done all on a single machine, you just need to pay attention to ports etc.
+Note: It can be done all on a single machine, you just need to pay attention to ports etc. As of June 2022, the network difficulty is high, and given that half of the work is done at pool premises, it's recommended to run at least a dozen BlkMiner machines, with a significant (768GB recommended) ammount of RAM. 
 
 ### Block mining & running a pool
 
@@ -19,8 +22,8 @@ Starting your own pool requires setting up a number of services:
 
 -   **_pktd node_**  (one or more) - One pktd instance is required for the Master to function, each of the  _Block Handlers_  may optionally use separate pktd nodes.
 -   **_Master_**  (one) - This node coordinates all of the others and provides work files and configuration
--   **_Ann Handler_**  (one or more) - These are high performance nodes which accept announcements from the announcement miners in the network, they also provide announcements to the block miners. As you scale up the amount of bandwidth in the pool, you will need to add more Ann handlers.
--   **_Block Miner_**  (one or more) - These nodes download announcements from the announcement handlers and use them in the mining process to mine blocks.
+-   **_Ann Handler_**  (two or more) - These are high performance nodes which accept announcements from the announcement miners in the network, they also provide announcements to the block miners. As you scale up the amount of bandwidth in the pool, you will need to add more Ann handlers.
+-   **_Block Miner_**  (two or more) - These nodes download announcements from the announcement handlers and use them in the mining process to mine blocks.
 -   **_Block Handlers_**  (one or more) - These nodes receive "block shares" from the block miners and submit blocks if
 -   **_Paymaker_**  (one) - This node receives updates from the Ann Handlers and Block Handlers and keeps track of who should be paid. The Paymaker sends configuration to the pktd node which is used by the Master in order to make the pool pay out the announcement and block miners
 
@@ -34,20 +37,31 @@ The following repositories hold the required programs to run a pool:
 | PacketCrypt: https://github.com/cjdelisle/PacketCrypt/ | Master, Paymaker, BlkHandler |
 | pktd: https://github.com/pkt-cash/pktd | pktd |
 
-### Assumed Local Port Ranges:
+### Assumed network Ranges:
+In this guide we have two separate networks, the public network (198.51.100.0/24 & 2001:db8::/32), and local network (10.0.16.0/24) to connect AnnHandlers and BlkMiner.
+| Machine | Public Network IP | Private Network IP |
+|--|--|--|
+| Machine 1 | 198.51.100.1 & 2001:db8::1 | 10.0.16.1 |
+| Machine 2 | 198.51.100.2 & 2001:db8::2 | 10.0.16.2 |
+| Machine 3 | 198.51.100.3 & 2001:db8::3 | 10.0.16.3 |
+| Machine 4 | 198.51.100.4 & 2001:db8::4 | 10.0.16.4 |
+| Machine 5 |       X      | 10.0.16.5 |
+| Machine 6 |       X      | 10.0.16.6 |
+
 | Service | Machine | Port/Port Ranges|
 |--|--|--|
-| Master | Machine 1 | 8080 |
-|Paymaker|Machine 1|8081|
-|BlkHandlers| Machine 1| 8100-8200
-|AnnHandlers| Machine 3| 8201-8300
+| Master | Machine 2 | 8080 |
+|Paymaker|Machine 2|8081|
+|BlkHandlers| Machine 2 | 8100-8200
+|AnnHandlers| Machine 3 & 4 | 80 |
+
 
 # Installation
 
 ## *Machine 1*
 
 ### PKTD node:
-40GB of storage is required at a **minimum** to run the pktd node
+150GB of storage is required at a **minimum** to run the pktd node. Recommended size is around 250GB of NVMe storage.
 
  1. Install Golang
 	 
@@ -71,6 +85,8 @@ The output should show the following:
 ```
 Everything looks good - use ./bin/pktd to launch
 ```
+
+## *Machine 2*
 
 ### Master | Paymaker | BlkHandler:
 1. Install the required tools:
@@ -97,7 +113,7 @@ cd PacketCrypt
 npm install
 ```
 
-## *Machine 2 & 3*
+## *Machine 4 - 6*
 
 ### BlkMiner | AnnHandler | AnnMiner:
 
@@ -189,11 +205,11 @@ The address that is advertized for accessing this ann handler (external address)
 
 If running locally use:
 ```
-url:  'http://localhost:8081',
+url:  'http://10.0.16.3:8081','http://10.0.16.4:8081'
 ```
-If allowing external annminers use a resolved address suchas:
+If allowing external annminers use a resolved address such as:
 ```
-url: 'http://ann1.pktpool.io'
+url: 'http://ann1.pktpool.io','http://ann2.pktpool.io'
 ```
 ***Replace the url with your own.***
 
