@@ -142,7 +142,7 @@ cd packetcrypt_rs
 ---
 ### config.privateSeed
 
-Yeah, just mention that signing of announcements is rarely used, it breaks people mining into multiple pools, and you should set it to null unless "you know what you're doing"
+Signing of announcements is rarely used, it breaks people mining into multiple pools, and you should set it to null unless "you know what you're doing"
 
 This seed is used for deriving keys which will be used for signing announcements.
 
@@ -538,7 +538,7 @@ cd packetcrypt_rs
 
 ### BlkMiner
 
-``--threads`` is the number of threads you want to dedicate to the Blkminer. Default is all
+``--threads`` is the number of threads you want to dedicate to the Blkminer, the default is to use all available threads.
 ``--paymentaddr`` is the wallet you want your coins to be mined into, it is advisable to not use the electrum wallet for this.
 ``--memorysizemb`` is how much RAM you are allocating to block mining, Ideally you want to set as much as you can.
 ``<Master address of pool>`` is the masterUrl of your pool
