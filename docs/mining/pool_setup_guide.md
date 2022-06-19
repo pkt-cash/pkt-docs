@@ -22,9 +22,9 @@ Starting your own pool requires setting up a number of services:
 
 -   **_pktd node_**  (one or more) - One pktd instance is required for the Master to function, each of the  _Block Handlers_  may optionally use separate pktd nodes.
 -   **_Master_**  (one) - This node coordinates all of the others and provides work files and configuration
--   **_Ann Handler_**  (two or more) - These are high performance nodes which accept announcements from the announcement miners in the network, they also provide announcements to the block miners. As you scale up the amount of bandwidth in the pool, you will need to add more Ann handlers.
--   **_Block Miner_**  (two or more) - These nodes download announcements from the announcement handlers and use them in the mining process to mine blocks.
--   **_Block Handlers_**  (one or more) - These nodes receive "block shares" from the block miners and submit blocks if
+-   **_Ann Handler_**  (two or more) - These are nodes which accept announcements from the announcement miners in the network, they also provide announcements to the block miners. As you scale up the amount of bandwidth in the pool, you will need to add more Ann handlers.
+-   **_Block Miner_**  (two or more) - These high performance nodes download announcements from the announcement handlers and use them in the mining process to mine blocks.
+-   **_Block Handlers_**  (one or more) - These nodes receive "block shares" from the block miners and submit blocks if they validate the share
 -   **_Paymaker_**  (one) - This node receives updates from the Ann Handlers and Block Handlers and keeps track of who should be paid. The Paymaker sends configuration to the pktd node which is used by the Master in order to make the pool pay out the announcement and block miners
 
 # General Information
