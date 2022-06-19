@@ -38,13 +38,13 @@ The following repositories hold the required programs to run a pool:
 | pktd: https://github.com/pkt-cash/pktd | pktd |
 
 ### Assumed network Ranges:
-In this guide we have two separate networks, the public network (198.51.100.0/24 & 2001:db8::/32), and local network (10.0.16.0/24) to connect AnnHandlers and BlkMiner.
+In this guide we have two separate networks, the public network (198.51.100.0/24), and local network (10.0.16.0/24) to connect AnnHandlers and BlkMiner.
 | Machine | Public Network IP | Private Network IP |
 |--|--|--|
-| Machine 1 | 198.51.100.1 & 2001:db8::1 | 10.0.16.1 |
-| Machine 2 | 198.51.100.2 & 2001:db8::2 | 10.0.16.2 |
-| Machine 3 | 198.51.100.3 & 2001:db8::3 | 10.0.16.3 |
-| Machine 4 | 198.51.100.4 & 2001:db8::4 | 10.0.16.4 |
+| Machine 1 | 198.51.100.1 | 10.0.16.1 |
+| Machine 2 | 198.51.100.2 | 10.0.16.2 |
+| Machine 3 | 198.51.100.3 | 10.0.16.3 |
+| Machine 4 | 198.51.100.4 | 10.0.16.4 |
 | Machine 5 |       X      | 10.0.16.5 |
 | Machine 6 |       X      | 10.0.16.6 |
 
@@ -450,12 +450,38 @@ spray_at = ["239.0.1.1:6667"]
 spray_workers = 8
 ```
 
+For Machine 3 you should end up with something like this 
+
+```
+[ann_handler.ah0]
+
+    block_miner_passwd = "no one steals my anns"
+
+    skip_check_chance = 0
+
+    num_workers = 8
+
+    input_queue_len = 512
+
+    public_url = "http://ann1.pktpool.io/submit"
+
+    bind_pub = "198.51.100.3:80"
+
+    bind_pvt = "10.0.16.3:6666"
+
+    spray_at = ["239.0.1.1:6667"]
+
+    spray_workers = 8
+
+    subscribe_to = []
+
+    files_to_keep = 512
+```
+
+The same logic should be followed for Machine 4 and other handlers you may have. 
+
 #### NOTE: To bind low ports with non-root user run:
 ```sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)```
-
-
-Keep this many of the newest ann files
-```files_to_keep = 500```
 
 # Running Manually
 
@@ -471,6 +497,9 @@ Keep this many of the newest ann files
 
 ./pktd/bin/pktd --rpcuser=XXX --rpcpass=XXX --miningaddr <your PKT wallet address>
 ```
+
+## *Machine 2*
+
 ### Master
 ```
 node ./pool.js --master
@@ -489,17 +518,7 @@ node ./pool.js --blk1
 ```
 
 
-## *Machine 2*
-
-### BlkMiner
-
-``--threads`` is the number of threads you want to dedicate to the Blkminer
-``--paymentaddr`` is the wallet you want your coins to be mined into, it is advisable to not use the electrum wallet for this.
-``<Master address of pool>`` is the masterUrl of your pool
-```
-cd packetcrypt_rs
-./target/release/packetcrypt blk <Master Address of Pool> --paymentaddr <your PKT wallet address> --threads 5 --memorysizemb 2300
-```
+## *Machine 3*
 
 ### AnnHandler
 ```
@@ -507,20 +526,32 @@ cd packetcrypt_rs
 ./target/release/packetcrypt ah --config /path/to/pool.toml ah0
 ```
 
-## *Machine 3*
+## *Machine 4*
 
-### AnnMiner
+### AnnHandler
 ```
-./target/release/packetcrypt ann http://pool.pktpool.io --paymentaddr <your PKT wallet address>
+cd packetcrypt_rs
+./targer/release/packetcrypt ah --config /path/to/pool.toml ah1
 ```
 
+## *Machine 5 and 6*
 
+### BlkMiner
+
+``--threads`` is the number of threads you want to dedicate to the Blkminer. Default is all
+``--paymentaddr`` is the wallet you want your coins to be mined into, it is advisable to not use the electrum wallet for this.
+``--memorysizemb`` is how much RAM you are allocating to block mining, Ideally you want to set as much as you can.
+``<Master address of pool>`` is the masterUrl of your pool
+```
+cd packetcrypt_rs
+./target/release/packetcrypt blk <Master Address of Pool> --paymentaddr <your PKT wallet address> --threads 80 --memorysizemb 665000 --handlerpass NoOneStealsMyAnns --subscribe 10.0.16.3:6666 --bind 0.0.0.0:6667 --mcast 239.0.1.1
+```
 
 
 
 # NGINX Setup (For allowing external AnnMining)
 
-## *Machine 1*
+## *Machine 2*
 Update system and install Nginx
 ```
 sudo apt update
@@ -573,36 +604,4 @@ Reload nginx to pick up config changes.
 ```
 sudo systemctl reload nginx
 ```
-## *Machine 2*
 
-```
-unlink /etc/nginx/sites-enabled/default
-cd /etc/nginx/sites-available
-```
-```
-server { 
-    listen 80; 
-    listen [::]:80; 
-    server_name ann1.pktpool.io; 
-    location / { 
-        proxy_pass http://localhost:8081/; 
-    } 
-}
-```
-
-Link new file to sites-enabled
-```
-ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
-```
-Remove default config
-```
-rm default
-```
-Check reverse proxy config is correct
-```
-nginx -t
-```
-Reload nginx to pick up config changes.
-```
-sudo systemctl reload nginx
-```
