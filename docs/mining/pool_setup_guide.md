@@ -407,7 +407,7 @@ master_url = "http://pool.pktpool.io"
 
 
 #### ann_handler.ah*
-You can have multiple ann_handlers (Ideally one on each BlkMiner machine), you can do this by defining each one such as:
+You can have multiple ann_handlers, you can do this by defining each one such as:
 
 ```
 [ann_handler.ah0]
@@ -437,8 +437,19 @@ public_url = "http://ann1.pktpool.io/submit"
 ```
 Bind to this port
 ```
-bind_port = 80
+bind_port = "198.51.100.3:80"
 ```
+Bind this port to the sprayer component
+```
+bind_pvt = "10.0.16.3:6666"
+```
+Set sprayer
+```
+spray_at = ["239.0.1.1:6667"]
+
+spray_workers = 8
+```
+
 #### NOTE: To bind low ports with non-root user run:
 ```sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)```
 
