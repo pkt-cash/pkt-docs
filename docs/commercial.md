@@ -23,5 +23,5 @@ Mining servers for rent
 Your best choice towards a fully automated PKT cloud mining solution.
 
 ## PKT mining calculator
-### [MinePKT.com](http://minepkt.com/)
+### [MinePKT.com](https://minepkt.com/)
 Ke/s calculator to see your profits!
