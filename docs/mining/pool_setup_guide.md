@@ -39,6 +39,7 @@ The following repositories hold the required programs to run a pool:
 
 ### Assumed network Ranges:
 In this guide we have two separate networks, the public network (198.51.100.0/24), and local network (10.0.16.0/24) to connect AnnHandlers and BlkMiner.
+
 | Machine | Public Network IP | Private Network IP |
 |--|--|--|
 | Machine 1 | 198.51.100.1 | 10.0.16.1 |
@@ -47,6 +48,8 @@ In this guide we have two separate networks, the public network (198.51.100.0/24
 | Machine 4 | 198.51.100.4 | 10.0.16.4 |
 | Machine 5 |       X      | 10.0.16.5 |
 | Machine 6 |       X      | 10.0.16.6 |
+
+### Assumed Port Ranges:
 
 | Service | Machine | Port/Port Ranges|
 |--|--|--|
