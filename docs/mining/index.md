@@ -150,11 +150,6 @@ You can mine in as many pools as you have the bandwidth to supply. The same data
 - PKTPool: `http://pool.pktpool.io`
 - PktWorld: `http://pool.pkt.world`
 
-If you have bandwidth to spare, you may wish to consider mining with some or all of the new/experimental mining pools listed below. New pools require support from the mining community (in the form of announcements) in order to test their infrastructure and begin to win blocks.
-
-- Pkt Digger: `http://p.master.pktdigger.com/`
-- Pkthash: `https://pool.pkthash.com`
-
 (Check the relevant channels on Discord for current pool statuses)
 
 You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks.
