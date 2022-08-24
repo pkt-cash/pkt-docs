@@ -13,6 +13,10 @@ Make a [Pull Request](https://docs.github.com/en/github/collaborating-with-pull-
 ### [Pkt.world Explorer](http://pkt.world/explorer)
 The Pkt.world blockchain explorer gives insights into the blockchain, active mining pools and their performance, and your mining profits.
 
+## PKT mining calculator
+### [MinePKT.com](https://minepkt.com/)
+Ke/s calculator to see your profits!
+
 ### [Pkt.watch Mining Profitability Calculator](https://calculator.pkt.watch/)
 Estimate performance and potential PKT Cash announcement miner earnings for a huge selection of CPUs.
 
