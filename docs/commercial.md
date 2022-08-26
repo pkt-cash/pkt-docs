@@ -21,7 +21,3 @@ Mining servers for rent
 ## PKT Cloud Mining Service
 ### [AMAPOOL.com](https://amapool.com/)
 Your best choice towards a fully automated PKT cloud mining solution.
-
-## PKT mining calculator
-### [MinePKT.com](https://minepkt.com/)
-Ke/s calculator to see your profits!
