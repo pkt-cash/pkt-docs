@@ -17,6 +17,7 @@ nav:
   - Pool Operation: mining/pool_setup_guide.md
   - Pktd: pktd/index.md
   - PKTWallet: pktd/pktwallet.md
+  - Wrapped PKT: wrapped_pkt.md
   - Electrum Import: pktd/migrating_from_electrum.md
   - FAQ: PKT_FAQ.md
   - Code of Conduct: code_of_conduct.md
@@ -28,3 +29,4 @@ markdown_extensions:
   - admonition
   - toc:
       permalink: true
+  - attr_list

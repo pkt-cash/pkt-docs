@@ -74,6 +74,85 @@ You should see a series of numbers and letters beginning with `pkt1`. This is yo
 
 **NOTE**: Every time you use `getnewaddress`, the address you receive must be remembered by pktwallet forever. So, only use it when you actually need an address.
 
+## How to install the PKT World Wallet (Windows only)
+
+1. Download the [PKT World Wallet](https://www.pkt.world/wallet){target=_blank}
+2. Follow the installation instructions
+3. Launch wallet
+4. Create a new wallet
+5. Enter a wallet passphrase. Make sure to save your passphrase in a safe place.
+6. Write down your wallet seed. It is very important to keep your seed in a safe place
+7. To generate a new PKT address, click Wallet.
+8. Generate new address
+9. To begin mining using the PKT World Wallet, click Miner
+10. Start Mining
+
+## How to install a CLI Wallet
+If you already have a wallet created on your computer called wallet.db you will need to create a new wallet by following these steps:
+
+1. Download [pktd-v1.5.1-macos.pkg](https://github.com/pkt-cash/pktd/releases/download/pktd-v1.5.1/pktd-v1.5.1-macos.pkg){target=_blank}
+2. Run the installation
+3. Open Terminal
+4. Enter the command: ```$ cd pktd```
+5. Enter the command: ```$ ~/pktd/bin/pktwallet --create --wallet xxxx```    
+*`xxxx` is the name of the wallet i.e. wallet personal*  
+*Make sure to write this down for your notes*  
+6. Enter passphrase or leave empty  
+*Make sure to write this down for you notes*
+7. Do NOT add additional layer of security
+8. Copy down your seed. If your wallet is destroyed, you can recover it as long as you have this seed and your wallet passphrase. Please keep in mind that anyone who has access to the seed only needs to guess your wallet passphrase to access your funds.
+9. Follow the instructions to finalize wallet
+
+### How to start up CLI Wallet
+
+1. Open terminal
+2. Enter the command: ```$ cd pktd```
+3. Enter the command:  
+```$ ~/pktd/bin/pktwallet --wallet```  
+*(whatever you named your wallet) i.e* ```wallet personal```
+
+### How to create new PKT wallet address
+
+1. Make sure you have the CLI wallet running in a separate terminal window
+2. Open Terminal
+3. Enter command: ```$ cd pktd```
+4. Enter command: ```$ ~/pktd/bin/pktctl --wallet getnewaddress```  
+*Save your address in a safe place that is easily accessible*
+
+### How to send PKT from your CLI wallet
+
+1. Make sure you have the CLI wallet running in a separate terminal window
+2. Open terminal
+3. Enter command: ```$ cd pktd```
+4. Enter Command: ```$ ~/pktd/pktd/bin/pktctl --wallet sendfrom pkt1xxxxx $$$$ '["pkt1xxxxx"]' ```
+*xxxxx = PKT address you want to send from and to*  
+*$$$$ = amount of pkt you want to send*
+
+### How to install a CLI Wallet from Seed
+If you already have a wallet created on your computer called wallet.db you will need to create a new wallet by following these steps:
+
+1. Download [pktd-v1.5.1-macos.pkg](https://github.com/pkt-cash/pktd/releases/download/pktd-v1.5.1/pktd-v1.5.1-macos.pkg){target=_blank}
+2. Run the installation
+3. Open Terminal
+4. Enter the command: ```$ cd pktd```
+5. Enter the command: ```$ ~/pktd/bin/pktwallet --create --wallet xxxx```  
+*xxxx is the name of the wallet i.e. wallet personal*  
+*Make sure to write this down for your notes*
+6. Enter passphrase or leave empty  
+*Make sure to write this down for you notes*
+7. Do NOT add additional layer of security
+8. Enter seed
+9. Start up wallet (see instructions above)
+10. Open new terminal window
+11. Enter the command: ```$ cd pktd```
+12. Enter the command: ```$ ~/pktd/bin/pktctl --wallet getnewaddress```  
+*repeat until you find receive (each of) your recovered wallet address(es)*
+13. Enter the command: ```$ ~/pktd/bin/pktctl --wallet resync```  
+*This will resync the wallet to the blockchain (takes at least 24 hours)*
+14. Enter the command: ```$ ~/pktd/bin/pktctl --wallet getaddressbalances 1 1```  
+*this is how you view all your (sub)wallet balances*
+
+
 # Using Your Wallet
 
 pktctl is the program that interfaces with a running pktwallet instance. pktctl functions will not work if pktwallet is not running and accessible. Some functions will be limited until pktwallet is fully synchronized. Some functions require the wallet being unlocked before executing.

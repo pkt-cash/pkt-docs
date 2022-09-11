@@ -997,3 +997,6 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     font-size: 17px;
 	}
 }
+ol li {
+  font-weight:300;
+}
