@@ -15,9 +15,13 @@ PacketCrypt mining is split into two distinct stages:
 Block mining is typically done at the mining pool's datacenter, however Announcement mining can be
 done from anywhere.
 
+---
+
 ## How to Announcement mine
 
-### Installing from source
+There are a number of options available when it comes to installing the PacketCrpyt announcement miner. Choose whichever best suits your technical ability:
+
+### 1. Install a Pre-built Binary
 
 Pre-built packetcrypt binaries (for linux) or installation packages (for macos) and archives (for windows) can be downloaded from [packetcrypt releases page](https://github.com/cjdelisle/packetcrypt_rs/releases/).
 
@@ -29,7 +33,8 @@ Pre-built packetcrypt binaries (for linux) or installation packages (for macos) 
   and rename it `packetcrypt`.
 - - If you're on Arch linux or Manjaro, you can install the [packetcrypt AUR package](https://aur.archlinux.org/packages/packetcrypt)
 
-### Deploying a Docker Image
+
+### 2. Deploy a Docker Image
 
 There is a PacketCrypt Docker image available, which can be used for announcement mining.
 
@@ -43,7 +48,7 @@ To install:
 $ docker pull thomasjp0x42/packetcrypt
 ```
 
-There's also available a PacketCrypt Docker image built without the portable flag (`--no-portable`) which may increase the performance of the announcement mining while reducing CPU compatibility. Image is available at `thomasjp0x42/packetcrypt-amd64`.
+There are also PacketCrypt Docker images built without the portable flag (`--no-portable`) which may increase the performance of the announcement mining while reducing CPU compatibility. One such image (compiled on AMD 5950x) is available at `thomasjp0x42/packetcrypt-amd64`. Additionally, for ARM devices such as Raspberry Pi, there is an image available at `thomasjp0x42/packetcrypt-arm64`. The arm64 image will also work on Apple silicon such as the M1 and M2 chips.
 
 3. Run the container similar to the commands described in the [Begin Announcement Mining](#begin-announcement-mining) section, except replace this part of the command:
 
@@ -65,7 +70,23 @@ $ docker run thomasjp0x42/packetcrypt ann -p <your_wallet_address> <pool_1>
 
 More information can be found at the [PacketCrypt DockerHub page](https://hub.docker.com/r/thomasjp0x42/packetcrypt)
 
-#### Begin Announcement Mining
+### 3. Build From Source
+
+Building from source will generally offer the best mining performance but requires more technical knowledge than the previous two options.
+
+First install rust if you haven't, see: [rustup](https://rustup.rs/)
+
+```
+git clone https://github.com/cjdelisle/packetcrypt_rs
+cd packetcrypt_rs
+cargo build --release
+```
+
+See the [PacketCrypt GitHub repository](https://github.com/cjdelisle/packetcrypt_rs) for more detailed instructions.
+
+---
+
+### Begin Announcement Mining
 
 !!! danger "Important"
     **You cannot mine into the electrum wallet**, You can only mine into the [Command Line Wallet](https://docs.pkt.cash/en/latest/pktd/pktwallet/), the [Pkt.World Wallet](https://www.pkt.world/wallet) or the [Mac GUI Wallet](https://github.com/artrepreneur/PKT-Cash-Wallet/releases) .
@@ -139,20 +160,17 @@ You can mine in as many pools as you have the bandwidth to supply. The same data
 - Pkteer: `http://pool.pkteer.com`
 - PKTPool: `http://pool.pktpool.io`
 - PktWorld: `http://pool.pkt.world`
+- Zetahash (f.k.a. Srizbi): `https://stratum.zetahash.com`
 
-If you have bandwidth to spare, you may wish to consider mining with some or all of the new/experimental mining pools listed below. New pools require support from the mining community (in the form of announcements) in order to test their infrastructure and begin to win blocks.
-
-- K1m3r4: `http://pool.k1m3r4.com/`
-- Oeuf2: `http://oeuf2pool.xyz`
-- Pktco.in: `http://pktco.in`
-- Pkt Digger: `http://p.master.pktdigger.com/`
-- Pkthash: `https://pool.pkthash.com`
+In general the recommendation is to list the pool with highest difficulty in the first position to ensure your announcements will be accepted, as the standardized policy is to accept announcements of a higher difficulty for pools with a lower base difficulty. In some cases the rewards might vary depending on the pool order regardless of difficulty, subject to custom policies implemented by the respective pools.
 
 (Check the relevant channels on Discord for current pool statuses)
 
 You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks.
 
-## Limiting System Resources
+---
+
+## Limiting System Resource Usage
 
 Limiting the system resources available to Packetcrypt may negatively effect your mining power but can be useful to conserve resources for other processess.
 
@@ -187,6 +205,8 @@ Bandwidth usage is directly related to two main factors:
 + Packetcrypt will send the same Announcements to each pool mined
 
 Bandwidth usage can therefore be limited by selecting a higher difficulty pool as the primary pool and/or by mining to fewer pools.
+
+---
 
 ## Block Mining & Running a Pool
 
@@ -309,6 +329,8 @@ will be valid for 3 block periods making the power multiplier `750 ** 2` or 562,
 
 From here, the power output of the power multiplier of the optimal announcement set halves for each
 doubling of the announcement difficulty, making the optimal difficulty `2`.
+
+---
 
 ## FAQ for ANN Miners
 

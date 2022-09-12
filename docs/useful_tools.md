@@ -10,11 +10,27 @@ Make a [Pull Request](https://docs.github.com/en/github/collaborating-with-pull-
 * NO PICTURES, no color text, no big fonts
 * No commercial products or services (these can be added [here](https://docs.pkt.cash/en/latest/commercial/))
 
+### Chain Analysis
 ### [Pkt.world Explorer](http://pkt.world/explorer)
 The Pkt.world blockchain explorer gives insights into the blockchain, active mining pools and their performance, and your mining profits.
 
-### [Pkt.watch Mining Profitability Calculator](https://calculator.pkt.watch/)
+### [PktPool.io](https://pktpool.io/pkt)
+Analytics dashboard covering many aspects of the PKT blockchain including a block explorer, transaction graphs, mining rewards, WPKT transactions and much more.
+
+### Mining Yield and Performance Calculators
+### [MinePKT.com](http://minepkt.com/)
+Ke/s calculator to see your profits!
+
+### [Mining Profitability Calculator](https://calculator.pkt.watch/)
 Estimate performance and potential PKT Cash announcement miner earnings for a huge selection of CPUs.
 
-### [Pkt.watch Config Generator](https://config.pkt.watch/)
-The easiest way to configure your PKT Cash announcement miner. Quickly generate and download a config.json file.
+### Mining Tools
+### [Minr](https://pkt.watch/minr/)
+A simple to use GUI for PacketCrypt. Available on MacOS, Windows and Linux.
+
+### [Configuration Generator](https://config.pkt.watch/)
+Quickly generate and download a PacketCrypt config.json file.
+
+### Miscellaneous
+### [Decimation Tracker](https://decimation.pkt.watch/)
+When will the next PKT Cash decimation be? Never miss another decimation with the PKT Watch Decimation Tracker.
