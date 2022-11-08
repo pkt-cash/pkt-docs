@@ -35,5 +35,5 @@ Quickly generate and download a PacketCrypt config.json file.
 ### [Decimation Tracker](https://decimation.pkt.watch/)
 When will the next PKT Cash decimation be? Never miss another decimation with the PKT Watch Decimation Tracker.
 
-###[PKT Tips](https://www.pkt.tips)
+### [PKT Tips](https://www.pkt.tips)
 Mining tips and tricks for memebers who are new to the PKT project.
