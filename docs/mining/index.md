@@ -145,13 +145,7 @@ pool_1 is the pool running the highest difficulty. If you notice problems, you c
 1. Install the [Zulu](https://github.com/artrepreneur/Zulu){target=_blank} or [CLI](https://docs.pkt.cash/en/latest/pktd/pktwallet/) PKT Wallet from [https://docs.pkt.cash](https://docs.pkt.cash)
 2. Download the [PacketCrypt.pkg](https://github.com/cjdelisle/packetcrypt_rs/releases/tag/packetcrypt-v0.5.0){target=_blank} for mac
 3. Open your Terminal
-4. Install Rust by entering in the command: ```$ curl --proto '=https' --tlsv1.2 -sSf * https://sh.rustup.rs | sh```
-5. Press **1** to confirm
-6. Enter the command: ```$ sudo install make```
-7. Enter the command: ```$ git clone https://github.com/cjdelisle/packetcrypt_rs```
-8. Enter the command: ```$ cd packetcrypt_rs```
-9. Enter the command: ```$ ~/.cargo/bin/cargo build --release```
-10. Enter Command: ```$ packetcrypt``` 
+4. Enter Command: ```$ packetcrypt``` 
 ```$ packetcrypt ann -p [your PKT Wallet Address] [pool 1] [pool 2] [pool 3] [pool 4]```
 
 
