@@ -253,6 +253,24 @@ For example:
 
     ./bin/pldctl wallet/transaction/sendfrom --to_address=<address> --amount=0 --from_address='["<address>"]'
 
+## Opening a lightning channel
+
+First you need to find your node publick key. Do this after unlocking your wallet by running:
+
+    ./bin/pldctl meta/getinfo
+
+get the **identityPubkey** from lightning section. Then you need to convert it by running:
+
+>`echo -n '<identity_pub_key>' | base64 -d | xxd -ps`
+
+You can use the output from this as the node pubkey when opening a channel. To do this, run the command:
+
+    ./bin/pldctl lightning/channel/open --node_pubkey=<node_pubkey> --local_funding_amount=<amount> --private=true
+
+*set private to true if you want your channel to be private*
+*amount should be in satoshis*
+
+**Note**: In case your pld instance runs behind NAT make sure you have port-forwarding enable for port 9735, which is the default port for connecting peers.
 
 **Windows:**  
 >`pldctl.exe wallet/transaction/sendfrom --to_address=<address> --amount=0 --from_address=[\"<address>\"]`
