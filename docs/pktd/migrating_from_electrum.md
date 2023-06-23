@@ -17,22 +17,22 @@ Follow the instructions in [pktwallet](./pktwallet) to get your wallet up and ru
   * The key will look sometihng like this: `ci2TBp2HTWtyMQtizWMuugHxG6lNpInA1bSpLIWzjJS2AI8ObwV5`
 
 ## Step 3: Import key to pktwallet
-* In a terminal window, run `pktctl --wallet getbalance` to verify that your wallet is working
-* Unlock your wallet using `pktctl --wallet walletpassphrase <the password you used when setting it up> 1000000`
-* Type `pktctl --wallet importprivkey <the key you just copied>`
+* Unlock your wallet using `pldctl wallet/unlock --wallet_passphrase=<the password you used when setting it up>`
+* In a terminal window, run `pldctl wallet/balance` to verify that your wallet is working
+* Type `pldctl wallet/address/import --private_key=<the key you just copied>`
 * You should see the address printed on the screen
 
 ## Importing more keys
 * When you import a key, it starts a rescan of the chain automatically, in order to import more you need to stop
-  * `pktctl --wallet stopresync` to stop
+  * `pldctl wallet/address/stopresync` to stop
 
 ## Speed things up
 If you know exactly when an address was paid, you can speed up the import by only rescanning blocks where it
 might have been paid. For example if you are sure that the address was not paid earlier than block number 600000
 you can do the following:
 
-* `pktctl --wallet stopresync`
-* `pktctl --wallet resync 600000 100000000`
+* `pldctl wallet/address/stopresync`
+* `pldctl wallet/address/resync --from_height=600000 --to_height=100000000`
 
 ## Check that it's working
 It's recommended that you run pktwallet with `-d debug` flag in order to be able to see the debug logs.
