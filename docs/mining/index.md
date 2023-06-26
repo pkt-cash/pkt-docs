@@ -166,7 +166,7 @@ In general the recommendation is to list the pool with highest difficulty in the
 
 (Check the relevant channels on Discord for current pool statuses)
 
-You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, your not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks.
+You should test your daily earnings on each pool to see which one is best. Your mining revenue depends on how much each pool allocates towards announcement miners as well as how much hardware they are using in-house. The pools are winning different blocks and if you mine to just one pool, you're not getting any payment from the others when they win a block. It's the same with mining to a pool that is not winning any blocks.
 
 ---
 
