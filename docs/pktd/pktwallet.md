@@ -122,9 +122,10 @@ If you already have a wallet created on your computer called wallet.db you will 
 ### How to send PKT from your CLI wallet
 
 1. Make sure you have the CLI wallet running in a separate terminal window
-2. Open terminal
-3. Enter command: ```$ cd pktd```
-4. Enter Command: ```$ ~/pktd/pktd/bin/pktctl --wallet sendfrom pkt1xxxxx $$$$ '["pkt1xxxxx"]' ```
+2. Command click on file to open
+3. Open terminal
+4. Enter command: ```$ cd pktd```
+5. Enter Command: ```$ ~/pktd/pktd/bin/pktctl --wallet sendfrom pkt1xxxxx $$$$ '["pkt1xxxxx"]' ```
 *xxxxx = PKT address you want to send from and to*  
 *$$$$ = amount of pkt you want to send*
 
@@ -132,24 +133,25 @@ If you already have a wallet created on your computer called wallet.db you will 
 If you already have a wallet created on your computer called wallet.db you will need to create a new wallet by following these steps:
 
 1. Download [pktd-v1.5.1-macos.pkg](https://github.com/pkt-cash/pktd/releases/download/pktd-v1.5.1/pktd-v1.5.1-macos.pkg){target=_blank}
-2. Run the installation
-3. Open Terminal
-4. Enter the command: ```$ cd pktd```
-5. Enter the command: ```$ ~/pktd/bin/pktwallet --create --wallet xxxx```  
+2. Command click on file to open
+3. Run the installation
+4. Open Terminal
+5. Enter the command: ```$ cd pktd```
+6. Enter the command: ```$ ~/pktd/bin/pktwallet --create --wallet xxxx```  
 *xxxx is the name of the wallet i.e. wallet personal*  
 *Make sure to write this down for your notes*
-6. Enter passphrase or leave empty  
+7. Enter passphrase or leave empty  
 *Make sure to write this down for you notes*
-7. Do NOT add additional layer of security
-8. Enter seed
-9. Start up wallet (see instructions above)
-10. Open new terminal window
-11. Enter the command: ```$ cd pktd```
-12. Enter the command: ```$ ~/pktd/bin/pktctl --wallet getnewaddress```  
+8. Do NOT add additional layer of security
+9. Enter seed
+10. Start up wallet (see instructions above)
+11. Open new terminal window
+12. Enter the command: ```$ cd pktd```
+13. Enter the command: ```$ ~/pktd/bin/pktctl --wallet getnewaddress```  
 *repeat until you find receive (each of) your recovered wallet address(es)*
-13. Enter the command: ```$ ~/pktd/bin/pktctl --wallet resync```  
+14. Enter the command: ```$ ~/pktd/bin/pktctl --wallet resync```  
 *This will resync the wallet to the blockchain (takes at least 24 hours)*
-14. Enter the command: ```$ ~/pktd/bin/pktctl --wallet getaddressbalances 1 1```  
+15. Enter the command: ```$ ~/pktd/bin/pktctl --wallet getaddressbalances 1 1```  
 *this is how you view all your (sub)wallet balances*
 
 
