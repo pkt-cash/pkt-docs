@@ -18,7 +18,7 @@ The Pkt.world blockchain explorer gives insights into the blockchain, active min
 Analytics dashboard covering many aspects of the PKT blockchain including a block explorer, transaction graphs, mining rewards, WPKT transactions and much more.
 
 ### [Packetscan.io](https://packetscan.io)
-Explore the PKT Cash blockchain with Packetscan. Look up transactions, blocks, addresess, balances, chain stats and more.
+Packetscan is a block explorer for the PKT Cash blockchain. Look up transactions, blocks, addresess, balances, chain stats and more.
 
 ### Mining Yield and Performance Calculators
 ### [MinePKT.com](http://minepkt.com/)
