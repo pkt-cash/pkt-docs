@@ -50,4 +50,4 @@ rounded to `10.00` and after sending exactly `5 PKT`, the miniscule fee caused i
 become `4.555555553`.
 
 If you wish to perform analytical accounting, it is recommended that you deal exclusively in atomic units,
-represented as a uint64, and only represent PKT for display purposes.
+represented as an int64, and only represent PKT for display purposes.
