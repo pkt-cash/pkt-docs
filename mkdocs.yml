@@ -24,6 +24,7 @@ nav:
   - Commercial: commercial.md
   - Useful Tools: useful_tools.md
   - Communication: communication.md
+  - Units: units.md
 
 markdown_extensions:
   - admonition
