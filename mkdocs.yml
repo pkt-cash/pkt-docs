@@ -25,6 +25,8 @@ nav:
   - Useful Tools: useful_tools.md
   - Communication: communication.md
   - Units & Fees: units.md
+  - Cjdns Websites: cjdns_websites.md
+  - Voting: vote.md
 
 markdown_extensions:
   - admonition
