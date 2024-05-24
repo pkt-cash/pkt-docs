@@ -1,0 +1,14 @@
+# Config options for 'moonstone' theme
+
+extends: bootstrap4
+fluid_layout: false
+suppress_nextprev: true
+highlightjs: true
+hljs_languages:
+  - http
+hljs_style: github
+shortcuts:
+  help: 191    # ?
+  next: 78     # n
+  previous: 80 # p
+  search: 83   # s

@@ -1,4 +1,3 @@
-
 # PKT Code of Conduct:
 
   1) We are here to talk about PKT. If it's not PKT related don't post it here.
@@ -11,7 +10,7 @@
   If the conversation turns negative, the moderators reserves the right to ban or block anyone. A person will not be banned for a single 
   offense, but only if the behavior continues after being warned by a moderator. 
 
-  5) Hate speech is not permitted and can result in being banned. This mean no sexist, racist, homophobic, transphobic, ableist or otherwise                           discriminatory jokes and language. We ask that Pkteers keep the conversation civil and respectful.
+  5) Hate speech is not permitted and can result in being banned. This mean no sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language. We ask that Pkteers keep the conversation civil and respectful.
 
   6) No violence, threats of violence or violent language directed against another person.
   No name calling, attacks, or bad mouthing others.

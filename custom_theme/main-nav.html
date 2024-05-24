@@ -1,0 +1,84 @@
+<nav id="mainnav" class="navbar navbar-default navbar-expand-md sticky-top py-2" role="navigation">
+  <div class="container">
+    {%- block site_name %}
+    <a class="navbar-brand" href="{{ nav.homepage.url|url }}" title="{{ config.site_name }}">
+      <img src="{{'./assets/logo.svg'|url}}" alt="{{ config.site_name }}">
+    </a>
+    {%- endblock %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav-navbar-collapse" aria-controls="mainnav-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+    <div id="mainnav-navbar-collapse" class="collapse navbar-collapse">
+      {%- block site_nav %}
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/mine" target="_blank">Mine</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/utility" target="_blank">Utility</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/pkt-network" target="_blank">PKT Network</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/pkt-cash" target="_blank">PKT Cash</a></li>
+            <li><a class="dropdown-item" href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank">PKT Deck</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Develop</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/developer-central" target="_blank">Developer Central</a></li>
+            <li><a class="dropdown-item" href="https://docs.pkt.cash/" target="_blank">Technical Docs</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/roadmap" target="_blank">Roadmap</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank">Yellowpaper</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" target="_blank">Whitepaper</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Network</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/network-steward" target="_blank">Network Steward</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/wallet" target="_blank">Wallets</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/ecosystem" target="_blank">Ecosystem</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/cryptoeconomics" target="_blank">Cryptoeconomics</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/cjdns" target="_blank">Cjdns</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://packetscan.io/" target="_blank">Explorer</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/community" target="_blank">Community</a></li>
+            <li><a class="dropdown-item" href="https://crypto.pkt.cash/" target="_blank">Blog</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/brand" target="_blank">Media Kit</a></li>
+          </ul>
+        </li>
+      </ul>
+      {%- endblock %}
+      
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        {%- block search_button %}
+        {%- if 'search' in config['plugins'] %}
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+	    <i class="fa fa-search"></i> Search
+          </a>
+        </li>
+        {%- endif %}
+        {%- endblock %}
+	
+        {%- block next_prev %}
+        {%- if page and (page.next_page or page.previous_page) and (not config.theme.suppress_nextprev) %}
+        <li class="nav-item{% if not page.previous_page %} disabled{% endif %}">
+          <a class="nav-link" rel="next" {% if page.previous_page %}href="{{ page.previous_page.url|url }}"{% endif %}>
+	    <i class="fa fa-arrow-left"></i> Previous
+          </a>
+        </li>
+        <li class="nav-item{% if not page.next_page %} disabled{% endif %}">
+          <a class="nav-link" rel="prev" {% if page.next_page %}href="{{ page.next_page.url|url }}"{% endif %}>
+	    Next <i class="fa fa-arrow-right"></i>
+          </a>
+        </li>
+        {%- endif %}
+        {%- endblock %}
+      </ul>
+    </div>
+  </div>
+</nav>

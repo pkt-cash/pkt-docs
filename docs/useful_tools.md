@@ -4,7 +4,7 @@ This is a mostly un-moderated list of FREE tools, websites and software built by
 
 ---
 ## Add yourself
-Make a [Pull Request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to [This page](https://github.com/pkt-cash/pkt-docs/blob/main/docs/useful_tools.md) to add your link.
+Make a [Pull Request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request){target=_blank} to [This page](https://github.com/pkt-cash/pkt-docs/blob/main/docs/useful_tools.md) to add your link.
 
 * Keep it short and to the point
 * NO PICTURES, no color text, no big fonts
