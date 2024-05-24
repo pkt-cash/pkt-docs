@@ -1,0 +1,66 @@
+<footer class="col-md-12">
+  {%- block footer %}
+  <nav class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-12">
+		{%- block site_name %}
+		<a class="navbar-brand" href="{{ nav.homepage.url|url }}">
+          <img src="{{'./assets/logo.svg'|url}}" alt="{{ config.site_name }}">
+		</a>
+		{%- endblock %}
+		<ul class="c-footer__logo_social nav flex-row ml-md-auto d-md-flex">
+			<li class="c-footer__menu-item">
+				<a href="https://pkt.chat" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="{{'./assets/pkt-chat.svg'|url}}" alt="pkt.chat" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://www.youtube.com/c/PKTCash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="{{'./assets/youtube.svg'|url}}" alt="Youtube" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://www.instagram.com/pktcash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="{{'./assets/instagram.svg'|url}}" alt="Instagram" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://twitter.com/pktcash" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="{{'./assets/x.svg'|url}}" alt="Twitter" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://discord.gg/bjJutHm9CN" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="{{'./assets/discord.svg'|url}}" alt="Discord" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://github.com/pkt-cash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="{{'./assets/github.svg'|url}}" alt="Github" width="24"></span></a>
+			</li>
+		</ul>
+		<a href="https://github.com/cjdelisle/CJDNS-contact" target="_blank" class="c-footer__menu-link">©2024 PKT Cash | Privacy Policy</a>
+      </div>
+		<div class="col">
+			<h4>Learn</h4>
+			<a href="https://pkt.cash/mine" title="Mine" target="_blank">Mine</a>
+			<a href="https://pkt.cash/utility" title="Utility" target="_blank">Utility</a>
+			<a href="https://pkt.cash/pkt-network" title="PKT Network" target="_blank">PKT Network</a>
+			<a href="https://pkt.cash/pkt-cash" title="PKT Cash" target="_blank">PKT Cash</a>
+			<a href="https://docsend.com/view/ayf5d3tz5rymn8fv" title="PKT Deck" target="_blank">PKT Deck</a>
+		</div>
+		<div class="col">
+			<h4>Develop</h4>
+			<a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" title="Technical Docs" target="_blank">Technical Docs</a>
+			<a href="https://pkt.cash/roadmap" title="Roadmap" target="_blank">Roadmap</a>
+			<a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" title="Yellowpaper" target="_blank">Yellowpaper</a>
+			<a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" title="Whitepaper" target="_blank">Whitepaper</a>
+		</div>
+		<div class="col">
+			<h4>Network</h4>
+			<a href="https://packetscan.io/" title="Explorer" target="_blank">Explorer</a>
+			<a href="https://pkt.cash/wallet" title="Wallets" target="_blank">Wallets</a>
+			<a href="https://pkt.cash/network-steward" title="Network Steward" target="_blank">Network Steward</a>
+			<a href="https://pkt.cash/ecosystem" title="Ecosystem" target="_blank">Ecosystem</a>
+			<a href="https://github.com/cjdelisle/cjdns" title="Cjdns" target="_blank">Cjdns</a>
+		</div>
+		<div class="col">
+			<h4>Explore</h4>
+			<a href="https://pkt.cash/community" title="Community" target="_blank">Community</a>
+			<a href="https://crypto.pkt.cash/" title="Blog" target="_blank">Blog</a>
+			<a href="https://pkt.cash/trademark" title="Trademark" target="_blank">Trademark</a>
+			<a href="https://pkt.cash/brand" title="Brand" target="_blank">Brand</a>
+		</div>
+  </nav>
+  {%- endblock %}
+</footer>
+
