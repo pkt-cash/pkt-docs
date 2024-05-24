@@ -17,6 +17,9 @@ The Pkt.world blockchain explorer gives insights into the blockchain, active min
 ### [PktPool.io](https://pktpool.io/pkt)
 Analytics dashboard covering many aspects of the PKT blockchain including a block explorer, transaction graphs, mining rewards, WPKT transactions and much more.
 
+### [Packetscan.io](https://packetscan.io)
+Packetscan is a block explorer for the PKT Cash blockchain. Look up transactions, blocks, addresess, balances, chain stats and more.
+
 ### Mining Yield and Performance Calculators
 ### [MinePKT.com](http://minepkt.com/)
 Ke/s calculator to see your profits!
@@ -34,3 +37,6 @@ Quickly generate and download a PacketCrypt config.json file.
 ### Miscellaneous
 ### [Decimation Tracker](https://decimation.pkt.watch/)
 When will the next PKT Cash decimation be? Never miss another decimation with the PKT Watch Decimation Tracker.
+
+### [PKT Tips](https://www.pkt.tips)
+Mining tips and tricks for memebers who are new to the PKT project.

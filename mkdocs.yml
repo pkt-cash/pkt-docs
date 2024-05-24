@@ -5,12 +5,6 @@ site_description: ""
 repo_url: "https://github.com/pkt-cash/pkt-docs"
 site_favicon: img/favicon.ico
 
-# theme:
-#   name: null
-#   custom_dir: pkt
-#   colorscheme: github
-#   highlightjs: true
-
 plugins:
   - search
 
@@ -20,21 +14,6 @@ theme:
   fluid_layout: false
 
 
-# nav:
-#   - Home: index.md
-#   - PKT Electrum: electrum/index.md
-#   - Mining: mining/index.md
-#   - Pool Operation: mining/pool_setup_guide.md
-#   - Pktd: pktd/index.md
-#   - PKTWallet: pktd/pktwallet.md
-#   - Wrapped PKT: wrapped_pkt.md
-#   - Electrum Import: pktd/migrating_from_electrum.md
-#   - FAQ: PKT_FAQ.md
-#   - Code of Conduct: code_of_conduct.md
-#   - Commercial: commercial.md
-#   - Useful Tools: useful_tools.md
-#   - Communication: communication.md
-
 nav:
   - Home: index.md
   - Learn:
@@ -42,7 +21,6 @@ nav:
     - What is PacketCrypt?: learn/packetcrypt.md
     - What is PKT Cash?: learn/pkt-cash.md
     - What is WPKT?: learn/wpkt.md
-    # - What is the PKT Network?: learn/pkt-network.md
     - What is the Network Steward?: learn/network-steward.md
     - Whitepapers: https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf
   - Wallet Setup:
@@ -52,32 +30,19 @@ nav:
     - Installing PKT.World Wallet (Mac/Windows): wallet_setup/pkt-world-wallet.md
     - Installing PKT Zulu Wallet (Mac): wallet_setup/pkt-zulu-wallet.md
     - Installing PKT CLI Wallet (Mac/Windows/Linux): wallet_setup/pkt-cli-wallet.md
-    # - Wallet FAQ: wallet_setup/wallet-faq.md
   - Start Mining:
     - Intro to PKT Mining: start_mining/intro.md
     - How to Start Announcement Mining: start_mining/announcement-mining.md
     - How to Setup a PKT Mining Pool: start_mining/pkt-mining-pool.md
-  # - Developers:
-  #   - Building on PKT: dev/building-on-pkt.md
-  #   - PacketCrypt: dev/packetcrypt.md
-  #   - PKT VPN: dev/pkt-vpn.md
-  #   - Wifi Sharing: dev/wiif-sharing.md
-  #   - PKT Lightning Daemon: dev/pkt-lightning-deamon.md
-  #   - TokenStrike: dev/tokenstrike.md
-  #   - Cjdns: dev/cjdns.md
-  #   - Edge Points: dev/edge-points.md
-  #   - Cloud ISPs: dev/cloud-isp.md
   - Advanced Learning:
-    # - Cryptoeconomics: adv_learning/cryptoeconomics.md
     - How to Run a Pktd Full Node: adv_learning/pktd-full-node.md
     - How to Swap PKT and Wrapped PKT: adv_learning/swap-pkt-wrapped-pkt.md
-    # - How to Buy PKT?: adv_learning/buy-pkt.md
-    # - How to Sell PKT?: adv_learning/sell-pkt.md
   - Community:
     - Code of Conduct: code_of_conduct.md
     - Ethical Communication Guidelines: community/ethica-communication-guidelines.md
     - Classifieds: community/classifieds.md
     - Press & Media Assets: community/press-media-assets.md
+
 
 markdown_extensions:
   - admonition
