@@ -3,7 +3,6 @@ site_url: https://docs.pkt.cash/
 site_author: PKT
 site_description: ""
 repo_url: "https://github.com/pkt-cash/pkt-docs"
-site_favicon: img/favicon.ico
 
 plugins:
   - search

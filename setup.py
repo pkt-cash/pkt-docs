@@ -14,7 +14,7 @@ setup(
     entry_points={
         "mkdocs.themes": [
             # "pkt = pkt",
-            "moonstone = mkdocs_moonstone",
+            "moonstone = moonstone",
         ]
     },
     zip_safe=False,
