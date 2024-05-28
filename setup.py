@@ -22,7 +22,7 @@ from setuptools import setup, find_packages
 VERSION = '0.2.0'
 
 setup(
-    name="moonstone",
+    name="mkdocs-moonstone",
     version=VERSION,
     url='https://github.com/byrnereese/mkdocs-moonstone/',
     description='Moonstone theme for MkDocs',
@@ -40,7 +40,7 @@ setup(
     python_requires='>=2.7.9,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*',
     entry_points={
         'mkdocs.themes': [
-            'moonstone = moonstone',
+            'moonstone = mkdocs_moonstone',
         ]
     },
     zip_safe=False
