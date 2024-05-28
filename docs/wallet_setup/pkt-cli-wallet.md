@@ -1,4 +1,4 @@
-# Installing PKT CLI Wallet (Mac/Windows/Linux)
+# Installing PKT CLI Wallet (Mac / Windows / Linux)
 
 The command line PKT wallet
 
