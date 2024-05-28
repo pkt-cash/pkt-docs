@@ -321,8 +321,17 @@ footer .col > a:focus {
 #main .page-metadata {
     display: none;
 }
+#main ol li,
+#main ul li {
+    padding-bottom: 5px;
+} 
 @media screen and (max-width:1280px) {
     #main p {
         word-break: break-all;
+    }
+}
+@media screen and (max-width:767px) {
+    #main p {
+        word-break: normal;
     }
 }
