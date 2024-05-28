@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      // Hack for scrolling window when linking to anchor tag with fixed nav header
+      var shiftWindow = function() { scrollBy(0, -75) };
+      window.addEventListener("hashchange", shiftWindow);
+      function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="author" content="PKT">
+    <link rel="canonical" href="https://docs.pkt.cash/mining/pool_setup_guide/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    
+    <title>Setting up a Pool - PKT Documentation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/code-styles.css" rel="stylesheet">
+    <link href="../../css/mega-menu.css" rel="stylesheet">
+    <link href="../../css/code-tabs.css" rel="stylesheet">
+    <link href="../../css/admonition.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/extra.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="../../fonts.js"></script> 
+  </head>
+  
+  <body class="" data-spy="scroll" data-target="#toc">
+    <nav id="mainnav" class="navbar navbar-default navbar-expand-md sticky-top py-2" role="navigation">
+  <div class="container">
+    <a class="navbar-brand" href="../.." title="PKT Documentation">
+      <img src="../../assets/logo.svg" alt="PKT Documentation">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav-navbar-collapse" aria-controls="mainnav-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+    <div id="mainnav-navbar-collapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/mine" target="_blank">Mine</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/utility" target="_blank">Utility</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/pkt-network" target="_blank">PKT Network</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/pkt-cash" target="_blank">PKT Cash</a></li>
+            <li><a class="dropdown-item" href="https://docsend.com/view/ayf5d3tz5rymn8fv" target="_blank">PKT Deck</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Develop</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/developer-central" target="_blank">Developer Central</a></li>
+            <li><a class="dropdown-item" href="https://docs.pkt.cash/" target="_blank">Technical Docs</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/roadmap" target="_blank">Roadmap</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" target="_blank">Yellowpaper</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" target="_blank">Whitepaper</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Network</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pkt.cash/network-steward" target="_blank">Network Steward</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/wallet" target="_blank">Wallets</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/ecosystem" target="_blank">Ecosystem</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/cryptoeconomics" target="_blank">Cryptoeconomics</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/cjdns" target="_blank">Cjdns</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://packetscan.io/" target="_blank">Explorer</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/community" target="_blank">Community</a></li>
+            <li><a class="dropdown-item" href="https://crypto.pkt.cash/" target="_blank">Blog</a></li>
+            <li><a class="dropdown-item" href="https://pkt.cash/brand" target="_blank">Media Kit</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+	    <i class="fa fa-search"></i> Search
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div id="content"class="container">
+      
+    <div class="row">
+      <div id="sidebar-nav" class="sidebar col-md-3"><nav id="sidenav" class="navbar navbar-default navbar-expand-md" role="navigation">
+  <button class="navbar-toggler ml-auto hidden-sm-up" type="button" data-toggle="collapse" data-target="#sidebar-navbar-collapse" aria-controls="sidebar-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="fa fa-bars fa-fw"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="sidebar-navbar-collapse">
+    <!-- Main navigation -->
+    <ul class="nav navbar-nav flex-column">
+      <li >
+        <a class="toplevel nav-link" href="../..">Home</a>
+      </li>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#learn">
+        <!--<a href="#" class="nav-link">Learn <b class="caret"></b></a>-->
+        <span class="section-title">Learn</span>
+        <ul id="learn" class="collapse">
+                
+<li>
+    <a href="../../learn/pkt/" class="">What is PKT?</a>
+</li>
+                
+<li>
+    <a href="../../learn/packetcrypt/" class="">What is PacketCrypt?</a>
+</li>
+                
+<li>
+    <a href="../../learn/pkt-cash/" class="">What is PKT Cash?</a>
+</li>
+                
+<li>
+    <a href="../../learn/wpkt/" class="">What is WPKT?</a>
+</li>
+                
+<li>
+    <a href="../../learn/network-steward/" class="">What is the Network Steward?</a>
+</li>
+                
+<li>
+    <a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" class="">Whitepapers</a>
+</li>
+        </ul>
+      </li>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#wallet-setup">
+        <!--<a href="#" class="nav-link">Wallet Setup <b class="caret"></b></a>-->
+        <span class="section-title">Wallet Setup</span>
+        <ul id="wallet-setup" class="collapse">
+                
+<li>
+    <a href="../../wallet_setup/pkt-wallet-setup/" class="">How to setup a PKT Wallet</a>
+</li>
+                
+<li>
+    <a href="../../wallet_setup/install-from-seed/" class="">Installing from Seed</a>
+</li>
+                
+<li>
+    <a href="../../wallet_setup/install-pkt-electrum/" class="">Installing PKT Electrum (Mac/Windows)</a>
+</li>
+                
+<li>
+    <a href="../../wallet_setup/pkt-world-wallet/" class="">Installing PKT.World Wallet (Mac/Windows)</a>
+</li>
+                
+<li>
+    <a href="../../wallet_setup/pkt-zulu-wallet/" class="">Installing PKT Zulu Wallet (Mac)</a>
+</li>
+                
+<li>
+    <a href="../../wallet_setup/pkt-cli-wallet/" class="">Installing PKT CLI Wallet (Mac/Windows/Linux)</a>
+</li>
+        </ul>
+      </li>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#start-mining">
+        <!--<a href="#" class="nav-link">Start Mining <b class="caret"></b></a>-->
+        <span class="section-title">Start Mining</span>
+        <ul id="start-mining" class="collapse">
+                
+<li>
+    <a href="../../start_mining/intro/" class="">Intro to PKT Mining</a>
+</li>
+                
+<li>
+    <a href="../../start_mining/announcement-mining/" class="">How to Start Announcement Mining</a>
+</li>
+                
+<li>
+    <a href="../../start_mining/pkt-mining-pool/" class="">How to Setup a PKT Mining Pool</a>
+</li>
+        </ul>
+      </li>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#advanced-learning">
+        <!--<a href="#" class="nav-link">Advanced Learning <b class="caret"></b></a>-->
+        <span class="section-title">Advanced Learning</span>
+        <ul id="advanced-learning" class="collapse">
+                
+<li>
+    <a href="../../adv_learning/pktd-full-node/" class="">How to Run a Pktd Full Node</a>
+</li>
+                
+<li>
+    <a href="../../adv_learning/swap-pkt-wrapped-pkt/" class="">How to Swap PKT and Wrapped PKT</a>
+</li>
+        </ul>
+      </li>
+      <li class="toplevel nav-item" data-toggle="collapse" data-target="#community">
+        <!--<a href="#" class="nav-link">Community <b class="caret"></b></a>-->
+        <span class="section-title">Community</span>
+        <ul id="community" class="collapse">
+                
+<li>
+    <a href="../../code_of_conduct/" class="">Code of Conduct</a>
+</li>
+                
+<li>
+    <a href="../../community/ethica-communication-guidelines/" class="">Ethical Communication Guidelines</a>
+</li>
+                
+<li>
+    <a href="../../community/classifieds/" class="">Classifieds</a>
+</li>
+                
+<li>
+    <a href="../../community/press-media-assets/" class="">Press & Media Assets</a>
+</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+      <div id="main" class="col-md-7" role="main">
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    
+    <li class="breadcrumb-item active" aria-current="page">Setting up a Pool</li>
+  </ol>
+</nav>
+
+
+<h1 id="setting-up-a-pool"><strong>Setting up a Pool</strong><a class="headerlink" href="#setting-up-a-pool" title="Permanent link">&para;</a></h1>
+<h3 id="expectations">Expectations<a class="headerlink" href="#expectations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>General knowledge of Linux</li>
+<li>General knowledge of git</li>
+<li>General knowledge of networking</li>
+<li>General knowledge of blockchain</li>
+<li>Access to at least 6 machines running <strong><em>Ubuntu 18.04 LTS</em></strong> or <strong><em>20.04 LTS</em></strong>, to deploy the following services.<ul>
+<li><strong>Machine 1</strong>: PKT node</li>
+<li><strong>Machine 2</strong>: Master, Paymaker &amp; Blkhander</li>
+<li><strong>Machine 3</strong>: AnnHandler</li>
+<li><strong>Machine 4</strong>: AnnHandler</li>
+<li><strong>Machine 5</strong>: BlkMiner</li>
+<li><strong>Machine 6</strong>: BlkMiner</li>
+</ul>
+</li>
+</ul>
+<p>Note: It can be done all on a single machine, you just need to pay attention to ports etc. As of June 2022, the network difficulty is high, and given that half of the work is done at pool premises, it's recommended to run at least a dozen BlkMiner machines, with a significant (768GB recommended) ammount of RAM. </p>
+<h3 id="block-mining-running-a-pool">Block mining &amp; running a pool<a class="headerlink" href="#block-mining-running-a-pool" title="Permanent link">&para;</a></h3>
+<p>Starting your own pool requires setting up a number of services:</p>
+<ul>
+<li><strong><em>pktd node</em></strong>  (one or more) - One pktd instance is required for the Master to function, each of the  <em>Block Handlers</em>  may optionally use separate pktd nodes.</li>
+<li><strong><em>Master</em></strong>  (one) - This node coordinates all of the others and provides work files and configuration</li>
+<li><strong><em>Ann Handler</em></strong>  (two or more) - These are nodes which accept announcements from the announcement miners in the network, they also provide announcements to the block miners. As you scale up the amount of bandwidth in the pool, you will need to add more Ann handlers.</li>
+<li><strong><em>Block Miner</em></strong>  (two or more) - These high performance nodes download announcements from the announcement handlers and use them in the mining process to mine blocks.</li>
+<li><strong><em>Block Handlers</em></strong>  (one or more) - These nodes receive "block shares" from the block miners and submit blocks if they validate the share</li>
+<li><strong><em>Paymaker</em></strong>  (one) - This node receives updates from the Ann Handlers and Block Handlers and keeps track of who should be paid. The Paymaker sends configuration to the pktd node which is used by the Master in order to make the pool pay out the announcement and block miners</li>
+</ul>
+<h1 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h1>
+<h3 id="repository-information">Repository Information:<a class="headerlink" href="#repository-information" title="Permanent link">&para;</a></h3>
+<p>The following repositories hold the required programs to run a pool:</p>
+<table>
+<thead>
+<tr>
+<th>Repository</th>
+<th>Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>packetcrypt_rs:  https://github.com/cjdelisle/packetcrypt_rs</td>
+<td>AnnHandler, Blkminer, AnnMiner</td>
+</tr>
+<tr>
+<td>PacketCrypt: https://github.com/cjdelisle/PacketCrypt/</td>
+<td>Master, Paymaker, BlkHandler</td>
+</tr>
+<tr>
+<td>pktd: https://github.com/pkt-cash/pktd</td>
+<td>pktd</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assumed-network-ranges">Assumed network Ranges:<a class="headerlink" href="#assumed-network-ranges" title="Permanent link">&para;</a></h3>
+<p>In this guide we have two separate networks, the public network (198.51.100.0/24), and local network (10.0.16.0/24) to connect AnnHandlers and BlkMiner.</p>
+<table>
+<thead>
+<tr>
+<th>Machine</th>
+<th>Public Network IP</th>
+<th>Private Network IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Machine 1</td>
+<td>198.51.100.1</td>
+<td>10.0.16.1</td>
+</tr>
+<tr>
+<td>Machine 2</td>
+<td>198.51.100.2</td>
+<td>10.0.16.2</td>
+</tr>
+<tr>
+<td>Machine 3</td>
+<td>198.51.100.3</td>
+<td>10.0.16.3</td>
+</tr>
+<tr>
+<td>Machine 4</td>
+<td>198.51.100.4</td>
+<td>10.0.16.4</td>
+</tr>
+<tr>
+<td>Machine 5</td>
+<td>X</td>
+<td>10.0.16.5</td>
+</tr>
+<tr>
+<td>Machine 6</td>
+<td>X</td>
+<td>10.0.16.6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assumed-port-ranges">Assumed Port Ranges:<a class="headerlink" href="#assumed-port-ranges" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Machine</th>
+<th>Port/Port Ranges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Master</td>
+<td>Machine 2</td>
+<td>8080</td>
+</tr>
+<tr>
+<td>Paymaker</td>
+<td>Machine 2</td>
+<td>8081</td>
+</tr>
+<tr>
+<td>BlkHandlers</td>
+<td>Machine 2</td>
+<td>8100-8200</td>
+</tr>
+<tr>
+<td>AnnHandlers</td>
+<td>Machine 3 &amp; 4</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
+<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+<h2 id="machine-1"><em>Machine 1</em><a class="headerlink" href="#machine-1" title="Permanent link">&para;</a></h2>
+<h3 id="pktd-node">PKTD node:<a class="headerlink" href="#pktd-node" title="Permanent link">&para;</a></h3>
+<p>150GB of storage is required at a <strong>minimum</strong> to run the pktd node. Recommended size is around 250GB of NVMe storage.</p>
+<ol>
+<li>Install Golang</li>
+</ol>
+<pre><code>sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install golang-go
+</code></pre>
+<ol>
+<li>Install git</li>
+</ol>
+<pre><code>sudo apt install git
+</code></pre>
+<ol>
+<li>Install the pktd node</li>
+</ol>
+<pre><code>git clone --branch develop https://github.com/pkt-cash/pktd 
+cd pktd 
+./do
+</code></pre>
+<p>The output should show the following:</p>
+<pre><code>Everything looks good - use ./bin/pktd to launch
+</code></pre>
+<h2 id="machine-2"><em>Machine 2</em><a class="headerlink" href="#machine-2" title="Permanent link">&para;</a></h2>
+<h3 id="master-paymaker-blkhandler">Master | Paymaker | BlkHandler:<a class="headerlink" href="#master-paymaker-blkhandler" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Install the required tools:</li>
+</ol>
+<pre><code>cd ~
+sudo add-apt-repository universe
+sudo apt install git
+sudo apt install make
+sudo apt install npm
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+</code></pre>
+<p>Restart your shell ### Add here how to get latest stable version of node</p>
+<ol>
+<li>Clone the source code:</li>
+</ol>
+<pre><code>git clone --branch master https://github.com/cjdelisle/PacketCrypt
+</code></pre>
+<ol>
+<li>Build the PacketCrypt code</li>
+</ol>
+<pre><code>cd PacketCrypt
+npm install
+</code></pre>
+<h2 id="machine-4-6"><em>Machine 4 - 6</em><a class="headerlink" href="#machine-4-6" title="Permanent link">&para;</a></h2>
+<h3 id="blkminer-annhandler-annminer">BlkMiner | AnnHandler | AnnMiner:<a class="headerlink" href="#blkminer-annhandler-annminer" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Install the Required tools:</li>
+</ol>
+<pre><code>sudo apt install gcc git
+sudo apt install curl
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre>
+<ol>
+<li>Clone packetcrypt_rs</li>
+</ol>
+<pre><code>git clone --branch develop https://github.com/cjdelisle/packetcrypt_rs
+</code></pre>
+<ol>
+<li>Compile PacketCrypt</li>
+</ol>
+<pre><code>cd packetcrypt_rs 
+~/.cargo/bin/cargo build --release --features jemalloc
+</code></pre>
+<h1 id="config-of-pooljs">Config of pool.js<a class="headerlink" href="#config-of-pooljs" title="Permanent link">&para;</a></h1>
+<p><strong><em>Information:</em></strong> </p>
+<ul>
+<li>pool.js is located at: <code>~/PacketCrypt/pool.example.js</code></li>
+<li>You need to edit this file, then run: <code>cp ~/PacketCrypt/pool.example.js ~/PacketCrypt/pool.js</code></li>
+</ul>
+<hr />
+<h3 id="configprivateseed">config.privateSeed<a class="headerlink" href="#configprivateseed" title="Permanent link">&para;</a></h3>
+<p>Signing of announcements is rarely used, it breaks people mining into multiple pools, and you should set it to null unless "you know what you're doing"</p>
+<p>This seed is used for deriving keys which will be used for signing announcements.</p>
+<p>Setting this value to an alphanumeric value e.g </p>
+<pre><code>oHk8TXpbtRRZGtaYYMnIFAzYMrVh6vA8XzKWWXcKbzCThuFLIJ234bHN5peddQFzR2TtQyo58gcFRP7bKg9BeXZirSqp9gVpjBWp
+</code></pre>
+<p>In general, this value should be set to the null, as signing announcements is rarely used, and breaks Announcement mining with multiple pools if you have your pool externally accessable, and should only be set if you have a strong understanding and knowledge of what you are doing.</p>
+<p><code>config.privateSeed = null</code></p>
+<p>If you aren't bothered by, or don't require your announcements to be signed .</p>
+<hr />
+<h3 id="configpaymakerhttppasswd">config.paymakerHttpPasswd<a class="headerlink" href="#configpaymakerhttppasswd" title="Permanent link">&para;</a></h3>
+<p>Anyone who has this password can make http posts to the paymaker (claim that shares were won)
+You should make this random and also firewall the paymaker from the public.
+The upload will be done using Authorization Basic with a username of "x" and this as the password</p>
+<pre><code>config.paymakerHttpPasswd = 'anyone with this password can post results to the paymaker';
+</code></pre>
+<p>You can put the paymaker behind an http proxy if you wish.</p>
+<hr />
+<h3 id="configmasterurl">config.masterUrl<a class="headerlink" href="#configmasterurl" title="Permanent link">&para;</a></h3>
+<p>This is used by the paymaker and block handler when running them with pool.js, it is used to resolve where the master is.</p>
+<p>You can either set this as a locally host or put your master behind a nginx proxy</p>
+<pre><code>config.masterUrl = 'http://localhost:8080';
+</code></pre>
+<p>or if you have your instance public, and you want to have it be resolvable publically, <strong><em>replace the url with your own.</em></strong></p>
+<pre><code>config.masterUrl = 'http://pool.pktpool.io';
+</code></pre>
+<hr />
+<h3 id="configrpc">config.rpc<a class="headerlink" href="#configrpc" title="Permanent link">&para;</a></h3>
+<p>The username and password set here, should be the same username and password used at the end of this guide for when you configure the pktd service.</p>
+<pre><code>user:  'x',
+pass:  'x',
+</code></pre>
+<hr />
+<h3 id="configannhandlers">config.annHandlers<a class="headerlink" href="#configannhandlers" title="Permanent link">&para;</a></h3>
+<p><strong><em>Information:</em></strong> </p>
+<ul>
+<li>config.annHandlers is a list of json object, with an object for each individual annhandler you would like to run, each ann handler will require it's own individual port.</li>
+<li>As the AnnHandler will be run on the same machine as the BlkMiner you need to make sure there are no over-lapping port bindings. </li>
+<li>If you plan to allow external AnnMiners (AnnMiners not on your LAN to mine against your pool, the url's placed in the AnnHandlers list, should be externally resolvable.</li>
+</ul>
+<p>The address that is advertized for accessing this ann handler (external address)</p>
+<p>If running locally use:</p>
+<pre><code>url:  'http://10.0.16.3:8081','http://10.0.16.4:8081'
+</code></pre>
+<p>If allowing external annminers use a resolved address such as:</p>
+<pre><code>url: 'http://ann1.pktpool.io','http://ann2.pktpool.io'
+</code></pre>
+<p><strong><em>Replace the url with your own.</em></strong></p>
+<hr />
+<h3 id="configblkhandlers">config.blkHandlers<a class="headerlink" href="#configblkhandlers" title="Permanent link">&para;</a></h3>
+<p><strong><em>Information:</em></strong> </p>
+<ul>
+<li>config.blkHandlers is a list of json object, with an object for each individual annhandler you would like to run, each ann handler will require it's own individual port.</li>
+<li>BlockHandlers are low-effort high-volume single-threaded workers.</li>
+</ul>
+<p>What address should be advertized for accessing this BlkHander, again make sure there are no overlapping ports.</p>
+<p>If you are wanting to support external blockminers, this address should be externally resolvable</p>
+<pre><code>url:  'http://localhost:8100',
+</code></pre>
+<p>This is the port that the blkHandler will bind to.</p>
+<pre><code>port:  8082,
+</code></pre>
+<p>This is the host that the blkHandler will bind to.</p>
+<pre><code>host:  '::',
+</code></pre>
+<p>This is  how many requests a blkHandler can queue before the handler starts rejecting requests</p>
+<pre><code>maxConnections:  50,
+</code></pre>
+<pre><code>root:  config
+</code></pre>
+<hr />
+<h3 id="configmaster">config.master<a class="headerlink" href="#configmaster" title="Permanent link">&para;</a></h3>
+<p>Which port to run the master on</p>
+<pre><code>port:  8080,
+</code></pre>
+<p>What address to bind to, set to localhost if proxying</p>
+<pre><code>host:  '::',
+</code></pre>
+<p>Minimum work for an announcement.
+This number is effectively a bandwidth divisor, every time you double this number you will reduce your bandwidth by a factor of two.</p>
+<pre><code>annMinWork:  Util.annWorkToTarget(128),
+</code></pre>
+<p>Average number of shares per block, reducing this number will reduce load on your block handlers, 
+but increasing it will allow payment to be spread more evenly between block miners.</p>
+<p>This wants to be set to a higher number than one, for the purpose of constantly testing that the block miners are making valid shares. You may have a block miner sitting for hours without a share and then when it wins one, it can become invalid because of misconfiguration </p>
+<pre><code>shareWorkDivisor:  4,
+</code></pre>
+<p>Which versions of announcements we will accept</p>
+<pre><code>annVersions: [1],
+</code></pre>
+<p>Request that ann miners mine announcements that are this many blocks old.</p>
+<p>Announcements contain a commitment of the most recent block hash but they need 3 blocks to "mature" before they can be used</p>
+<p>The point of this is so that PacketCrypt is about bandwidth, not latency.</p>
+<p>But there is a risk: If there is a surge then you are going to be starved for announcements</p>
+<p>When you are starved, you will have few usable anns which causes a slow-down in mining and the announcements which are being submitted are not usable.</p>
+<p>When you win a few blocks, those announcements become usable and you surge, which causes you to go back into starvation again.</p>
+<p>This should be set to either:</p>
+<ul>
+<li>0 Which means the announcements you are receiving are used instantly</li>
+<li>3 Which means you are waiting for the announcements to mature before using them.</li>
+</ul>
+<p>If running your own AnnMiners, it is advisable to set this to 0, and add the <code>--mineold 3</code> to <strong><em>some</em></strong> of your AnnMiner startups on the CLI.</p>
+<p>This helps to keep a balance between keeping your pool as powerful as possible, along with having AnnMiners to help out in the case of a starvation</p>
+<pre><code>mineOldAnns:  0,
+</code></pre>
+<hr />
+<h3 id="configpaymaker">config.payMaker<a class="headerlink" href="#configpaymaker" title="Permanent link">&para;</a></h3>
+<p>How the miners should access the paymaker (external address), <strong><em>replace the url with your own.</em></strong></p>
+<pre><code>url:  'pool.pktpool.io',
+</code></pre>
+<p>Which port to run the paymaker on</p>
+<pre><code>port:  8081,
+</code></pre>
+<p>What address to bind to, set to localhost if proxying</p>
+<pre><code>host:  '::',
+</code></pre>
+<p>Seconds between sending updates to pktd.
+If this set to zero, the payMaker will accept log uploads but will
+not send any changes of payout data to pktd.</p>
+<pre><code>updateCycle:  120,
+</code></pre>
+<p><code>updateCycle: 0</code> to disable</p>
+<p>How many seconds backward to keep history in memory</p>
+<pre><code>historyDepth:  60 * 60 * 24 * 30,
+</code></pre>
+<p>Maximum number of simultanious connections to accept before sending 500 errors</p>
+<pre><code>maxConnections:  200,
+</code></pre>
+<hr />
+<h4 id="anncompressor">annCompressor<a class="headerlink" href="#anncompressor" title="Permanent link">&para;</a></h4>
+<p>Store data in 1 minute aggregations</p>
+<pre><code>timespanMs:  1000 * 60,
+</code></pre>
+<p>Allow data to be submitted to any of the last 10 aggregations</p>
+<pre><code>slotsToKeepEvents:  10,
+</code></pre>
+<hr />
+<p>What fraction of the payout to pay to block miners (the rest will be paid to ann miners) (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)</p>
+<pre><code>blockPayoutFraction:  0.5,
+</code></pre>
+<p>What percent of the total winnings should be taken for pool management</p>
+<pre><code>poolFee:  0.40,
+</code></pre>
+<p>The address which should be paid the pool fee</p>
+<pre><code>poolFeeAddress:  &quot;pkt1qyc9dkhca7uc84zn3vlgd0h0fxr3twwn34qgeqe&quot;,
+</code></pre>
+<p>This constant will affect how far back into history we pay our announcement miners (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)</p>
+<pre><code>pplnsAnnConstantX:  0.125,
+</code></pre>
+<p>This constant will affect how far back into history we pay our block miners (<a href="https://bitcointalk.org/index.php?topic=39832">Pay per last N shares</a>)</p>
+<pre><code>pplnsBlkConstantX:  2,
+</code></pre>
+<p>When there are not enough shares to fairly spread out the winnings, pay what is left over to this address.</p>
+<pre><code>defaultAddress:  &quot;pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2&quot;,
+</code></pre>
+<p>When something goes wrong, direct pktd to send all coins here, if this is different
+from the defaultAddress then it is possible to account for and pay out to the miners
+later when the problem is fixed.</p>
+<pre><code>errorAddress:  &quot;pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2&quot;,
+</code></pre>
+<h1 id="config-of-pooltoml">Config of pool.toml<a class="headerlink" href="#config-of-pooltoml" title="Permanent link">&para;</a></h1>
+<p><strong><em>Information:</em></strong> 
+ - pool.example.toml is located at: <code>~/packetcrypt_rs/pool.example.toml</code>
+ - You need to edit this file, then run: <code>~/packetcrypt_rs/pool.example.toml ~/packetcrypt_rs/pool.toml</code></p>
+<hr />
+<p>Password used by your paymaker to post logs for payment, the same as <code>config.paymakerHttpPasswd</code></p>
+<pre><code>paymaker_http_password = &quot;you'll want this to be a secret&quot;
+</code></pre>
+<p>URL of the pool master, used for getting configuration and work, the same as:
+<strong><em>Replace the url with your own.</em></strong></p>
+<pre><code>master_url = &quot;http://pool.pktpool.io&quot;
+</code></pre>
+<h4 id="ann_handlerah">ann_handler.ah*<a class="headerlink" href="#ann_handlerah" title="Permanent link">&para;</a></h4>
+<p>You can have multiple ann_handlers, you can do this by defining each one such as:</p>
+<pre><code>[ann_handler.ah0]
+    &quot;parameters&quot;
+[ann_handler.ah1]
+    &quot;parameters&quot;
+</code></pre>
+<p>These can all be in a single file to be used by each annhandler, when starting the annhandlers, you would start them with on each respective machine:</p>
+<pre><code>packetcrypt ah --config /path/to/config.toml ah0
+packetcrypt ah --config /path/to/config.toml ah1
+</code></pre>
+<p>Number of threads to dedicate to the AnnHandler</p>
+<pre><code>num_workers = 8
+</code></pre>
+<p>Length of the input queue, keeping this low will create back-pressure and prevent miners from posting too many announcements when the server is in fact overloaded</p>
+<pre><code>input_queue_len = 256
+</code></pre>
+<p>The public url of the annhandler, this should match what is set in your pool.js
+<strong><em>Replace the url with your own.</em></strong></p>
+<pre><code>public_url = &quot;http://ann1.pktpool.io/submit&quot;
+</code></pre>
+<p>Bind to this port</p>
+<pre><code>bind_port = &quot;198.51.100.3:80&quot;
+</code></pre>
+<p>Bind this port to the sprayer component</p>
+<pre><code>bind_pvt = &quot;10.0.16.3:6666&quot;
+</code></pre>
+<p>Set sprayer</p>
+<pre><code>spray_at = [&quot;239.0.1.1:6667&quot;]
+
+spray_workers = 8
+</code></pre>
+<p>For Machine 3 you should end up with something like this </p>
+<pre><code>[ann_handler.ah0]
+
+    block_miner_passwd = &quot;no one steals my anns&quot;
+
+    skip_check_chance = 0
+
+    num_workers = 8
+
+    input_queue_len = 512
+
+    public_url = &quot;http://ann1.pktpool.io/submit&quot;
+
+    bind_pub = &quot;198.51.100.3:80&quot;
+
+    bind_pvt = &quot;10.0.16.3:6666&quot;
+
+    spray_at = [&quot;239.0.1.1:6667&quot;]
+
+    spray_workers = 8
+
+    subscribe_to = []
+
+    files_to_keep = 512
+</code></pre>
+<p>The same logic should be followed for Machine 4 and other handlers you may have. </p>
+<h4 id="note-to-bind-low-ports-with-non-root-user-run">NOTE: To bind low ports with non-root user run:<a class="headerlink" href="#note-to-bind-low-ports-with-non-root-user-run" title="Permanent link">&para;</a></h4>
+<p><code>sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)</code></p>
+<h1 id="running-manually">Running Manually<a class="headerlink" href="#running-manually" title="Permanent link">&para;</a></h1>
+<h2 id="machine-1_1"><em>Machine 1</em><a class="headerlink" href="#machine-1_1" title="Permanent link">&para;</a></h2>
+<p><strong><em>Information:</em></strong> </p>
+<ul>
+<li>These tasks need to be run in the order they are presented</li>
+<li>PKTD needs to have downloaded the full chain first, you will know when the node is upto date when <strong><em>height</em></strong> is equal to the current block on the <a href="https://explorer.pkt.cash/">explorer</a> It can take 12+ hours to fully sync to the current block height</li>
+</ul>
+<h3 id="pktd">PKTD<a class="headerlink" href="#pktd" title="Permanent link">&para;</a></h3>
+<p><code>--rpcuser</code> and <code>--rpcpass</code> should match the values set in pool.js under config.rpc </p>
+<pre><code>
+./pktd/bin/pktd --rpcuser=XXX --rpcpass=XXX --miningaddr &lt;your PKT wallet address&gt;
+</code></pre>
+<h2 id="machine-2_1"><em>Machine 2</em><a class="headerlink" href="#machine-2_1" title="Permanent link">&para;</a></h2>
+<h3 id="master">Master<a class="headerlink" href="#master" title="Permanent link">&para;</a></h3>
+<pre><code>node ./pool.js --master
+</code></pre>
+<h3 id="paymaker">Paymaker<a class="headerlink" href="#paymaker" title="Permanent link">&para;</a></h3>
+<pre><code>node ./pool.js --payMaker
+</code></pre>
+<h3 id="blkhandlers">BlkHandler(s)<a class="headerlink" href="#blkhandlers" title="Permanent link">&para;</a></h3>
+<p>Launch the <strong>BlkHandler</strong> nodes, specify <code>--blk0</code> for the first <strong>BlkHandler</strong>, <code>--blk1</code> for the second, and so forth</p>
+<pre><code>cd PacketCrypt
+node ./pool.js --blk0
+node ./pool.js --blk1
+</code></pre>
+<h2 id="machine-3"><em>Machine 3</em><a class="headerlink" href="#machine-3" title="Permanent link">&para;</a></h2>
+<h3 id="annhandler">AnnHandler<a class="headerlink" href="#annhandler" title="Permanent link">&para;</a></h3>
+<pre><code>cd packetcrypt_rs
+./target/release/packetcrypt ah --config /path/to/pool.toml ah0
+</code></pre>
+<h2 id="machine-4"><em>Machine 4</em><a class="headerlink" href="#machine-4" title="Permanent link">&para;</a></h2>
+<h3 id="annhandler_1">AnnHandler<a class="headerlink" href="#annhandler_1" title="Permanent link">&para;</a></h3>
+<pre><code>cd packetcrypt_rs
+./targer/release/packetcrypt ah --config /path/to/pool.toml ah1
+</code></pre>
+<h2 id="machine-5-and-6"><em>Machine 5 and 6</em><a class="headerlink" href="#machine-5-and-6" title="Permanent link">&para;</a></h2>
+<h3 id="blkminer">BlkMiner<a class="headerlink" href="#blkminer" title="Permanent link">&para;</a></h3>
+<p><code>--threads</code> is the number of threads you want to dedicate to the Blkminer, the default is to use all available threads.
+<code>--paymentaddr</code> is the wallet you want your coins to be mined into, it is advisable to not use the electrum wallet for this.
+<code>--memorysizemb</code> is how much RAM you are allocating to block mining, Ideally you want to set as much as you can.
+<code>&lt;Master address of pool&gt;</code> is the masterUrl of your pool</p>
+<pre><code>cd packetcrypt_rs
+./target/release/packetcrypt blk &lt;Master Address of Pool&gt; --paymentaddr &lt;your PKT wallet address&gt; --threads 80 --memorysizemb 665000 --handlerpass NoOneStealsMyAnns --subscribe 10.0.16.3:6666 --bind 0.0.0.0:6667 --mcast 239.0.1.1
+</code></pre>
+<h1 id="nginx-setup-for-allowing-external-annmining">NGINX Setup (For allowing external AnnMining)<a class="headerlink" href="#nginx-setup-for-allowing-external-annmining" title="Permanent link">&para;</a></h1>
+<h2 id="machine-2_2"><em>Machine 2</em><a class="headerlink" href="#machine-2_2" title="Permanent link">&para;</a></h2>
+<p>Update system and install Nginx</p>
+<pre><code>sudo apt update
+sudo apt install nginx
+</code></pre>
+<p>Unlink default nginx site</p>
+<pre><code>unlink /etc/nginx/sites-enabled/default
+cd /etc/nginx/sites-available
+</code></pre>
+<p>Create and edit the reverse-proxy.conf file</p>
+<pre><code>vim reverse-proxy.conf
+</code></pre>
+<p>The config for the services:</p>
+<pre><code>server { 
+    listen 80; 
+    listen [::]:80; 
+    server_name &lt;masterURL&gt;; 
+    location / { 
+        proxy_pass http://localhost:8080/; 
+        } 
+}
+
+server { 
+    listen 80; 
+    listen [::]:80; 
+    server_name paymaker.pktpool.io; 
+    location / { 
+        proxy_pass http://localhost:8081/; 
+        } 
+}
+</code></pre>
+<p>Link new file to sites-enabled</p>
+<pre><code>ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf
+</code></pre>
+<p>Remove default config</p>
+<pre><code>rm default
+</code></pre>
+<p>Check reverse proxy config is correct</p>
+<pre><code>nginx -t
+</code></pre>
+<p>Reload nginx to pick up config changes.</p>
+<pre><code>sudo systemctl reload nginx
+</code></pre>
+
+<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+  <li class="last-updated-holder displayDate loading">
+    <span class="last-updated-text">Last updated:</span>
+    <time role="presentation" datetime="2018-10-25T00:00:00.000Z" data-article-date-source="ms.date"></time>
+  </li>
+<!--
+  <li class="readingTime">
+    2 minutes to read
+  </li>
+-->
+  <li class="contributors-holder">
+    <span class="contributors-text">Contributors</span>
+    <ul class="contributors" data-bi-name="contributors"></ul>
+  </li>
+</ul>
+</div>
+      <div id="sidebar-toc" class="sidebar col-md-2">
+        <nav id="toc" data-toggle="toc" class="sticky-top sticky-offset">
+          <h4>Table of Contents</h4>
+        </nav>
+      </div>
+    </div>
+    </div><footer class="col-md-12">
+  <nav class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-12">
+		<a class="navbar-brand" href="../..">
+          <img src="../../assets/logo.svg" alt="PKT Documentation">
+		</a>
+		<ul class="c-footer__logo_social nav flex-row ml-md-auto d-md-flex">
+			<li class="c-footer__menu-item">
+				<a href="https://pkt.chat" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/pkt-chat.svg" alt="pkt.chat" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://www.youtube.com/c/PKTCash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/youtube.svg" alt="Youtube" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://www.instagram.com/pktcash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/instagram.svg" alt="Instagram" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://twitter.com/pktcash" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/x.svg" alt="Twitter" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://discord.gg/bjJutHm9CN" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/discord.svg" alt="Discord" width="24"></span></a>
+			</li>
+			<li class="c-footer__menu-item">
+				<a href="https://github.com/pkt-cash/" target="_blank" class="c-footer__menu-link"><span class="c-footer__menu-text"><img src="../../assets/github.svg" alt="Github" width="24"></span></a>
+			</li>
+		</ul>
+		<a href="https://github.com/cjdelisle/CJDNS-contact" target="_blank" class="c-footer__menu-link">©2024 PKT Cash | Privacy Policy</a>
+      </div>
+		<div class="col">
+			<h4>Learn</h4>
+			<a href="https://pkt.cash/mine" title="Mine" target="_blank">Mine</a>
+			<a href="https://pkt.cash/utility" title="Utility" target="_blank">Utility</a>
+			<a href="https://pkt.cash/pkt-network" title="PKT Network" target="_blank">PKT Network</a>
+			<a href="https://pkt.cash/pkt-cash" title="PKT Cash" target="_blank">PKT Cash</a>
+			<a href="https://docsend.com/view/ayf5d3tz5rymn8fv" title="PKT Deck" target="_blank">PKT Deck</a>
+		</div>
+		<div class="col">
+			<h4>Develop</h4>
+			<a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" title="Technical Docs" target="_blank">Technical Docs</a>
+			<a href="https://pkt.cash/roadmap" title="Roadmap" target="_blank">Roadmap</a>
+			<a href="https://pkt.cash/PacketCrypt-2020-09-04.pdf" title="Yellowpaper" target="_blank">Yellowpaper</a>
+			<a href="https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf" title="Whitepaper" target="_blank">Whitepaper</a>
+		</div>
+		<div class="col">
+			<h4>Network</h4>
+			<a href="https://packetscan.io/" title="Explorer" target="_blank">Explorer</a>
+			<a href="https://pkt.cash/wallet" title="Wallets" target="_blank">Wallets</a>
+			<a href="https://pkt.cash/network-steward" title="Network Steward" target="_blank">Network Steward</a>
+			<a href="https://pkt.cash/ecosystem" title="Ecosystem" target="_blank">Ecosystem</a>
+			<a href="https://github.com/cjdelisle/cjdns" title="Cjdns" target="_blank">Cjdns</a>
+		</div>
+		<div class="col">
+			<h4>Explore</h4>
+			<a href="https://pkt.cash/community" title="Community" target="_blank">Community</a>
+			<a href="https://crypto.pkt.cash/" title="Blog" target="_blank">Blog</a>
+			<a href="https://pkt.cash/trademark" title="Trademark" target="_blank">Trademark</a>
+			<a href="https://pkt.cash/brand" title="Brand" target="_blank">Brand</a>
+		</div>
+  </nav>
+</footer>
+
+    <script>
+      var base_url = "../..",
+          shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js" defer></script>
+    <script src="../../js/base.js" defer></script>
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" data-toc-skip>Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="h4 modal-title">Keyboard Shortcuts</p>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </body>
+</html>

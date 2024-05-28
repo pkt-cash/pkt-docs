@@ -17,7 +17,7 @@ nav:
   - Home: index.md
   - Learn:
     - What is PKT?: learn/pkt.md
-    - What is PacketCrypt?: learn/packetcrypt.md  
+    - What is PacketCrypt?: learn/packetcrypt.md
     - What is PKT Cash?: learn/pkt-cash.md
     - What is WPKT?: learn/wpkt.md
     - What is the Network Steward?: learn/network-steward.md
