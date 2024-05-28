@@ -75,7 +75,6 @@ Before you can begin using PKT, you need to setup your wallet, this means writin
 2. After you click "Request", your wallet will create a new address and copy it to your clipboard so you can send it to the person paying you (or transfer money to your new wallet)
 ![pkt_electrum_receive2](./pkt_electrum_receive2.png)
 3. When PKT gets sent to your new address, you will get a notification. It says "unconfirmed" because the transaction has not yet been included in the history of the blockchain.
-![pkt_electrum_receive3](./pkt_electrum_receive3.png)
 4. Once your transaction has been included in the blockchain, this icon will change to a clock and then after a few minutes, a checkmark
 ![pkt_electrum_receive4](./pkt_electrum_receive4.png)
 5. Congratulations, you have received your first PKT
