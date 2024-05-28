@@ -43,7 +43,6 @@ body {
 }
 h1,h2,h3,.h1,.h2,.h3 {
     font-family: "Inter-Bold", sans-serif;
-    color: #fff;
 }
 .h3, h3 {
     color: #fff;
@@ -141,18 +140,13 @@ footer .col > h4 {
     font-size: 1rem;
     line-height: 2.5rem;
     color: hsla(0, 0%, 100%, .5);
-    font-family: "Inter-Bold", sans-serif;
+    font-weight: bold;
 }
 footer .col > a {
     font-size: 1rem;
     line-height: 2.5rem;
     color: hsla(0, 0%, 100%, .5);
     display: block;
-}
-footer .col > a:hover,
-footer .col > a:focus {
-    color:#fff;
-    text-decoration: none;
 }
 @media screen and (max-width:767px) {
     footer .navbar-brand img {
@@ -205,9 +199,6 @@ footer .col > a:focus {
     cursor: pointer;
 }
 @media screen and (max-width:767px) {
-    #sidebar-nav {
-        padding: 0;
-    }
     #sidebar-nav .navbar-toggler {
         margin: 0;
         position: fixed;
@@ -234,12 +225,11 @@ footer .col > a:focus {
         background: rgba(0, 5, 47, .5);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
-        -ms-align-items: flex-start;
-        align-items: flex-start;
+        -ms-align-items: center;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
         opacity: 0;
-        padding: 0 25px;
     }
     #sidebar-navbar-collapse.show {
         display: -moz-flex;
