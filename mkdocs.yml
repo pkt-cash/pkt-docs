@@ -8,7 +8,7 @@ plugins:
   - search
 
 theme:
-  name: null
+  name: moonstone
   custom_dir: custom_theme
   fluid_layout: false
 
@@ -17,7 +17,7 @@ nav:
   - Home: index.md
   - Learn:
     - What is PKT?: learn/pkt.md
-    - What is PacketCrypt?: learn/packetcrypt.md
+    - What is PacketCrypt?: learn/packetcrypt.md  
     - What is PKT Cash?: learn/pkt-cash.md
     - What is WPKT?: learn/wpkt.md
     - What is the Network Steward?: learn/network-steward.md
@@ -48,7 +48,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - attr_list
-  - pymdownx.extra
+
 
 extra_css:
     - css/extra.css
