@@ -85,6 +85,22 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
 #mainnav .navbar-brand img {
     max-width: 125px;
 }
+#mainnav #mainnav-navbar-collapse > .search_wrap {
+    opacity: 0;
+    visibility: hidden;
+}
+#mainnav #mainnav-navbar-collapse > .navbar-nav > .nav-item .dropdown-menu {
+    background-color: #202f5a;
+}
+#mainnav #mainnav-navbar-collapse > .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
+    color: #fff;
+}
+#mainnav #mainnav-navbar-collapse > .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus,
+#mainnav #mainnav-navbar-collapse > .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+}
 @media screen and (max-width:767px) {
     #mainnav {
         background: rgba(0, 5, 47, .5);
