@@ -8,7 +8,7 @@ plugins:
   - search
 
 theme:
-  name: mkdocs_moonstone
+  name: null
   custom_dir: custom_theme
   fluid_layout: false
 
