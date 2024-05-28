@@ -8,7 +8,7 @@ plugins:
   - search
 
 theme:
-  name: null
+  name: moonstone
   custom_dir: custom_theme
   fluid_layout: false
 
@@ -48,7 +48,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - attr_list
-  - pymdownx.extra
+
 
 extra_css:
     - css/extra.css
