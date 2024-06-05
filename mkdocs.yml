@@ -37,11 +37,10 @@ nav:
     - How to Run a Pktd Full Node: adv_learning/pktd-full-node.md
     - How to Swap PKT and Wrapped PKT: adv_learning/swap-pkt-wrapped-pkt.md
   - Community:
-    - Code of Conduct: code_of_conduct.md
+    - Code of Conduct: community/code_of_conduct.md
     - Ethical Communication Guidelines: community/ethica-communication-guidelines.md
     - Classifieds: community/classifieds.md
     - Press & Media Assets: community/press-media-assets.md
-
 
 markdown_extensions:
   - admonition

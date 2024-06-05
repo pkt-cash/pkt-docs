@@ -324,7 +324,40 @@ footer .col > a:focus {
 #main ol li,
 #main ul li {
     padding-bottom: 5px;
-} 
+}
+.md-footer-nav {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.md-footer-nav > a {
+    padding: .5rem 1rem;
+    border: 1px solid #c0c0c063;
+    border-radius: .3rem;
+    width: 48%;
+    color: #c0c0c063;
+    transition: all .5s ease;
+    font-size: 14px;
+}
+.md-footer-nav > a:hover,
+.md-footer-nav > a:focus {
+    border-color: silver;
+    color:silver;
+    text-decoration: none;
+}
+.md-footer-nav > .md-footer-nav__link--next {
+    text-align: right;
+}
+.md-footer-nav > a span {
+    color:#00b127;
+    display: block;
+    margin-top: 7px;
+}
 @media screen and (max-width:1280px) {
     #main p {
         word-break: break-all;
@@ -333,5 +366,11 @@ footer .col > a:focus {
 @media screen and (max-width:767px) {
     #main p {
         word-break: normal;
+    }
+    .md-footer-nav > a {
+        width: 100%;
+    }
+    .md-footer-nav > .md-footer-nav__link--next {
+        margin-top: 15px;
     }
 }

@@ -71,7 +71,12 @@
     {%- set main_content %}
     <div class="row">
       <div id="sidebar-nav" class="sidebar col-md-3">{% include "side-nav.html" %}</div>
-      <div id="main" class="{%- if config.theme.fluid_layout -%}col{%- else -%}col-md-7{%- endif -%}" role="main">{% include "content.html" %}</div>
+      <div id="main" class="{%- if config.theme.fluid_layout -%}col{%- else -%}col-md-7{%- endif -%}" role="main">
+        {% include "content.html" %}
+        <div class="md-footer-nav">
+          <!-- Navigation links will be inserted here by custom-nav.js -->
+        </div>
+      </div>
       <div id="sidebar-toc" class="sidebar col-md-2">
         <nav id="toc" data-toggle="toc" class="sticky-top sticky-offset">
           <h4>Table of Contents</h4>
@@ -106,8 +111,48 @@
     <script src="{{ "js/base.js"|url }}" defer></script>
     {%- endblock %}
     {% if 'search' in config['plugins'] %}{%- include "search-modal.html" %}{% endif %}
-    {%- include "keyboard-modal.html" %}
-    
+    {{ extra_js }}
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get all nav items
+        const navItems = document.querySelectorAll('.md-nav__link');
+        
+        // Find the current page
+        let currentPageIndex = -1;
+        navItems.forEach((item, index) => {
+            if (item.classList.contains('active')) {
+                currentPageIndex = index;
+            }
+        });
+
+        // Add previous and next links if current page is found
+        if (currentPageIndex !== -1) {
+            const navContainer = document.querySelector('.md-footer-nav');
+            
+            if (navContainer) {
+                // Previous link
+                if (currentPageIndex > 0) {
+                    const prevItem = navItems[currentPageIndex - 1];
+                    const prevLink = document.createElement('a');
+                    prevLink.href = prevItem.href;
+                    prevLink.innerHTML = 'Previous <span>'+prevItem.textContent +'</span>';
+                    prevLink.className = 'md-footer-nav__link md-footer-nav__link--prev';
+                    navContainer.appendChild(prevLink);
+                }
+
+                // Next link
+                if (currentPageIndex < navItems.length - 1) {
+                    const nextItem = navItems[currentPageIndex + 1];
+                    const nextLink = document.createElement('a');
+                    nextLink.href = nextItem.href;
+                    nextLink.innerHTML = 'Next <span>'+nextItem.textContent +'</span>';
+                    nextLink.className = 'md-footer-nav__link md-footer-nav__link--next';
+                    navContainer.appendChild(nextLink);
+                }
+            }
+        }
+    });
+    </script>
   </body>
 </html>
 {% if page and page.is_homepage %}
