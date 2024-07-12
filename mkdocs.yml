@@ -33,6 +33,10 @@ nav:
     - Intro to PKT Mining: start_mining/intro.md
     - How to Start Announcement Mining: start_mining/announcement-mining.md
     - How to Setup a PKT Mining Pool: start_mining/pkt-mining-pool.md
+  - Running Infrastructure:
+    - How to Run a CJDNS Node: running_infrastructure/cjdns_node.md
+    - How to Run a CJDNS Website: running_infrastructure/cjdns_website.md
+    - How to Run a VPN Server: running_infrastructure/vpn_server.md
   - Advanced Learning:
     - How to Run a Pktd Full Node: adv_learning/pktd-full-node.md
     - How to Swap PKT and Wrapped PKT: adv_learning/swap-pkt-wrapped-pkt.md
