@@ -2,252 +2,267 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.pkt.cash/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/PKT_FAQ/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/cjdns_websites/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/commercial/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/communication/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/units/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/useful_tools/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/vote/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/wrapped_pkt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/adv_learning/buy-pkt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/adv_learning/cryptoeconomics/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/adv_learning/pktd-full-node/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/adv_learning/sell-pkt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/adv_learning/swap-pkt-wrapped-pkt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/community/classifieds/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/community/code_of_conduct/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/community/ethica-communication-guidelines/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/community/press-media-assets/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/building-on-pkt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/cjdns/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/cloud-isp/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/edge-points/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/packetcrypt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/pkt-lightning-deamon/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/pkt-vpn/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/tokenstrike/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/dev/wiif-sharing/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/electrum/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/learn/network-steward/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/learn/packetcrypt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/learn/pkt-cash/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/learn/pkt-network/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/learn/pkt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/learn/wpkt/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/mining/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/mining/pool_setup_guide/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/pktd/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/pktd/migrating_from_electrum/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/pktd/pktwallet/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/pktwalletgui/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.pkt.cash/running_infrastructure/cjdns_node/</loc>
+         <lastmod>2024-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.pkt.cash/running_infrastructure/cjdns_website/</loc>
+         <lastmod>2024-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.pkt.cash/running_infrastructure/vpn_server/</loc>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/start_mining/announcement-mining/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/start_mining/intro/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/start_mining/pkt-mining-pool/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/wallet_setup/install-from-seed/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/wallet_setup/install-pkt-electrum/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/wallet_setup/pkt-cli-wallet/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/wallet_setup/pkt-wallet-setup/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/wallet_setup/pkt-world-wallet/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/wallet_setup/pkt-zulu-wallet/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.pkt.cash/wallet_setup/wallet-faq/</loc>
-         <lastmod>2024-06-05</lastmod>
+         <lastmod>2024-07-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

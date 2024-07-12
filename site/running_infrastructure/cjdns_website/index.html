@@ -12,10 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="author" content="PKT">
-    <link rel="canonical" href="https://docs.pkt.cash/wallet_setup/wallet-faq/">
+    <link rel="canonical" href="https://docs.pkt.cash/running_infrastructure/cjdns_website/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
     
-    <title>PKT Documentation - PKT Documentation</title>
+    <title>How to Run a CJDNS Website - PKT Documentation</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" rel="stylesheet">
@@ -146,27 +146,27 @@
         <ul id="wallet-setup" class="collapse">
                 
 <li>
-    <a href="../pkt-wallet-setup/" class="md-nav__link ">How to setup a PKT Wallet</a>
+    <a href="../../wallet_setup/pkt-wallet-setup/" class="md-nav__link ">How to setup a PKT Wallet</a>
 </li>
                 
 <li>
-    <a href="../install-from-seed/" class="md-nav__link ">Installing from Seed</a>
+    <a href="../../wallet_setup/install-from-seed/" class="md-nav__link ">Installing from Seed</a>
 </li>
                 
 <li>
-    <a href="../install-pkt-electrum/" class="md-nav__link ">Installing PKT Electrum (Mac/Windows)</a>
+    <a href="../../wallet_setup/install-pkt-electrum/" class="md-nav__link ">Installing PKT Electrum (Mac/Windows)</a>
 </li>
                 
 <li>
-    <a href="../pkt-world-wallet/" class="md-nav__link ">Installing PKT.World Wallet (Mac/Windows)</a>
+    <a href="../../wallet_setup/pkt-world-wallet/" class="md-nav__link ">Installing PKT.World Wallet (Mac/Windows)</a>
 </li>
                 
 <li>
-    <a href="../pkt-zulu-wallet/" class="md-nav__link ">Installing PKT Zulu Wallet (Mac)</a>
+    <a href="../../wallet_setup/pkt-zulu-wallet/" class="md-nav__link ">Installing PKT Zulu Wallet (Mac)</a>
 </li>
                 
 <li>
-    <a href="../pkt-cli-wallet/" class="md-nav__link ">Installing PKT CLI Wallet (Mac/Windows/Linux)</a>
+    <a href="../../wallet_setup/pkt-cli-wallet/" class="md-nav__link ">Installing PKT CLI Wallet (Mac/Windows/Linux)</a>
 </li>
         </ul>
       </li>
@@ -188,21 +188,21 @@
 </li>
         </ul>
       </li>
-      <li class="toplevel nav-item" data-toggle="collapse" data-target="#running-infrastructure">
+      <li class="toplevel nav-item active" data-toggle="collapse" data-target="#running-infrastructure">
         <!--<a href="#" class="nav-link">Running Infrastructure <b class="caret"></b></a>-->
         <span class="section-title">Running Infrastructure</span>
         <ul id="running-infrastructure" class="collapse">
                 
 <li>
-    <a href="../../running_infrastructure/cjdns_node/" class="md-nav__link ">How to Run a CJDNS Node</a>
+    <a href="../cjdns_node/" class="md-nav__link ">How to Run a CJDNS Node</a>
 </li>
                 
 <li>
-    <a href="../../running_infrastructure/cjdns_website/" class="md-nav__link ">How to Run a CJDNS Website</a>
+    <a href="./" class="md-nav__link  active">How to Run a CJDNS Website</a>
 </li>
                 
 <li>
-    <a href="../../running_infrastructure/vpn_server/" class="md-nav__link ">How to Run a VPN Server</a>
+    <a href="../vpn_server/" class="md-nav__link ">How to Run a VPN Server</a>
 </li>
         </ul>
       </li>
@@ -253,30 +253,73 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     
-    <li class="breadcrumb-item active" aria-current="page">PKT Documentation</li>
+    
+    <li class="breadcrumb-item">Running Infrastructure</li>
+    
+    
+    <li class="breadcrumb-item active" aria-current="page">How to Run a CJDNS Website</li>
   </ol>
 </nav>
 
 
-<h1 id="pkt-documentation">PKT Documentation<a class="headerlink" href="#pkt-documentation" title="Permanent link">&para;</a></h1>
-<p>Documentation for the PKT project</p>
-<h2 id="wallet-setup">Wallet setup<a class="headerlink" href="#wallet-setup" title="Permanent link">&para;</a></h2>
-<p>There are several wallets which you can choose from, the easiest to set up are</p>
+<h1 id="how-to-set-up-your-own-self-hosted-website-on-cjdns-network">How to set up your own self-hosted website on cjdns network.<a class="headerlink" href="#how-to-set-up-your-own-self-hosted-website-on-cjdns-network" title="Permanent link">&para;</a></h1>
+<p>The following setup has been tested on a Raspberry Pi 4.</p>
+<ol>
+<li>Go to https://yunohost.org/en/install</li>
+<li>Select Raspberry Pi</li>
+<li>Download the YunoHost image</li>
+<li>Go to https://www.raspberrypi.com/news/raspberry-pi-imager-imaging-utility/</li>
+<li>Download Pi Imager</li>
+<li>Flash the YunoHost image to your SD card using the Pi Imager</li>
+<li>Then insert the SD card into your Raspberry Pi and boot it up.</li>
+<li>Access the YunoHost admin panel by going to https://yunohost.local</li>
+<li>Start the post-installation process</li>
+<li>In the Set main-domain select "I want a domain for local usage / test only"</li>
+<li>Complete the post-installation process</li>
+<li>Once the post-installation process is complete, go to the YunoHost admin panel and log in</li>
+<li>Select the "Applications" tab and click on "Install"</li>
+<li>Search for "wordpress", select it.</li>
+<li>Scroll down and select "administrator for this site"</li>
+<li>Click on "Install"</li>
+<li>Upon completion go to "Applications" and click "Install" again</li>
+<li>Scroll down on "Install custom app" and paste the following link: https://github.com/dkoukoul/cjdns_ynh</li>
+<li>Click on "Install"</li>
+<li>On completion your cjdns ipv6 address will be displayed, copy it.</li>
+</ol>
+<h1 id="accessing-your-website">Accessing your website<a class="headerlink" href="#accessing-your-website" title="Permanent link">&para;</a></h1>
+<p>For anyone to access your cjdns site they need to be on the cjdns network, either by running cjdns on their device or by connecting to one of the VPN exits that allow access to cjdns network.</p>
+<ol>
+<li>Go to a browser and paste the ipv6 address after http and inside square brackets like this: http://[your-cjdns_ipv6_address]/blog</li>
+</ol>
+<p><strong>NOTE</strong>: Make sure to remove any leading <code>0</code> from each section of the ipv6 address.
+for example if your cjdns ipv6 is ending with <code>... :0ad2</code> it should be <code>... :ad2</code> in the browser.</p>
+<h1 id="set-up-a-domain-for-your-site">Set up a domain for your site<a class="headerlink" href="#set-up-a-domain-for-your-site" title="Permanent link">&para;</a></h1>
+<p>First you will need to own a domain name for example "pkt.net".
+Select one of the VPN exits that have a running SNI proxy and copy their IPv4 address.</p>
+<p>Go to your domain registrar and set up the following DNS records:</p>
 <ul>
-<li><a href="./electrum">PKT Electrum</a> which has a Graphical UI and supports Windows, Mac and Linux.</li>
-<li><a href="./pktwalletgui">PKT Wallet</a> which has a Graphical UI and supports MacOS and works great with miners.</li>
-<li><a href="https://www.pkt.world/wallet">Pkt.world Wallet</a> which has a Graphical UI for Windows, works with miners and includes a built-in miner.</li>
+<li>A record: pkt.net -&gt; [VPN server IPv4 address]</li>
+<li>AAAA record: h.pkt.net -&gt; [your-cjdns_ipv6_address]</li>
 </ul>
-<p>You can also setup <a href="./pktd/pktwallet">PKT Wallet</a> which is command line only but has greater
-scalability and privacy features.</p>
-<h2 id="mining">Mining<a class="headerlink" href="#mining" title="Permanent link">&para;</a></h2>
-<p>PKT is mined using the PacketCrypt bandwidth hard mining algorithm. You can learn how
-to mine on the <a href="./mining">Mining</a> page.</p>
-<h2 id="running-a-pktd-instance">Running a pktd instance<a class="headerlink" href="#running-a-pktd-instance" title="Permanent link">&para;</a></h2>
-<p>You can setup a pktd instance using the instructions on <a href="./pktd">pktd</a>.</p>
-<h2 id="help-and-community">Help and Community<a class="headerlink" href="#help-and-community" title="Permanent link">&para;</a></h2>
-<p>To get help with the technologies in the PKT project or to hang out in the community
-join us on the <a href="https://pkt.chat/">PKT Chat</a> project chat.</p>
+<p>for example if the VPN server's IPv4 address is <code>51.79.51.242</code> your domain is <code>pkt.net</code> and your cjdns IPv6 address where your site is running is <code>fc04:8212:c1fa:94ad:e554:7bac:1264:0ad2</code></p>
+<p>your A record should be:
+* A record: pkt.net -&gt; 51.79.51.242
+and your AAAA record should be:
+* AAAA record: h.pkt.net -&gt; fc04:8212:c1fa:94ad:e554:7bac:1264:ad2</p>
+<h2 id="register-domain-with-vpn-server">Register domain with VPN server<a class="headerlink" href="#register-domain-with-vpn-server" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Request the VPN server operator to add your domain to their SNI proxy by editing the following command replacing it with your domain and cjdns ipv6 address and the VPN server's IPv4 address:</li>
+</ol>
+<p><code>curl -X POST --H "Content-Type: application/json" -d '{"domain":"domain.com","cjdnsIpv6":"your_cjdns_ipv6_address"} http://[VPN server IPv4 address]:8099/api/0.4/server/domain/add/</code></p>
+<h2 id="set-up-the-domain-in-yunohost">Set up the domain in yunohost<a class="headerlink" href="#set-up-the-domain-in-yunohost" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Log in into your yunohost admin panel.</li>
+<li>Go to "Domains" and click on "Add domain"</li>
+<li>Click on " I want to add a domain I own, or a subdomain" add your domain and click on "Add"</li>
+<li>Select your newly added domain.</li>
+<li>Go to tab "Certificates"</li>
+<li>Click on "Ignore diagnosis checks" and then you can request a certificate for your domain by going clicking "Install Let's Encrypt certificate".</li>
+</ol>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <li class="last-updated-holder displayDate loading">
