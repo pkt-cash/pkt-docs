@@ -3,18 +3,10 @@
 This guide will help you set up a CJDNS node with PKT wallet and the following services:
 You can follow the [steps](#steps) to set up the server or reade more about the [process](#understanding-the-process) and [services](#understanding-the-services-and-files) involved.
 
-* AnodeVPN server 
-  
-  https://github.com/anode-co/anodevpn-server
-* IKEv2 Ipsec VPN server
-  
-  https://github.com/hwdsl2/setup-ipsec-vpn
-* OpenVPN server
-  
-  https://ubuntu.com/server/docs/how-to-install-and-use-openvpn
-* SNI proxy 
-  
-  https://github.com/dlundquist/sniproxy
+* [AnodeVPN server ](https://github.com/anode-co/anodevpn-server)
+* [IKEv2 Ipsec VPN server](https://github.com/hwdsl2/setup-ipsec-vpn)
+* [OpenVPN server](https://ubuntu.com/server/docs/how-to-install-and-use-openvpn)
+* [SNI proxy](https://github.com/dlundquist/sniproxy)
 
 ## Requirements
 * A server running debian based Linux (preferrably Ubuntu 22.04)
