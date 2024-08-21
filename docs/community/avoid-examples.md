@@ -1,24 +1,8 @@
-# Classifieds
-PKT is composed of the community members and community member companies that operate within the ecosystem. This collective comes from around the world and are rallying around the vision and roadmap towards getting the next one billion people connected online.
+# Examples to Avoid
+These passages are examples of the type of communication which is likely to be problematic. Context is key, and in the context of a communication which clearly transmits an ethical core message, a passing mention of money probably does not make the whole communication unethical. But if the core message is not communicated with adequate clarity, then even the slightest mention of topics like the following may make the communication unethical.
 
-Below is a mostly un-moderated list of classified advertisements and offerings. Beware that anyone can contribute and offer their services and there is no central authority at pkt.cash to verify them.
+* "Reaping the rewards for something you put zero effort in."
+* "Easy money.”
+* "So many people trust cryptocurrency as an investment."
 
-## Add yourself
-Make a [Pull Request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to [This page](https://github.com/pkt-cash/pkt-docs/blob/main/docs/commercial.md) to add your offer.
-
-* Keep it short and to the point
-* NO PICTURES, no color text, no big fonts
-* Use the appropriate category
-
-## Hardware
-### [Pktpal.com](https://pktpal.com/)
-Buy a PKT Cube which will mine PKT with your unused internet and provides easy-to-use PkteerOS wallet.
-
-## Hosting
-### [Space-hosting.net](https://space-hosting.net/pktcash)
-Mining servers for rent
-
-## PKT Cloud Mining Service
-### [AMAPOOL.com](https://amapool.com/)
-Your best choice towards a fully automated PKT cloud mining solution.
-
+While some of these statements may be factual, they share a common narrative that there is an opportunity, it is easy, and it leads to making money. This is a stark contrast from the Principle of No Expected Return.

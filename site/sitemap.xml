@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.pkt.cash/wallets/</loc>
+         <lastmod>2024-08-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.pkt.cash/wrapped_pkt/</loc>
          <lastmod>2024-08-21</lastmod>
          <changefreq>daily</changefreq>
@@ -107,11 +112,6 @@
     </url>
     <url>
          <loc>https://docs.pkt.cash/community/better-examples/</loc>
-         <lastmod>2024-08-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.pkt.cash/community/classifieds/</loc>
          <lastmod>2024-08-21</lastmod>
          <changefreq>daily</changefreq>
     </url>

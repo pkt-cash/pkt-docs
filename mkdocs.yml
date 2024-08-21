@@ -44,13 +44,7 @@ nav:
     - Development Team Allocation: tockenomics/dev-team.md
   - Affiliate: affiliate.md
   - How to buy PKT: buy-pkt.md
-  - Wallets:
-    - How to setup a PKT Wallet: wallet_setup/pkt-wallet-setup.md
-    - Installing from Seed: wallet_setup/install-from-seed.md
-    - Installing PKT Electrum (Mac/Windows): wallet_setup/install-pkt-electrum.md
-    - Installing PKT.World Wallet (Mac/Windows): wallet_setup/pkt-world-wallet.md
-    - Installing PKT Zulu Wallet (Mac): wallet_setup/pkt-zulu-wallet.md
-    - Installing PKT CLI Wallet (Mac/Windows/Linux): wallet_setup/pkt-cli-wallet.md
+  - Wallets: wallets.md
   - Utility:
     - Introduction: utility.md
     - Content & Media: utility/content.md

@@ -1,24 +1,9 @@
-# Classifieds
-PKT is composed of the community members and community member companies that operate within the ecosystem. This collective comes from around the world and are rallying around the vision and roadmap towards getting the next one billion people connected online.
+# Better Examples
 
-Below is a mostly un-moderated list of classified advertisements and offerings. Beware that anyone can contribute and offer their services and there is no central authority at pkt.cash to verify them.
+Honest communications addressing topics like the following are more likely to be ethical.
 
-## Add yourself
-Make a [Pull Request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to [This page](https://github.com/pkt-cash/pkt-docs/blob/main/docs/commercial.md) to add your offer.
-
-* Keep it short and to the point
-* NO PICTURES, no color text, no big fonts
-* Use the appropriate category
-
-## Hardware
-### [Pktpal.com](https://pktpal.com/)
-Buy a PKT Cube which will mine PKT with your unused internet and provides easy-to-use PkteerOS wallet.
-
-## Hosting
-### [Space-hosting.net](https://space-hosting.net/pktcash)
-Mining servers for rent
-
-## PKT Cloud Mining Service
-### [AMAPOOL.com](https://amapool.com/)
-Your best choice towards a fully automated PKT cloud mining solution.
-
+* "Price has been on the rise, but this can be affected by market events outside the project."
+* "We all know internet is over-priced, but now there is a community of people trying to do something about it"
+* "I know cryptocurrencies are risky, and tomorrow it could all be worth nothing, but I'm spending money I can afford to lose on a something I believe in""
+* "The control that big telecoms have over our everyday lives can make people feel powerless, but now there’s an easy way to push back"
+* "Sometimes the price goes up and sometimes it goes down. Being part of the community is about believing that democratized internet and a decentralized media network is possible."
