@@ -1,2 +1,0 @@
-# Setup a Nameserver Node
-PKT is developing a DNS (Domain Name System) that leverages the PKT Network to map domain names to cjdns IP addresses. More information on how to set up a Nameserver Node will be available prior to Infrastructure Day on October 30, 2024.

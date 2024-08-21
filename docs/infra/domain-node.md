@@ -1,2 +1,0 @@
-# Setup a Domain Node
-When you own a PKT vanity domain, it enables sovereignty for PKT websites. More information on how to set up a Domain Node will be available prior to Infrastructure Day on October 30, 2024.

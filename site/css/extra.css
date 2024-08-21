@@ -62,9 +62,6 @@ button:focus {
 h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .headerlink, h5:hover .headerlink {
     display: none;
 }
-b, strong {
-    font-family: "Inter-Bold";
-}
 /***************************************************
 * Header
 ***************************************************/
@@ -216,7 +213,6 @@ footer .col > a:focus {
 }
 #sidebar-nav .navbar-expand-md .navbar-nav .nav-link {
     padding-left: 0;
-    text-transform: uppercase;
 }
 #sidebar-nav .navbar-expand-md .navbar-nav .nav-link:before {
     display: none;
@@ -231,8 +227,8 @@ footer .col > a:focus {
     #sidebar-nav .navbar-toggler {
         margin: 0;
         position: fixed;
-        top: 85px;
-        right: 15px;
+        bottom: 25px;
+        left: 25px;
         z-index: 999;
         border: 0;
         background: #fff;
@@ -309,7 +305,6 @@ footer .col > a:focus {
 #main img {
     max-width: 50%;
     display: block;
-    margin: 10px auto;
 }
 #main pre {
     max-width: 50vw;
