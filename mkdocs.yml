@@ -15,36 +15,58 @@ theme:
 
 nav:
   - Home: index.md
-  - Learn:
-    - What is PKT?: learn/pkt.md
-    - What is PacketCrypt?: learn/packetcrypt.md
-    - What is PKT Cash?: learn/pkt-cash.md
-    - What is WPKT?: learn/wpkt.md
-    - What is the Network Steward?: learn/network-steward.md
-    - Whitepapers: https://pkt.cash/PKT_Network_v1.0_2021.02.01.pdf
-  - Wallet Setup:
+  - PKT Network:
+    - What is PKT Network: network/what-is-network.md
+    - An Open Ecosystem: network/open-ecosystem.md
+  - Staking:
+    - Stake to earn: stake/stake-earn.md
+    - How to stake: stake/how-to.md
+    - Community Liquidity: stake/community-liquidity.md
+    - How to stake LP: stake/stake-lp.md
+    - How to stake LP tokens: stake/stake-lp-tokens.md
+  - Migration airdrop: airdrop.md
+  - Infrastructure:
+    - Infrastructure: infra/infrastructure.md
+    - VPN Exit: infra/vpn-exit.md
+    - Setup a Cjdns Node: infra/cjdns-node.md
+    - PKT VPN: infra/vpn.md
+    - Setup a VPN Exit Node: infra/exit-node.md
+    - Setup a Domain Node: infra/domain-node.md
+    - Setup a Nameserver Node: infra/nameserver.md
+    - Setup a Route Server Node: infra/route-server.md
+    - Build a Website in PKT Network: infra/build-web.md
+    - Accessing your cjdns website: infra/cjdns-web.md
+  - Tockenomics:
+    - Initial Distribution: tockenomics/initial-distribution.md
+    - Migration Airdrop: tockenomics/airdrop.md
+    - Token Supply: tockenomics/token.md
+    - Proof-of-Stake Voting: tockenomics/voting.md
+    - Development Team Allocation: tockenomics/dev-team.md
+  - Affiliate: affiliate.md
+  - How to buy PKT: buy-pkt.md
+  - Wallets:
     - How to setup a PKT Wallet: wallet_setup/pkt-wallet-setup.md
     - Installing from Seed: wallet_setup/install-from-seed.md
     - Installing PKT Electrum (Mac/Windows): wallet_setup/install-pkt-electrum.md
     - Installing PKT.World Wallet (Mac/Windows): wallet_setup/pkt-world-wallet.md
     - Installing PKT Zulu Wallet (Mac): wallet_setup/pkt-zulu-wallet.md
     - Installing PKT CLI Wallet (Mac/Windows/Linux): wallet_setup/pkt-cli-wallet.md
-  - Start Mining:
-    - Intro to PKT Mining: start_mining/intro.md
-    - How to Start Announcement Mining: start_mining/announcement-mining.md
-    - How to Setup a PKT Mining Pool: start_mining/pkt-mining-pool.md
-  - Running Infrastructure:
-    - How to Run a CJDNS Node: running_infrastructure/cjdns_node.md
-    - How to Run a CJDNS Website: running_infrastructure/cjdns_website.md
-    - How to Run a VPN Server: running_infrastructure/vpn_server.md
-  - Advanced Learning:
-    - How to Run a Pktd Full Node: adv_learning/pktd-full-node.md
-    - How to Swap PKT and Wrapped PKT: adv_learning/swap-pkt-wrapped-pkt.md
+  - Utility:
+    - Introduction: utility.md
+    - Content & Media: utility/content.md
+    - BIA: utility/bia.md
+    - Ecommerce: utility/ecommerce.md
+    - Bandwidth Markets: utility/markets.md
+    - Payments Transparency: utility/transparency.md
+  - Governance:
+    - Introduction: governance.md
+    - Network Steward Charter: governance-nsc.md
   - Community:
     - Code of Conduct: community/code_of_conduct.md
     - Ethical Communication Guidelines: community/ethica-communication-guidelines.md
-    - Classifieds: community/classifieds.md
-    - Press & Media Assets: community/press-media-assets.md
+    - Examples to Avoid: community/avoid-examples.md
+    - Better Examples: community/better-examples.md
+  - Brand Assets: community/press-media-assets.md
 
 markdown_extensions:
   - admonition

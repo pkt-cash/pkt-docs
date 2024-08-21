@@ -1,0 +1,2 @@
+# Setup a Route Server Node
+The route server is used to route traffic on the PKT network. More information on how to set up a Route Server Node will be available prior to Infrastructure Day on October 30, 2024.
