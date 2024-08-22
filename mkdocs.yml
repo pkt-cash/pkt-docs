@@ -37,10 +37,12 @@ nav:
     - Build a Website in PKT Network: infra/build-web.md
     - Accessing your cjdns website: infra/cjdns-web.md
   - Tokenomics:
+    - Tokenomics: tokenomics/tokenomics.md
     - Initial Distribution: tokenomics/initial-distribution.md
-    - Migration Airdrop: tokenomics/airdrop.md
-    - Token Supply: tokenomics/token.md
-    - Proof-of-Stake Voting: tokenomics/voting.md
+    - Migration Airdrop: tokenomics/migration-airdrop.md
+    - Token Supply: tokenomics/token-supply.md
+    - Burned Coin Recapture Reconciliation: tokenomics/burned-coin-recapture-reconciliation.md
+    - Proof-of-Stake Voting: tokenomics/proof-of-stake-voting.md
     - Development Team Allocation: tokenomics/dev-team.md
   - Affiliate: affiliate.md
   - How to buy PKT: buy-pkt.md

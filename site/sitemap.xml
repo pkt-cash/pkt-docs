@@ -341,7 +341,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.pkt.cash/tokenomics/airdrop/</loc>
+         <loc>https://docs.pkt.cash/tokenomics/burned-coin-recapture-reconciliation/</loc>
          <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -356,12 +356,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.pkt.cash/tokenomics/token/</loc>
+         <loc>https://docs.pkt.cash/tokenomics/migration-airdrop/</loc>
          <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.pkt.cash/tokenomics/voting/</loc>
+         <loc>https://docs.pkt.cash/tokenomics/proof-of-stake-voting/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.pkt.cash/tokenomics/token-supply/</loc>
+         <lastmod>2024-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.pkt.cash/tokenomics/tokenomics/</loc>
          <lastmod>2024-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
