@@ -67,7 +67,7 @@ nav:
 markdown_extensions:
   - admonition
   - toc:
-      permalink: true
+      permalink: false
   - attr_list
 
 

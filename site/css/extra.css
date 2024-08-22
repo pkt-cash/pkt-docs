@@ -63,7 +63,7 @@ h1:hover .headerlink, h2:hover .headerlink, h3:hover .headerlink, h4:hover .head
     display: none;
 }
 b, strong {
-    font-family: "Inter-Bold";
+    font-family: "Inter-SemiBold";
 }
 /***************************************************
 * Header
@@ -214,8 +214,11 @@ footer .col > a:focus {
     border-radius: 3.125rem;
     vertical-align: middle;
 }
+#sidebar-nav ul ul {
+    padding: 10px 0 10px 15px;
+}
 #sidebar-nav .navbar-expand-md .navbar-nav .nav-link {
-    padding-left: 0;
+    padding: 0;
     text-transform: uppercase;
 }
 #sidebar-nav .navbar-expand-md .navbar-nav .nav-link:before {
@@ -223,6 +226,7 @@ footer .col > a:focus {
 }
 #sidebar-nav .toplevel .section-title {
     cursor: pointer;
+    display: block;
 }
 @media screen and (max-width:767px) {
     #sidebar-nav {
@@ -329,6 +333,28 @@ footer .col > a:focus {
 #main ol li,
 #main ul li {
     padding-bottom: 5px;
+}
+#main .admonition ul,
+#main .admonition ol {
+    margin-top: 1.2rem;
+}
+#main strong {
+    color: #ffffffcf;
+}
+#main h3 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+#main table {
+    border-collapse: separate;
+    margin:1.2rem 0;
+}
+#main table thead {
+    color:#fff;
+}
+#main table tbody tr td {
+    border:1px solid silver;
+    padding: 10px;
 }
 .md-footer-nav {
     display: -moz-flex;

@@ -327,12 +327,12 @@
 </nav>
 
 
-<h1 id="installing-pkt-cli-wallet-mac-windows-linux">Installing PKT CLI Wallet (Mac / Windows / Linux)<a class="headerlink" href="#installing-pkt-cli-wallet-mac-windows-linux" title="Permanent link">&para;</a></h1>
+<h1 id="installing-pkt-cli-wallet-mac-windows-linux">Installing PKT CLI Wallet (Mac / Windows / Linux)</h1>
 <p>The command line PKT wallet</p>
 <hr />
-<h2 id="first-time-installation-and-launching">First Time Installation and Launching<a class="headerlink" href="#first-time-installation-and-launching" title="Permanent link">&para;</a></h2>
-<h3 id="download-pktd">Download pktd<a class="headerlink" href="#download-pktd" title="Permanent link">&para;</a></h3>
-<h4 id="microsoft-windows">Microsoft Windows<a class="headerlink" href="#microsoft-windows" title="Permanent link">&para;</a></h4>
+<h2 id="first-time-installation-and-launching">First Time Installation and Launching</h2>
+<h3 id="download-pktd">Download pktd</h3>
+<h4 id="microsoft-windows">Microsoft Windows</h4>
 <ul>
 <li>Download the most recent zip archive suffixed with <code>-windows.zip</code> available from<br />
 <a href="https://github.com/pkt-cash/pktd/releases">pktd releases page</a></li>
@@ -346,7 +346,7 @@
 <li>In place of <code>./bin/pktwallet</code>, use <code>pktwallet.exe</code></li>
 <li>In place of <code>./bin/pktctl</code>, use <code>pktctl.exe</code></li>
 </ul>
-<h4 id="macos-and-linux">MacOS and Linux<a class="headerlink" href="#macos-and-linux" title="Permanent link">&para;</a></h4>
+<h4 id="macos-and-linux">MacOS and Linux</h4>
 <ul>
 <li>Download one of the most recent packages available for Linux or MacOS from<br />
 <a href="https://github.com/pkt-cash/pktd/releases">pktd releases page</a></li>
@@ -366,13 +366,13 @@
     install <code>pktwallet</code> and other utilities by clicking
     on the appropriate package icon or running an installation command</li>
 </ul>
-<h3 id="creating-a-new-wallet">Creating a New Wallet<a class="headerlink" href="#creating-a-new-wallet" title="Permanent link">&para;</a></h3>
+<h3 id="creating-a-new-wallet">Creating a New Wallet</h3>
 <p>To create a new PKT wallet, use the pktwallet --create command:</p>
 <pre><code>./bin/pktwallet --create
 </code></pre>
 <p>You will be prompted to follow a few steps. Make sure you write your seed words on paper so that you can
 recover your funds even if your computer is damaged. Do not skip this step. You will thank yourself later. Keep it secret. Keep it safe.</p>
-<h3 id="launching-pktwallet">Launching pktwallet<a class="headerlink" href="#launching-pktwallet" title="Permanent link">&para;</a></h3>
+<h3 id="launching-pktwallet">Launching pktwallet</h3>
 <p>After creating your wallet, you can launch pktwallet with:</p>
 <pre><code>./bin/pktwallet
 </code></pre>
@@ -381,7 +381,7 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 </code></pre>
 <p>Compare the height number in the log line (e.g. 702781) to the number in
 <a href="https://explorer.pkt.cash">the pkt block explorer</a> to see when your wallet is up to date. A complete sync from a new installation can take 12+ hours. During this time, the balance in your wallet will not be accurate and you will be unable to transact. You may, however, proceed with creating an address while syncing, as detailed below.</p>
-<h3 id="creating-a-new-pkt-address">Creating a New PKT Address<a class="headerlink" href="#creating-a-new-pkt-address" title="Permanent link">&para;</a></h3>
+<h3 id="creating-a-new-pkt-address">Creating a New PKT Address</h3>
 <p>While pktwallet is running in the background (or in another terminal), use the following command:</p>
 <pre><code>./bin/pktctl --wallet getnewaddress
 </code></pre>
@@ -389,7 +389,7 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <pre><code>./bin/pktctl --wallet getaddressbalances 1 1
 </code></pre>
 <p><strong>NOTE</strong>: Every time you use <code>getnewaddress</code>, the address you receive must be remembered by pktwallet forever. So, only use it when you actually need an address.</p>
-<h3 id="how-to-install-the-pkt-world-wallet-windows-only">How to install the PKT World Wallet (Windows only)<a class="headerlink" href="#how-to-install-the-pkt-world-wallet-windows-only" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-install-the-pkt-world-wallet-windows-only">How to install the PKT World Wallet (Windows only)</h3>
 <ol>
 <li>Download the <a href="https://www.pkt.world/wallet" target="_blank">PKT World Wallet</a></li>
 <li>Follow the installation instructions</li>
@@ -402,7 +402,7 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <li>To begin mining using the PKT World Wallet, click Miner</li>
 <li>Start Mining</li>
 </ol>
-<h3 id="how-to-install-a-cli-wallet">How to install a CLI Wallet<a class="headerlink" href="#how-to-install-a-cli-wallet" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-install-a-cli-wallet">How to install a CLI Wallet</h3>
 <p>If you already have a wallet created on your computer called wallet.db you will need to create a new wallet by following these steps:</p>
 <ol>
 <li>Download <a href="https://github.com/pkt-cash/pktd/releases/download/pktd-v1.5.1/pktd-v1.5.1-macos.pkg" target="_blank">pktd-v1.5.1-macos.pkg</a></li>
@@ -418,7 +418,7 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <li>Copy down your seed. If your wallet is destroyed, you can recover it as long as you have this seed and your wallet passphrase. Please keep in mind that anyone who has access to the seed only needs to guess your wallet passphrase to access your funds.</li>
 <li>Follow the instructions to finalize wallet</li>
 </ol>
-<h4 id="how-to-start-up-cli-wallet">How to start up CLI Wallet<a class="headerlink" href="#how-to-start-up-cli-wallet" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-start-up-cli-wallet">How to start up CLI Wallet</h4>
 <ol>
 <li>Open terminal</li>
 <li>Enter the command: <code>$ cd pktd</code></li>
@@ -426,7 +426,7 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <code>$ ~/pktd/bin/pktwallet --wallet</code><br />
 <em>(whatever you named your wallet) i.e</em> <code>wallet personal</code></li>
 </ol>
-<h4 id="how-to-create-new-pkt-wallet-address">How to create new PKT wallet address<a class="headerlink" href="#how-to-create-new-pkt-wallet-address" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-create-new-pkt-wallet-address">How to create new PKT wallet address</h4>
 <ol>
 <li>Make sure you have the CLI wallet running in a separate terminal window</li>
 <li>Open Terminal</li>
@@ -434,7 +434,7 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <li>Enter command: <code>$ ~/pktd/bin/pktctl --wallet getnewaddress</code><br />
 <em>Save your address in a safe place that is easily accessible</em></li>
 </ol>
-<h4 id="how-to-send-pkt-from-your-cli-wallet">How to send PKT from your CLI wallet<a class="headerlink" href="#how-to-send-pkt-from-your-cli-wallet" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-send-pkt-from-your-cli-wallet">How to send PKT from your CLI wallet</h4>
 <ol>
 <li>Make sure you have the CLI wallet running in a separate terminal window</li>
 <li>Command click on file to open</li>
@@ -444,7 +444,7 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <em>xxxxx = PKT address you want to send from and to</em><br />
 <em>$$$$ = amount of pkt you want to send</em></li>
 </ol>
-<h4 id="how-to-install-a-cli-wallet-from-seed">How to install a CLI Wallet from Seed<a class="headerlink" href="#how-to-install-a-cli-wallet-from-seed" title="Permanent link">&para;</a></h4>
+<h4 id="how-to-install-a-cli-wallet-from-seed">How to install a CLI Wallet from Seed</h4>
 <p>If you already have a wallet created on your computer called wallet.db you will need to create a new wallet by following these steps:</p>
 <ol>
 <li>Download <a href="https://github.com/pkt-cash/pktd/releases/download/pktd-v1.5.1/pktd-v1.5.1-macos.pkg" target="_blank">pktd-v1.5.1-macos.pkg</a></li>
@@ -469,9 +469,9 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <li>Enter the command: <code>$ ~/pktd/bin/pktctl --wallet getaddressbalances 1 1</code><br />
 <em>this is how you view all your (sub)wallet balances</em></li>
 </ol>
-<h2 id="using-your-wallet">Using Your Wallet<a class="headerlink" href="#using-your-wallet" title="Permanent link">&para;</a></h2>
+<h2 id="using-your-wallet">Using Your Wallet</h2>
 <p>pktctl is the program that interfaces with a running pktwallet instance. pktctl functions will not work if pktwallet is not running and accessible. Some functions will be limited until pktwallet is fully synchronized. Some functions require the wallet being unlocked before executing.</p>
-<h3 id="getting-your-balance">Getting Your Balance<a class="headerlink" href="#getting-your-balance" title="Permanent link">&para;</a></h3>
+<h3 id="getting-your-balance">Getting Your Balance</h3>
 <p>You can check your current PKT balance using pktctl or you can check the balances of each of your addresses if you have more than one.</p>
 <pre><code>./bin/pktctl --wallet getbalance
 </code></pre>
@@ -484,7 +484,7 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <p>For more explanation of the meaning of the output of <code>getaddressbalances</code>, use:</p>
 <pre><code>./bin/pktctl --wallet help getaddressbalances
 </code></pre>
-<h3 id="unlocking-wallet">Unlocking Wallet<a class="headerlink" href="#unlocking-wallet" title="Permanent link">&para;</a></h3>
+<h3 id="unlocking-wallet">Unlocking Wallet</h3>
 <p>While many functions can be performed while the wallet is locked, other functions first require the wallet to be unlocked, including sending PKT and folding. The passphrase used to unlock the wallet was set when creating the wallet.</p>
 <p>To unlock your wallet for 120 seconds (this can be changed to your liking), use:</p>
 <pre><code>./bin/pktctl --wallet walletpassphrase &lt;passphrase you used when creating wallet&gt; 120
@@ -498,12 +498,12 @@ recover your funds even if your computer is damaged. Do not skip this step. You 
 <p><strong>NOTE:</strong> Special characters (e.g., !, #, &amp; *) in your passphrase may be incorrectly interpreted by your shell. You may need to wrap your passphrase in quotes.</p>
 <pre><code>./bin/pktctl --wallet walletpassphrase 'suP3r_S3cReT^P@s5W0Rd!' 120
 </code></pre>
-<h3 id="sending-pkt">Sending PKT<a class="headerlink" href="#sending-pkt" title="Permanent link">&para;</a></h3>
+<h3 id="sending-pkt">Sending PKT</h3>
 <p>You can send PKT using the <code>sendtoaddress</code> command, but first you must unlock your wallet for sending, as shown in the previous step.</p>
 <p>To send cjd a 10 PKT tip:</p>
 <pre><code>./bin/pktctl --wallet sendtoaddress pkt1qt8xe7dwpelngtcpsgn5nkj3pwwdm7gf3l4auax 10
 </code></pre>
-<h4 id="sending-pkt-from-specific-address">Sending PKT from Specific Address<a class="headerlink" href="#sending-pkt-from-specific-address" title="Permanent link">&para;</a></h4>
+<h4 id="sending-pkt-from-specific-address">Sending PKT from Specific Address</h4>
 <p>pktwallet gives you control over which addresses are used for making a payment. This means you can
 keep different PKT in your wallet separate, for example separating business transactions from personal
 transactions.</p>
@@ -524,7 +524,7 @@ addresses as the source of a payment. For example:</p>
 <blockquote>
 <p><code>pktctl.exe --wallet sendfrom &lt;their address&gt; 10 [\"&lt;your address&gt;\"]</code></p>
 </blockquote>
-<h4 id="sweeping-an-address">Sweeping an Address<a class="headerlink" href="#sweeping-an-address" title="Permanent link">&para;</a></h4>
+<h4 id="sweeping-an-address">Sweeping an Address</h4>
 <p>With pktwallet, sending 0 PKT has special significance in that it will send "as much PKT as possible".
 To sweep <code>&lt;old address&gt;</code> address into <code>&lt;new address&gt;</code>, you can use the following command:</p>
 <pre><code>./bin/pktctl --wallet sendfrom &lt;new address&gt; 0 '["&lt;old address&gt;"]'
@@ -535,7 +535,7 @@ To sweep <code>&lt;old address&gt;</code> address into <code>&lt;new address&gt;
 </blockquote>
 <p><strong>NOTE</strong>: Sweeping an address will send <em>as much PKT as possible</em>, which is not necessarily all PKT
 in that address. You may need to sweep multiple times before the address is empty.</p>
-<h3 id="folding-coins">Folding Coins<a class="headerlink" href="#folding-coins" title="Permanent link">&para;</a></h3>
+<h3 id="folding-coins">Folding Coins</h3>
 <p>If you are the recipient of many transactions, such as is the case in mining, you may not be able to spend all of them at once. This is similar to someone who is paid in pennies having a difficult time using the pennies to buy a car. To solve this
 issue, you can consolidate all of the coins which were paid to you by <em>folding</em>.</p>
 <p>Folding is sweeping an address <em>to itself</em>. Just like in sweeping, you may need to run the command many times before you have completely folded. See FAQs for more detail.</p>
@@ -546,7 +546,7 @@ issue, you can consolidate all of the coins which were paid to you by <em>foldin
 <blockquote>
 <p><code>pktctl.exe --wallet sendfrom &lt;address&gt; 0 [\"&lt;address&gt;\"]</code></p>
 </blockquote>
-<h2 id="alternative-gui-wallets">Alternative GUI Wallets<a class="headerlink" href="#alternative-gui-wallets" title="Permanent link">&para;</a></h2>
+<h2 id="alternative-gui-wallets">Alternative GUI Wallets</h2>
 <ul>
 <li><a href="../electrum">Electrum for PKT</a> (Windows, MacOS, Linux)</li>
 </ul>
@@ -559,16 +559,16 @@ issue, you can consolidate all of the coins which were paid to you by <em>foldin
 <p><a href="https://github.com/artrepreneur/Zulu">Zulu Wallet</a> (MacOS)</p>
 </li>
 </ul>
-<h2 id="faqs">FAQs<a class="headerlink" href="#faqs" title="Permanent link">&para;</a></h2>
-<h3 id="i-have-several-machines-mining-do-i-need-the-wallet-running-on-each-machine">I have several machines mining, do I need the wallet running on each machine?<a class="headerlink" href="#i-have-several-machines-mining-do-i-need-the-wallet-running-on-each-machine" title="Permanent link">&para;</a></h3>
+<h2 id="faqs">FAQs</h2>
+<h3 id="i-have-several-machines-mining-do-i-need-the-wallet-running-on-each-machine">I have several machines mining, do I need the wallet running on each machine?</h3>
 <blockquote>
 <p>NO! In fact, the wallet doesn't need to be running at all to mine, but you do need to ensure you have control of the address you are mining to.</p>
 </blockquote>
-<h3 id="should-i-leave-pktwallet-running">Should I leave pktwallet running?<a class="headerlink" href="#should-i-leave-pktwallet-running" title="Permanent link">&para;</a></h3>
+<h3 id="should-i-leave-pktwallet-running">Should I leave pktwallet running?</h3>
 <blockquote>
 <p>It is not a requirement to have pktwallet running to mine. However, if you leave it running, it will stay synced. This will save time when performing pktctl functions, such as folding and sending coins. If pktwallet has not been running for some time, it will need time to sync up to the current block from the time it last ran. As a safety precaution, don't forget to lock your wallet if you do keep it running.</p>
 </blockquote>
-<h3 id="how-often-should-i-fold-and-why">How often should I fold and why?<a class="headerlink" href="#how-often-should-i-fold-and-why" title="Permanent link">&para;</a></h3>
+<h3 id="how-often-should-i-fold-and-why">How often should I fold and why?</h3>
 <blockquote>
 <p>The purpose of folding is to turn all your small payments (such as from mining) into quickly and easily spendable coins. If you are multi-pool mining and have rewards in every block, you will have roughly 1440 unconsolidated transactions per day - one for each block at a rate of ~ 1 block/min. If you do not fold these transactions, after awhile you'll have a huge amount of transactions to process if you wish to send the sum or portion thereof of these smaller transactions. So, while folding isn't required and will have no impact on mining if you do or do not, you're doing yourself a favor later by keeping the transactions as consolidated as possible. It is typical to fold as much as possible every day or every few days when you think about it, depending on your use case. It can also be scripted. Note that folding is a transaction itself. Depending on how much you have to fold, you may need to run the command many times. You also may need to wait for coins to confirm before folding more. Once the folding command fails or you see a very low number in the outputcount field from running <code>./bin/pktctl --wallet getaddressbalances 1 1</code> or on <a href="https://explorer.pkt.cash/">PKT block explorer</a> under Unconsolidated Txns, you have successfully folded the best you can for that point in time.</p>
 </blockquote>

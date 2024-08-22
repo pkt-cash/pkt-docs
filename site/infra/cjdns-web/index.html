@@ -331,14 +331,14 @@
 </nav>
 
 
-<h1 id="accessing-your-cjdns-website">Accessing your cjdns website<a class="headerlink" href="#accessing-your-cjdns-website" title="Permanent link">&para;</a></h1>
+<h1 id="accessing-your-cjdns-website">Accessing your cjdns website</h1>
 <p>For anyone to access your cjdns site they need to be on the cjdns network, either by running cjdns on their device or by connecting to one of the VPN exits that allow access to cjdns network.</p>
 <p>Go to a browser and paste the ipv6 address after http and inside square brackets like this: <code>http://[your-cjdns_ipv6_address]/blog</code></p>
 <div class="admonition note">
 <p class="admonition-title">NOTE</p>
 <p>Make sure to remove any leading <code>0</code> from each section of the ipv6 address. for example if your cjdns ipv6 is ending with <code>... :0ad2</code> it should be <code>... :ad2</code> in the browser.</p>
 </div>
-<h2 id="set-up-a-domain-for-your-site">Set up a domain for your site<a class="headerlink" href="#set-up-a-domain-for-your-site" title="Permanent link">&para;</a></h2>
+<h2 id="set-up-a-domain-for-your-site">Set up a domain for your site</h2>
 <p>First you will need to own a domain name for example "pkt.net". Select one of the VPN exits that have a running SNI proxy and copy their IPv4 address.</p>
 <p>Go to your domain registrar and set up the following DNS records:</p>
 <ul>
@@ -355,11 +355,11 @@
 <pre><code>* AAAA record: `h.pkt.net -&gt; fc04:8212:c1fa:94ad:e554:7bac:1264:ad2`
 </code></pre>
 </div>
-<h2 id="register-domain-with-vpn-server">Register domain with VPN server<a class="headerlink" href="#register-domain-with-vpn-server" title="Permanent link">&para;</a></h2>
+<h2 id="register-domain-with-vpn-server">Register domain with VPN server</h2>
 <p>Request the VPN server operator to add your domain to their SNI proxy by editing the following command replacing it with your domain and cjdns ipv6 address and the VPN server's IPv4 address:</p>
 <pre><code>curl -X POST --H &quot;Content-Type: application/json&quot; -d '{&quot;domain&quot;:&quot;domain.com&quot;,&quot;cjdnsIpv6&quot;:&quot;your_cjdns_ipv6_address&quot;} http://[VPN server IPv4 address]:8099/api/0.4/server/domain/add/
 </code></pre>
-<h2 id="set-up-the-domain-in-yunohost">Set up the domain in yunohost<a class="headerlink" href="#set-up-the-domain-in-yunohost" title="Permanent link">&para;</a></h2>
+<h2 id="set-up-the-domain-in-yunohost">Set up the domain in yunohost</h2>
 <ol>
 <li>Log in into your yunohost admin panel.</li>
 <li>Go to "Domains" and click on "Add domain"</li>

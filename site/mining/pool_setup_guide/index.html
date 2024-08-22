@@ -327,8 +327,8 @@
 </nav>
 
 
-<h1 id="setting-up-a-pool"><strong>Setting up a Pool</strong><a class="headerlink" href="#setting-up-a-pool" title="Permanent link">&para;</a></h1>
-<h3 id="expectations">Expectations<a class="headerlink" href="#expectations" title="Permanent link">&para;</a></h3>
+<h1 id="setting-up-a-pool"><strong>Setting up a Pool</strong></h1>
+<h3 id="expectations">Expectations</h3>
 <ul>
 <li>General knowledge of Linux</li>
 <li>General knowledge of git</li>
@@ -345,7 +345,7 @@
 </li>
 </ul>
 <p>Note: It can be done all on a single machine, you just need to pay attention to ports etc. As of June 2022, the network difficulty is high, and given that half of the work is done at pool premises, it's recommended to run at least a dozen BlkMiner machines, with a significant (768GB recommended) ammount of RAM. </p>
-<h3 id="block-mining-running-a-pool">Block mining &amp; running a pool<a class="headerlink" href="#block-mining-running-a-pool" title="Permanent link">&para;</a></h3>
+<h3 id="block-mining-running-a-pool">Block mining &amp; running a pool</h3>
 <p>Starting your own pool requires setting up a number of services:</p>
 <ul>
 <li><strong><em>pktd node</em></strong>  (one or more) - One pktd instance is required for the Master to function, each of the  <em>Block Handlers</em>  may optionally use separate pktd nodes.</li>
@@ -355,8 +355,8 @@
 <li><strong><em>Block Handlers</em></strong>  (one or more) - These nodes receive "block shares" from the block miners and submit blocks if they validate the share</li>
 <li><strong><em>Paymaker</em></strong>  (one) - This node receives updates from the Ann Handlers and Block Handlers and keeps track of who should be paid. The Paymaker sends configuration to the pktd node which is used by the Master in order to make the pool pay out the announcement and block miners</li>
 </ul>
-<h1 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h1>
-<h3 id="repository-information">Repository Information:<a class="headerlink" href="#repository-information" title="Permanent link">&para;</a></h3>
+<h1 id="general-information">General Information</h1>
+<h3 id="repository-information">Repository Information:</h3>
 <p>The following repositories hold the required programs to run a pool:</p>
 <table>
 <thead>
@@ -380,7 +380,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="assumed-network-ranges">Assumed network Ranges:<a class="headerlink" href="#assumed-network-ranges" title="Permanent link">&para;</a></h3>
+<h3 id="assumed-network-ranges">Assumed network Ranges:</h3>
 <p>In this guide we have two separate networks, the public network (198.51.100.0/24), and local network (10.0.16.0/24) to connect AnnHandlers and BlkMiner.</p>
 <table>
 <thead>
@@ -423,7 +423,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="assumed-port-ranges">Assumed Port Ranges:<a class="headerlink" href="#assumed-port-ranges" title="Permanent link">&para;</a></h3>
+<h3 id="assumed-port-ranges">Assumed Port Ranges:</h3>
 <table>
 <thead>
 <tr>
@@ -455,9 +455,9 @@
 </tr>
 </tbody>
 </table>
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<h2 id="machine-1"><em>Machine 1</em><a class="headerlink" href="#machine-1" title="Permanent link">&para;</a></h2>
-<h3 id="pktd-node">PKTD node:<a class="headerlink" href="#pktd-node" title="Permanent link">&para;</a></h3>
+<h1 id="installation">Installation</h1>
+<h2 id="machine-1"><em>Machine 1</em></h2>
+<h3 id="pktd-node">PKTD node:</h3>
 <p>150GB of storage is required at a <strong>minimum</strong> to run the pktd node. Recommended size is around 250GB of NVMe storage.</p>
 <ol>
 <li>Install Golang</li>
@@ -481,8 +481,8 @@ cd pktd
 <p>The output should show the following:</p>
 <pre><code>Everything looks good - use ./bin/pktd to launch
 </code></pre>
-<h2 id="machine-2"><em>Machine 2</em><a class="headerlink" href="#machine-2" title="Permanent link">&para;</a></h2>
-<h3 id="master-paymaker-blkhandler">Master | Paymaker | BlkHandler:<a class="headerlink" href="#master-paymaker-blkhandler" title="Permanent link">&para;</a></h3>
+<h2 id="machine-2"><em>Machine 2</em></h2>
+<h3 id="master-paymaker-blkhandler">Master | Paymaker | BlkHandler:</h3>
 <ol>
 <li>Install the required tools:</li>
 </ol>
@@ -507,8 +507,8 @@ sudo n stable
 <pre><code>cd PacketCrypt
 npm install
 </code></pre>
-<h2 id="machine-4-6"><em>Machine 4 - 6</em><a class="headerlink" href="#machine-4-6" title="Permanent link">&para;</a></h2>
-<h3 id="blkminer-annhandler-annminer">BlkMiner | AnnHandler | AnnMiner:<a class="headerlink" href="#blkminer-annhandler-annminer" title="Permanent link">&para;</a></h3>
+<h2 id="machine-4-6"><em>Machine 4 - 6</em></h2>
+<h3 id="blkminer-annhandler-annminer">BlkMiner | AnnHandler | AnnMiner:</h3>
 <ol>
 <li>Install the Required tools:</li>
 </ol>
@@ -527,14 +527,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 <pre><code>cd packetcrypt_rs 
 ~/.cargo/bin/cargo build --release --features jemalloc
 </code></pre>
-<h1 id="config-of-pooljs">Config of pool.js<a class="headerlink" href="#config-of-pooljs" title="Permanent link">&para;</a></h1>
+<h1 id="config-of-pooljs">Config of pool.js</h1>
 <p><strong><em>Information:</em></strong> </p>
 <ul>
 <li>pool.js is located at: <code>~/PacketCrypt/pool.example.js</code></li>
 <li>You need to edit this file, then run: <code>cp ~/PacketCrypt/pool.example.js ~/PacketCrypt/pool.js</code></li>
 </ul>
 <hr />
-<h3 id="configprivateseed">config.privateSeed<a class="headerlink" href="#configprivateseed" title="Permanent link">&para;</a></h3>
+<h3 id="configprivateseed">config.privateSeed</h3>
 <p>Signing of announcements is rarely used, it breaks people mining into multiple pools, and you should set it to null unless "you know what you're doing"</p>
 <p>This seed is used for deriving keys which will be used for signing announcements.</p>
 <p>Setting this value to an alphanumeric value e.g </p>
@@ -544,7 +544,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 <p><code>config.privateSeed = null</code></p>
 <p>If you aren't bothered by, or don't require your announcements to be signed .</p>
 <hr />
-<h3 id="configpaymakerhttppasswd">config.paymakerHttpPasswd<a class="headerlink" href="#configpaymakerhttppasswd" title="Permanent link">&para;</a></h3>
+<h3 id="configpaymakerhttppasswd">config.paymakerHttpPasswd</h3>
 <p>Anyone who has this password can make http posts to the paymaker (claim that shares were won)
 You should make this random and also firewall the paymaker from the public.
 The upload will be done using Authorization Basic with a username of "x" and this as the password</p>
@@ -552,7 +552,7 @@ The upload will be done using Authorization Basic with a username of "x" and thi
 </code></pre>
 <p>You can put the paymaker behind an http proxy if you wish.</p>
 <hr />
-<h3 id="configmasterurl">config.masterUrl<a class="headerlink" href="#configmasterurl" title="Permanent link">&para;</a></h3>
+<h3 id="configmasterurl">config.masterUrl</h3>
 <p>This is used by the paymaker and block handler when running them with pool.js, it is used to resolve where the master is.</p>
 <p>You can either set this as a locally host or put your master behind a nginx proxy</p>
 <pre><code>config.masterUrl = 'http://localhost:8080';
@@ -561,13 +561,13 @@ The upload will be done using Authorization Basic with a username of "x" and thi
 <pre><code>config.masterUrl = 'http://pool.pktpool.io';
 </code></pre>
 <hr />
-<h3 id="configrpc">config.rpc<a class="headerlink" href="#configrpc" title="Permanent link">&para;</a></h3>
+<h3 id="configrpc">config.rpc</h3>
 <p>The username and password set here, should be the same username and password used at the end of this guide for when you configure the pktd service.</p>
 <pre><code>user:  'x',
 pass:  'x',
 </code></pre>
 <hr />
-<h3 id="configannhandlers">config.annHandlers<a class="headerlink" href="#configannhandlers" title="Permanent link">&para;</a></h3>
+<h3 id="configannhandlers">config.annHandlers</h3>
 <p><strong><em>Information:</em></strong> </p>
 <ul>
 <li>config.annHandlers is a list of json object, with an object for each individual annhandler you would like to run, each ann handler will require it's own individual port.</li>
@@ -583,7 +583,7 @@ pass:  'x',
 </code></pre>
 <p><strong><em>Replace the url with your own.</em></strong></p>
 <hr />
-<h3 id="configblkhandlers">config.blkHandlers<a class="headerlink" href="#configblkhandlers" title="Permanent link">&para;</a></h3>
+<h3 id="configblkhandlers">config.blkHandlers</h3>
 <p><strong><em>Information:</em></strong> </p>
 <ul>
 <li>config.blkHandlers is a list of json object, with an object for each individual annhandler you would like to run, each ann handler will require it's own individual port.</li>
@@ -605,7 +605,7 @@ pass:  'x',
 <pre><code>root:  config
 </code></pre>
 <hr />
-<h3 id="configmaster">config.master<a class="headerlink" href="#configmaster" title="Permanent link">&para;</a></h3>
+<h3 id="configmaster">config.master</h3>
 <p>Which port to run the master on</p>
 <pre><code>port:  8080,
 </code></pre>
@@ -640,7 +640,7 @@ but increasing it will allow payment to be spread more evenly between block mine
 <pre><code>mineOldAnns:  0,
 </code></pre>
 <hr />
-<h3 id="configpaymaker">config.payMaker<a class="headerlink" href="#configpaymaker" title="Permanent link">&para;</a></h3>
+<h3 id="configpaymaker">config.payMaker</h3>
 <p>How the miners should access the paymaker (external address), <strong><em>replace the url with your own.</em></strong></p>
 <pre><code>url:  'pool.pktpool.io',
 </code></pre>
@@ -663,7 +663,7 @@ not send any changes of payout data to pktd.</p>
 <pre><code>maxConnections:  200,
 </code></pre>
 <hr />
-<h4 id="anncompressor">annCompressor<a class="headerlink" href="#anncompressor" title="Permanent link">&para;</a></h4>
+<h4 id="anncompressor">annCompressor</h4>
 <p>Store data in 1 minute aggregations</p>
 <pre><code>timespanMs:  1000 * 60,
 </code></pre>
@@ -694,7 +694,7 @@ from the defaultAddress then it is possible to account for and pay out to the mi
 later when the problem is fixed.</p>
 <pre><code>errorAddress:  &quot;pkt1q6hqsqhqdgqfd8t3xwgceulu7k9d9w5t2amath0qxyfjlvl3s3u4sjza2g2&quot;,
 </code></pre>
-<h1 id="config-of-pooltoml">Config of pool.toml<a class="headerlink" href="#config-of-pooltoml" title="Permanent link">&para;</a></h1>
+<h1 id="config-of-pooltoml">Config of pool.toml</h1>
 <p><strong><em>Information:</em></strong> 
  - pool.example.toml is located at: <code>~/packetcrypt_rs/pool.example.toml</code>
  - You need to edit this file, then run: <code>~/packetcrypt_rs/pool.example.toml ~/packetcrypt_rs/pool.toml</code></p>
@@ -706,7 +706,7 @@ later when the problem is fixed.</p>
 <strong><em>Replace the url with your own.</em></strong></p>
 <pre><code>master_url = &quot;http://pool.pktpool.io&quot;
 </code></pre>
-<h4 id="ann_handlerah">ann_handler.ah*<a class="headerlink" href="#ann_handlerah" title="Permanent link">&para;</a></h4>
+<h4 id="ann_handlerah">ann_handler.ah*</h4>
 <p>You can have multiple ann_handlers, you can do this by defining each one such as:</p>
 <pre><code>[ann_handler.ah0]
     &quot;parameters&quot;
@@ -764,45 +764,45 @@ spray_workers = 8
     files_to_keep = 512
 </code></pre>
 <p>The same logic should be followed for Machine 4 and other handlers you may have. </p>
-<h4 id="note-to-bind-low-ports-with-non-root-user-run">NOTE: To bind low ports with non-root user run:<a class="headerlink" href="#note-to-bind-low-ports-with-non-root-user-run" title="Permanent link">&para;</a></h4>
+<h4 id="note-to-bind-low-ports-with-non-root-user-run">NOTE: To bind low ports with non-root user run:</h4>
 <p><code>sudo setcap CAP_NET_BIND_SERVICE=+eip $(which packetcrypt)</code></p>
-<h1 id="running-manually">Running Manually<a class="headerlink" href="#running-manually" title="Permanent link">&para;</a></h1>
-<h2 id="machine-1_1"><em>Machine 1</em><a class="headerlink" href="#machine-1_1" title="Permanent link">&para;</a></h2>
+<h1 id="running-manually">Running Manually</h1>
+<h2 id="machine-1_1"><em>Machine 1</em></h2>
 <p><strong><em>Information:</em></strong> </p>
 <ul>
 <li>These tasks need to be run in the order they are presented</li>
 <li>PKTD needs to have downloaded the full chain first, you will know when the node is upto date when <strong><em>height</em></strong> is equal to the current block on the <a href="https://explorer.pkt.cash/">explorer</a> It can take 12+ hours to fully sync to the current block height</li>
 </ul>
-<h3 id="pktd">PKTD<a class="headerlink" href="#pktd" title="Permanent link">&para;</a></h3>
+<h3 id="pktd">PKTD</h3>
 <p><code>--rpcuser</code> and <code>--rpcpass</code> should match the values set in pool.js under config.rpc </p>
 <pre><code>
 ./pktd/bin/pktd --rpcuser=XXX --rpcpass=XXX --miningaddr &lt;your PKT wallet address&gt;
 </code></pre>
-<h2 id="machine-2_1"><em>Machine 2</em><a class="headerlink" href="#machine-2_1" title="Permanent link">&para;</a></h2>
-<h3 id="master">Master<a class="headerlink" href="#master" title="Permanent link">&para;</a></h3>
+<h2 id="machine-2_1"><em>Machine 2</em></h2>
+<h3 id="master">Master</h3>
 <pre><code>node ./pool.js --master
 </code></pre>
-<h3 id="paymaker">Paymaker<a class="headerlink" href="#paymaker" title="Permanent link">&para;</a></h3>
+<h3 id="paymaker">Paymaker</h3>
 <pre><code>node ./pool.js --payMaker
 </code></pre>
-<h3 id="blkhandlers">BlkHandler(s)<a class="headerlink" href="#blkhandlers" title="Permanent link">&para;</a></h3>
+<h3 id="blkhandlers">BlkHandler(s)</h3>
 <p>Launch the <strong>BlkHandler</strong> nodes, specify <code>--blk0</code> for the first <strong>BlkHandler</strong>, <code>--blk1</code> for the second, and so forth</p>
 <pre><code>cd PacketCrypt
 node ./pool.js --blk0
 node ./pool.js --blk1
 </code></pre>
-<h2 id="machine-3"><em>Machine 3</em><a class="headerlink" href="#machine-3" title="Permanent link">&para;</a></h2>
-<h3 id="annhandler">AnnHandler<a class="headerlink" href="#annhandler" title="Permanent link">&para;</a></h3>
+<h2 id="machine-3"><em>Machine 3</em></h2>
+<h3 id="annhandler">AnnHandler</h3>
 <pre><code>cd packetcrypt_rs
 ./target/release/packetcrypt ah --config /path/to/pool.toml ah0
 </code></pre>
-<h2 id="machine-4"><em>Machine 4</em><a class="headerlink" href="#machine-4" title="Permanent link">&para;</a></h2>
-<h3 id="annhandler_1">AnnHandler<a class="headerlink" href="#annhandler_1" title="Permanent link">&para;</a></h3>
+<h2 id="machine-4"><em>Machine 4</em></h2>
+<h3 id="annhandler_1">AnnHandler</h3>
 <pre><code>cd packetcrypt_rs
 ./targer/release/packetcrypt ah --config /path/to/pool.toml ah1
 </code></pre>
-<h2 id="machine-5-and-6"><em>Machine 5 and 6</em><a class="headerlink" href="#machine-5-and-6" title="Permanent link">&para;</a></h2>
-<h3 id="blkminer">BlkMiner<a class="headerlink" href="#blkminer" title="Permanent link">&para;</a></h3>
+<h2 id="machine-5-and-6"><em>Machine 5 and 6</em></h2>
+<h3 id="blkminer">BlkMiner</h3>
 <p><code>--threads</code> is the number of threads you want to dedicate to the Blkminer, the default is to use all available threads.
 <code>--paymentaddr</code> is the wallet you want your coins to be mined into, it is advisable to not use the electrum wallet for this.
 <code>--memorysizemb</code> is how much RAM you are allocating to block mining, Ideally you want to set as much as you can.
@@ -810,8 +810,8 @@ node ./pool.js --blk1
 <pre><code>cd packetcrypt_rs
 ./target/release/packetcrypt blk &lt;Master Address of Pool&gt; --paymentaddr &lt;your PKT wallet address&gt; --threads 80 --memorysizemb 665000 --handlerpass NoOneStealsMyAnns --subscribe 10.0.16.3:6666 --bind 0.0.0.0:6667 --mcast 239.0.1.1
 </code></pre>
-<h1 id="nginx-setup-for-allowing-external-annmining">NGINX Setup (For allowing external AnnMining)<a class="headerlink" href="#nginx-setup-for-allowing-external-annmining" title="Permanent link">&para;</a></h1>
-<h2 id="machine-2_2"><em>Machine 2</em><a class="headerlink" href="#machine-2_2" title="Permanent link">&para;</a></h2>
+<h1 id="nginx-setup-for-allowing-external-annmining">NGINX Setup (For allowing external AnnMining)</h1>
+<h2 id="machine-2_2"><em>Machine 2</em></h2>
 <p>Update system and install Nginx</p>
 <pre><code>sudo apt update
 sudo apt install nginx

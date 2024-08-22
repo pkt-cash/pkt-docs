@@ -327,10 +327,10 @@
 </nav>
 
 
-<h1 id="pkt-wallet-macos-gui">PKT Wallet MacOS GUI<a class="headerlink" href="#pkt-wallet-macos-gui" title="Permanent link">&para;</a></h1>
+<h1 id="pkt-wallet-macos-gui">PKT Wallet MacOS GUI</h1>
 <p><strong>NOTE</strong>: The PKT Wallet GUI handles mining income well and is a good wallet for those hoping to hold a copy of the blockchain and to keep ownership of their own keys and passphrases for multiple addresses.</p>
-<h2 id="first-setup">First setup<a class="headerlink" href="#first-setup" title="Permanent link">&para;</a></h2>
-<h3 id="macos">MacOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<h2 id="first-setup">First setup</h2>
+<h3 id="macos">MacOS</h3>
 <ol>
 <li>Download <strong><a href="https://github.com/artrepreneur/Vodun/releases">pktwallet-(version).dmg
 </a></strong></li>
@@ -345,7 +345,7 @@
 <li><img alt="pkt_wallet_osx_firstlaunch.png" src="./pkt_wallet_osx_firstlaunch.png" /></li>
 <li>Continue with <strong><a href="#setting-up-your-wallet">Setting up your wallet</a></strong> or <strong><a href="load-existing-wallet-from-seed">Load Existing Wallet From Seed</a></strong> below.</li>
 </ol>
-<h2 id="setting-up-your-wallet">Setting up your wallet<a class="headerlink" href="#setting-up-your-wallet" title="Permanent link">&para;</a></h2>
+<h2 id="setting-up-your-wallet">Setting up your wallet</h2>
 <p>Before you can begin using PKT, you need to setup your wallet, this means writing down your secret key and setting passwords so your PKT will stay safe.</p>
 <p>A video tutorial is available for this method:</p>
 <p><a href="https://www.youtube.com/watch?v=JqDSlfQuMP8"><img alt="Set up your wallet" src="https://img.youtube.com/vi/JqDSlfQuMP8/0.jpg" /></a></p>
@@ -365,7 +365,7 @@
 <li>Click "Balances" again to display your balances. By default, accounts with zero PKT will not be displayed unless you click "Get All Addresses"
 <img alt="pkt_wallet_balances" src="pkt_wallet_balances.png" /></li>
 </ol>
-<h2 id="load-existing-wallet-from-seed">Load Existing Wallet From Seed<a class="headerlink" href="#load-existing-wallet-from-seed" title="Permanent link">&para;</a></h2>
+<h2 id="load-existing-wallet-from-seed">Load Existing Wallet From Seed</h2>
 <p>Before you can begin using PKT, you need to setup your wallet, this means writing down your secret key and setting passwords so your PKT will stay safe.</p>
 <p>A video tutorial is available for this method:</p>
 <p><a href="https://youtu.be/c5cgrYDkEzI"><img alt="Load your wallet from seet" src="https://img.youtube.com/vi/c5cgrYDkEzI/0.jpg" /></a></p>
@@ -390,7 +390,7 @@
 <li>Copy and paste the address into the search field of the PKT Blockchain Explorer, then click the "Search" icon.
 <img alt="pkt_explorer_search" src="pkt_explorer_search.png" /></li>
 </ol>
-<h2 id="receiving-pkt">Receiving PKT<a class="headerlink" href="#receiving-pkt" title="Permanent link">&para;</a></h2>
+<h2 id="receiving-pkt">Receiving PKT</h2>
 <ol>
 <li>To receive coins, you need to create a new PKT <em>address</em></li>
 <li>Click the "Receive" tab</li>
@@ -401,7 +401,7 @@
 <li>When PKT gets sent to your new address, you will get a notification. It says "unconfirmed" because the transaction has not yet been included in the history of the blockchain.</li>
 <li>Congratulations, you have received your first PKT. It make take some time before the transaction is confirmed by the network and the PKT is formally in your account.</li>
 </ol>
-<h2 id="sending-pkt">Sending PKT<a class="headerlink" href="#sending-pkt" title="Permanent link">&para;</a></h2>
+<h2 id="sending-pkt">Sending PKT</h2>
 <ol>
 <li>To pay PKT to someone else, click on the Send tab and paste the address to be paid</li>
 <li>Type a description of the payment, this is just for you, it will not be sent to the person you are paying</li>
@@ -414,13 +414,13 @@
 <li>Just like when receiving, your transaction will appear first as "unconfirmed" and then later it will switch to a clock when it has been included in the blockchain.</li>
 <li>When people consider a transaction to be "complete" depends on the merchant, but in after some time the transaction will be confirmed and the PKT be in the recipient's account. Congratulations, you've sent PKT!</li>
 </ol>
-<h2 id="about-units">About Units<a class="headerlink" href="#about-units" title="Permanent link">&para;</a></h2>
+<h2 id="about-units">About Units</h2>
 <ul>
 <li>Each PKT is made up of 1000 milli-PKT, denoted <code>mPKT</code></li>
 <li>Each milli-PKT is sub-divided into 1000 micro-PKT, denoted <code>uPKT</code></li>
 <li>Each micro-PKT is sub-divided into 1000 nano-PKT, denoted <code>nPKT</code></li>
 </ul>
-<h3 id="statistical-verification">Statistical Verification<a class="headerlink" href="#statistical-verification" title="Permanent link">&para;</a></h3>
+<h3 id="statistical-verification">Statistical Verification</h3>
 <p>PKT Electrum makes the job of an attacker hard by asking for an unpredictable random set of PacketCrypt proofs, the chance of any give block being verified is based on the distance between the tip of the chain and that block. The chance is defined as <code>MIN(100%, K / distance_from_tip)</code> where <code>K</code> is a constant which we set at <code>20</code> to make PKT Electrum verify around 200 blocks total.</p>
 <p>With <code>K = 20</code>, the first 20 blocks have a 100% chance of being verified.
 * block 21 has a 95% chance

@@ -327,12 +327,12 @@
 </nav>
 
 
-<h1 id="migrating-from-electrum-to-pktwallet">Migrating from Electrum to PKTWallet<a class="headerlink" href="#migrating-from-electrum-to-pktwallet" title="Permanent link">&para;</a></h1>
+<h1 id="migrating-from-electrum-to-pktwallet">Migrating from Electrum to PKTWallet</h1>
 <p>If you have an electrum based wallet which becomes overloaded from too many transactions
 (e.g. from mining directly into it), then you will need to migrate your keys to a pktwallet instance.</p>
-<h2 id="step-1-setup-pktwallet">Step 1: Setup pktwallet<a class="headerlink" href="#step-1-setup-pktwallet" title="Permanent link">&para;</a></h2>
+<h2 id="step-1-setup-pktwallet">Step 1: Setup pktwallet</h2>
 <p>Follow the instructions in <a href="./pktwallet">pktwallet</a> to get your wallet up and running</p>
-<h2 id="step-2-export-your-keys">Step 2: Export your keys<a class="headerlink" href="#step-2-export-your-keys" title="Permanent link">&para;</a></h2>
+<h2 id="step-2-export-your-keys">Step 2: Export your keys</h2>
 <ul>
 <li>In Electrum, click <code>Wallet</code> -&gt; <code>Private Keys</code> -&gt; <code>Export</code></li>
 <li><img alt="electrum_export1.png" src="../electrum_export1.png" /></li>
@@ -343,19 +343,19 @@
 <li>Do <strong>not</strong> copy the part which says <code>p2wpkh:</code>, just the letters after it</li>
 <li>The key will look sometihng like this: <code>ci2TBp2HTWtyMQtizWMuugHxG6lNpInA1bSpLIWzjJS2AI8ObwV5</code></li>
 </ul>
-<h2 id="step-3-import-key-to-pktwallet">Step 3: Import key to pktwallet<a class="headerlink" href="#step-3-import-key-to-pktwallet" title="Permanent link">&para;</a></h2>
+<h2 id="step-3-import-key-to-pktwallet">Step 3: Import key to pktwallet</h2>
 <ul>
 <li>In a terminal window, run <code>pktctl --wallet getbalance</code> to verify that your wallet is working</li>
 <li>Unlock your wallet using <code>pktctl --wallet walletpassphrase &lt;the password you used when setting it up&gt; 1000000</code></li>
 <li>Type <code>pktctl --wallet importprivkey &lt;the key you just copied&gt;</code></li>
 <li>You should see the address printed on the screen</li>
 </ul>
-<h2 id="importing-more-keys">Importing more keys<a class="headerlink" href="#importing-more-keys" title="Permanent link">&para;</a></h2>
+<h2 id="importing-more-keys">Importing more keys</h2>
 <ul>
 <li>When you import a key, it starts a rescan of the chain automatically, in order to import more you need to stop</li>
 <li><code>pktctl --wallet stopresync</code> to stop</li>
 </ul>
-<h2 id="speed-things-up">Speed things up<a class="headerlink" href="#speed-things-up" title="Permanent link">&para;</a></h2>
+<h2 id="speed-things-up">Speed things up</h2>
 <p>If you know exactly when an address was paid, you can speed up the import by only rescanning blocks where it
 might have been paid. For example if you are sure that the address was not paid earlier than block number 600000
 you can do the following:</p>
@@ -363,7 +363,7 @@ you can do the following:</p>
 <li><code>pktctl --wallet stopresync</code></li>
 <li><code>pktctl --wallet resync 600000 100000000</code></li>
 </ul>
-<h2 id="check-that-its-working">Check that it's working<a class="headerlink" href="#check-that-its-working" title="Permanent link">&para;</a></h2>
+<h2 id="check-that-its-working">Check that it's working</h2>
 <p>It's recommended that you run pktwallet with <code>-d debug</code> flag in order to be able to see the debug logs.
 When you are resyncing you should see log lines like the following:</p>
 <pre><code>1609188780 [DBG] wallet.go:2817 Rescan cycle [620100]
@@ -372,7 +372,7 @@ When you are resyncing you should see log lines like the following:</p>
 1609188783 [DBG] wallet.go:2817 Rescan cycle [620400]
 </code></pre>
 <p>The number if the block number which is being scanned.</p>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h2 id="troubleshooting">Troubleshooting</h2>
 <ul>
 <li><code>ErrBirthdayBlockNotSet: birthday block not set</code></li>
 <li>Your wallet is not synced yet, wait for it to become synced</li>
