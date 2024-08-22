@@ -36,12 +36,12 @@ nav:
     - Setup a Route Server Node: infra/route-server.md
     - Build a Website in PKT Network: infra/build-web.md
     - Accessing your cjdns website: infra/cjdns-web.md
-  - Tockenomics:
-    - Initial Distribution: tockenomics/initial-distribution.md
-    - Migration Airdrop: tockenomics/airdrop.md
-    - Token Supply: tockenomics/token.md
-    - Proof-of-Stake Voting: tockenomics/voting.md
-    - Development Team Allocation: tockenomics/dev-team.md
+  - Tokenomics:
+    - Initial Distribution: tokenomics/initial-distribution.md
+    - Migration Airdrop: tokenomics/airdrop.md
+    - Token Supply: tokenomics/token.md
+    - Proof-of-Stake Voting: tokenomics/voting.md
+    - Development Team Allocation: tokenomics/dev-team.md
   - Affiliate: affiliate.md
   - How to buy PKT: buy-pkt.md
   - Wallets: wallets.md

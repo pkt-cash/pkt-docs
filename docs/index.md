@@ -14,7 +14,7 @@ PKT economically incentivizes people to stake and earn PKT. Each stake must be a
 ### [Infrastructure](infra/infrastructure)
 The PKT Network relies on its community to operate its underlying infrastructure. This is made possible by staking, which requires people to lockup PKT tokens to earn rewards. Beginning in October 26, 2024, each stake must be paired with an infrastructure node to continue receiving rewards. This ensures that the economic incentives in fact scale the underlying network. This ensures providers are rewarded to maintain reliable and accessible network resources.
 
-### [Tockenomics](tockenomics/initial-distribution)
+### [Tokenomics](tokenomics/initial-distribution)
 ### [Affiliate](affiliate)
 ### [How to buy PKT](buy-pkt)
 ### [Wallets](wallets)
