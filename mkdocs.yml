@@ -7,6 +7,7 @@ repo_url: "https://github.com/pkt-cash/pkt-docs"
 plugins:
   - search
 
+
 theme:
   name: moonstone
   custom_dir: custom_theme
@@ -37,7 +38,7 @@ nav:
     - Build a Website in PKT Network: infra/build-web.md
     - Accessing your cjdns website: infra/cjdns-web.md
   - Tokenomics:
-    - Tokenomics: tokenomics/tokenomics.md
+    - Tokenomics: tokenomics/introduction.md
     - Initial Distribution: tokenomics/initial-distribution.md
     - Migration Airdrop: tokenomics/migration-airdrop.md
     - Token Supply: tokenomics/token-supply.md
