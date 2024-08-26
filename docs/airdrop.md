@@ -3,13 +3,13 @@
 ## How to claim Airdrop
 If you own PacketCrypt proof-of-work (“PoW”) coins you will need to swap into tokens of PKT on Base. All PacketCrypt.
 
-* Install a Web3 wallet like [MetaMask](https://metamask.io/) or [Coinbase Wallet](https://www.coinbase.com/wallet)
+* Install a Web3 wallet like [MetaMask](https://metamask.io/){:target="_blank"} or [Coinbase Wallet](https://www.coinbase.com/wallet){:target="_blank"}
 * Buy enough Base Ethereum that you are able to pay a very small transaction fee
 * Add the PKT contract address to your Web3 wallet
 * Copy your wallet address
 * Open your legacy PKT wallet (PKT World, Anode, CLI)
 * Choose to copy the private key for one of the addresses in your legacy PKT wallet that has coins you want to swap
-* Download the [PKT Migration Signer](https://github.com/pkt-cash/PKT-Migration-Signer).
+* Download the [PKT Migration Signer](https://github.com/pkt-cash/PKT-Migration-Signer){:target="_blank"}.
 * Paste the private key into the migration app
 * Paste your new Web3 wallet address into the migration app
 * The migration app will compute a digital signature
