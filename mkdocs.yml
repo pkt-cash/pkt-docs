@@ -1,7 +1,7 @@
 site_name: PKT Documentation
 site_url: https://docs.pkt.cash/
 site_author: PKT
-site_description: ""
+site_description: "PKT is a stake-to-earn model, built on Coinbase’s Base blockchain, which rewards users that power its decentralized media network."
 repo_url: "https://github.com/pkt-cash/pkt-docs"
 
 plugins:
