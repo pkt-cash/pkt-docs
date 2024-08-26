@@ -9,7 +9,7 @@ If you own PacketCrypt proof-of-work (“PoW”) coins you will need to swap int
 * Copy your wallet address
 * Open your legacy PKT wallet (PKT World, Anode, CLI)
 * Choose to copy the private key for one of the addresses in your legacy PKT wallet that has coins you want to swap
-* Download the migration app [here](https://pkt.cash/1ea983ba3453631d914755e7ad96840d/overview) 
+* Download the [PKT Migration Signer](https://github.com/pkt-cash/PKT-Migration-Signer).
 * Paste the private key into the migration app
 * Paste your new Web3 wallet address into the migration app
 * The migration app will compute a digital signature
