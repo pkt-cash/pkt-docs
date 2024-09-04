@@ -16,7 +16,7 @@ The PKT Network relies on its community to operate its underlying infrastructure
 
 ### [Tokenomics](tokenomics/introduction)
 ### [Affiliate](affiliate)
-### [How to buy PKT](buy-pkt)
+### [How to buy PKT](buy-pkt-on-base)
 ### [Wallets](wallets)
 PKT works with all Ethereum compatible wallets. The wallets that are most recommended for staking and storing PKT are the Coinbase Wallet and MetaMask.
 
