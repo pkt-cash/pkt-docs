@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.pkt.cash/copyright/</loc>
+         <lastmod>2024-09-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.pkt.cash/governance-nsc/</loc>
          <lastmod>2024-09-04</lastmod>
          <changefreq>daily</changefreq>
