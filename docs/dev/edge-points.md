@@ -1,2 +1,0 @@
-# Edge Point
-Edge Points are devices that are operated by an individual or business and maintain a network connection to the PKT Network. Edge Points will tokenize their bandwidth using TokenStrike and sell tokenized bandwidth to Cloud ISPs to broker connectivity to real customers. Edge Point technology will interface with PKT VPN and evolve to facilitate mesh network access points to the internet.

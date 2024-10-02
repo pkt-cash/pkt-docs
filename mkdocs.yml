@@ -71,6 +71,11 @@ markdown_extensions:
       permalink: false
   - attr_list
 
+extra:
+  meta:
+    title: "PKT Documentation"
+    description: "PKT is a stake-to-earn model, built on Coinbase’s Base blockchain, which rewards users that power its decentralized media network."
+    sitemap_url: /sitemap.xml
 
 extra_css:
     - css/extra.css

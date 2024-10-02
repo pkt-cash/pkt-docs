@@ -1,4 +1,0 @@
-# Cloud ISP
-A Cloud ISP is a hybrid between a traditional ISP and a VPN provider. This technology is designed to reimagine internet service, so anyone can become an ISP. Cloud ISPs aggregate and broker Edge Point tokenized bandwidth leases, facilitate software defined networking, and oversee the administrative roles of internet service to customers. 
-
-The Cloud ISP system is designed to manage two virtual assets: the virtual router lease and the bandwidth lease. A virtual router lease has a right to resources within the routing device for a limited time period. The bandwidth lease provides a minimum bandwidth link guarantee between two physical routing devices for a specific time period. The result is the PKT Network: an ultra fast independent network that is connected to the normal internet and powered by the people.
