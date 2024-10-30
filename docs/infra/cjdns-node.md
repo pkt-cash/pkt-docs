@@ -1,42 +1,40 @@
 # Setup a Cjdns Node
 This guide will help you set up a cjdns node on a server.
 
+The easiest way to get a cjdns node installed is using [cjdns.sh](https://github.com/cjdelisle/cjdns.sh).
+
 ## Requirements
-A server running debian based Linux (preferably Ubuntu 22.04) with docker installed
+A server running debian based Linux (preferably Ubuntu 22.04).
 
 ## Steps
 
-* Create a data directory where the server configuration will be stored.
+* Determine your *Peer ID*.
+<span class="cjdns-peer-id-has" style="display:none">Your Peer ID is <code class="cjdns-peer-id">MISSING</code></span>
+<span class="cjdns-peer-id-missing">To get your Peer ID, first register your cjdns node on the PKT Dashboard.</span>
+
+* Install `cjdns.sh`
+
+    <code>
+    curl https://pkt.cash/special/cjdns/cjdns.sh | CJDNS_PEERID=<span class="cjdns-peer-id">&lt;peer-id-goes-here&gt;</span> CJDNS_ADMIN_PORT=11234 CJDNS_TUN=1 sh
+    </code>
+
+* Check if you have peers working
 
     ```
-    mkdir vpn_data
+    cjdnstool peers show
     ```
 
-* Get the latest docker image
+* Make sure your firewall is open. Port 3478 must be accessible from the public internet.
 
     ```
-    docker pull pkteer/pkt-server
+    iptables-save
+    nft list ruleset
     ```
 
-* Configure the server by running the following command:
+## Different public port
 
-    ```
-    docker run -it --rm -v $(pwd)/vpn_data:/data pkteer/pkt-server /configure.sh --novpn
-    ```
+If you can't expose port `3478` to the public, you can change the port by specifying `CJDNS_PORT=<port number>` when installing cjdns.
 
-The configure process will create: `* a cjdroute.conf at data/cjdroute.conf * PKT wallet at data/pktwallet/pkt/wallet.db * store the wallet's seed phrase at data/pktwallet/pkt/seed.txt`
-configure.sh can take the following flags: `* --no-vpn:` To configure the server without setting up the VPN server `* --with-pktd:` To configure the server with a local PKT daemon `* --pktd-passwd= :` To set a password for the PKT daemon
+## More information
 
-Alternatively you can edit the __config.json__ file manually.
-
-
-!!! warning "NOTE" 
-    Make sure to safely store your seed phrase in order to be able to import your wallet on your computer. And delete the __seed.txt__ file after.
-
-* Run the server by running the following commands:
-    ```
-    ./vpn_data/start.sh
-    ```
-
-    This will start the server and may expose the following ports: 
-    `* cjdns port set from cjdroute.conf * cjdns admin rpc port set from cjdroute.conf (default 11234) * 8099 for anodevpn server * 5201 for iperf3 * 64764` for pktd
+To learn more, check out [https://github.com/cjdelisle/cjdns.sh](https://github.com/cjdelisle/cjdns.sh)
