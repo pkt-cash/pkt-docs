@@ -26,10 +26,9 @@ A server running debian based Linux (preferably Ubuntu 22.04).
 
 * Make sure your firewall is open. Port 3478 must be accessible from the public internet.
 
-    ```
-    iptables-save
-    nft list ruleset
-    ```
+    `iptables-save`
+
+    `nft list ruleset`
 
 ## Different public port
 
