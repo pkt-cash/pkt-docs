@@ -32,6 +32,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="../../main.js"></script>
     <script src="../../fonts.js"></script> 
   </head>
   
@@ -333,38 +334,36 @@
 
 <h1 id="setup-a-cjdns-node">Setup a Cjdns Node</h1>
 <p>This guide will help you set up a cjdns node on a server.</p>
+<p>The easiest way to get a cjdns node installed is using <a href="https://github.com/cjdelisle/cjdns.sh">cjdns.sh</a>.</p>
 <h2 id="requirements">Requirements</h2>
-<p>A server running debian based Linux (preferably Ubuntu 22.04) with docker installed</p>
+<p>A server running debian based Linux (preferably Ubuntu 22.04).</p>
 <h2 id="steps">Steps</h2>
 <ul>
 <li>
-<p>Create a data directory where the server configuration will be stored.</p>
-<p><code>mkdir vpn_data</code></p>
+<p>Determine your <em>Peer ID</em>.
+<span class="cjdns-peer-id-has" style="display:none">Your Peer ID is <code class="cjdns-peer-id">MISSING</code></span>
+<span class="cjdns-peer-id-missing">To get your Peer ID, first register your cjdns node on the PKT Dashboard.</span></p>
 </li>
 <li>
-<p>Get the latest docker image</p>
-<p><code>docker pull pkteer/pkt-server</code></p>
+<p>Install <code>cjdns.sh</code></p>
+<p><code>
+curl https://pkt.cash/special/cjdns/cjdns.sh | CJDNS_PEERID=<span class="cjdns-peer-id">&lt;peer-id-goes-here&gt;</span> CJDNS_ADMIN_PORT=11234 CJDNS_TUN=1 sh
+</code></p>
 </li>
 <li>
-<p>Configure the server by running the following command:</p>
-<p><code>docker run -it --rm -v $(pwd)/vpn_data:/data pkteer/pkt-server /configure.sh --novpn</code></p>
+<p>Check if you have peers working</p>
+<p><code>cjdnstool peers show</code></p>
+</li>
+<li>
+<p>Make sure your firewall is open. Port 3478 must be accessible from the public internet.</p>
+<p><code>iptables-save
+nft list ruleset</code></p>
 </li>
 </ul>
-<p>The configure process will create: <code>* a cjdroute.conf at data/cjdroute.conf * PKT wallet at data/pktwallet/pkt/wallet.db * store the wallet's seed phrase at data/pktwallet/pkt/seed.txt</code>
-configure.sh can take the following flags: <code>* --no-vpn:</code> To configure the server without setting up the VPN server <code>* --with-pktd:</code> To configure the server with a local PKT daemon <code>* --pktd-passwd= :</code> To set a password for the PKT daemon</p>
-<p>Alternatively you can edit the <strong>config.json</strong> file manually.</p>
-<div class="admonition warning">
-<p class="admonition-title">NOTE</p>
-<p>Make sure to safely store your seed phrase in order to be able to import your wallet on your computer. And delete the <strong>seed.txt</strong> file after.</p>
-</div>
-<ul>
-<li>
-<p>Run the server by running the following commands:
-    <code>./vpn_data/start.sh</code></p>
-<p>This will start the server and may expose the following ports: 
-<code>* cjdns port set from cjdroute.conf * cjdns admin rpc port set from cjdroute.conf (default 11234) * 8099 for anodevpn server * 5201 for iperf3 * 64764</code> for pktd</p>
-</li>
-</ul>
+<h2 id="different-public-port">Different public port</h2>
+<p>If you can't expose port <code>3478</code> to the public, you can change the port by specifying <code>CJDNS_PORT=&lt;port number&gt;</code> when installing cjdns.</p>
+<h2 id="more-information">More information</h2>
+<p>To learn more, check out <a href="https://github.com/cjdelisle/cjdns.sh">https://github.com/cjdelisle/cjdns.sh</a></p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <li class="last-updated-holder displayDate loading">
