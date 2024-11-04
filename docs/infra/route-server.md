@@ -1,2 +1,10 @@
 # Setup a Route Server Node
-The route server is used to route traffic on the PKT network. More information on how to set up a Route Server Node will be available prior to Infrastructure Day on October 30, 2024.
+The Route Server is used to route traffic on the PKT network.
+In order to run a Route Server, you must be running at least:
+* 1 Cjdns Node
+* 1 VPN Exit
+* 1 Domain
+* 1 Nameserver
+
+Route Server staking will be coming soon.
+At current, the yields which *would* go to Route Servers are evenly divided up by the other stakers.
