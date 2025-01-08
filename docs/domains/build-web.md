@@ -1,16 +1,16 @@
-# Build a Website in PKT Network
+# Build a Website in Packet Network
 
-## How to set up your own self-hosted website on cjdns network
+## How to set up a self-hosted website on cjdns
 The following setup has been tested on a Raspberry Pi 4.
 
-1. Go to [https://yunohost.org/en/install](https://yunohost.org/en/install)
+1. Go to [https://yunohost.org/en/install](https://yunohost.org/en/install){:target="_blank"}
 2. Select Raspberry Pi
 3. Download the YunoHost image
-4. Go to [https://www.raspberrypi.com/news/raspberry-pi-imager-imaging-utility/](https://www.raspberrypi.com/news/raspberry-pi-imager-imaging-utility/)
+4. Go to [https://www.raspberrypi.com/news/raspberry-pi-imager-imaging-utility/](https://www.raspberrypi.com/news/raspberry-pi-imager-imaging-utility/){:target="_blank"}
 5. Download Pi Imager
 6. Flash the YunoHost image to your SD card using the Pi Imager
 7. Then insert the SD card into your Raspberry Pi and boot it up.
-8. Access the YunoHost admin panel by going to [https://yunohost.local](https://yunohost.local)
+8. Access the YunoHost admin panel by going to [https://yunohost.local](https://yunohost.local){:target="_blank"}
 9. Start the post-installation process
 10. In the Set main-domain select _"I want a domain for local usage / test only"_
 11. Complete the post-installation process

@@ -1,16 +1,16 @@
 # Infrastructure
 
 ## Introduction
-This strategic technology upgrade of PKT on Base coincides with the launch of a novel Stake-to-Earn protocol. This offers participants significant daily PKT rewards for staking PKT.
+PKT on Base relies on a novel Stake-to-Earn protocol. This offers participants significant daily PKT rewards for staking PKT tokens.
 
-Coming October 30, 2024 is Infrastructure Day, when users will be required to pair each stake with an infrastructure node to continue earning staking rewards. There are 5 different node types, ranging in operational complexity, with different infrastructure requirements and yields.
+As of Infrastructure Day on October 30, 2024, users are required to pair each stake with an infrastructure node to continue earning staking rewards. There are 5 different node types, ranging in operational complexity, with different infrastructure requirements and yield incentives.
 
-Instead of mining, PKT holders can stake their tokens and pair with infrastructure nodes to earn yields. To incentivize operators to make long term commitments to run infrastructure for the network, there are yield bonus multipliers based on staking duration.
+PKT holders can stake their tokens and pair with infrastructure nodes to earn yields. To incentivize operators to make long term commitments to run infrastructure for the network, there are yield bonus multipliers based on staking duration.
 
 ## Infrastructure Yields
-Starting on Infrastructure Day, October 30, 2024, each stake will be required to pair with at least one PKT Network infrastructure node in order to continue earning yields.
+Each stake is required to pair with at least one Packet Network infrastructure node in order to earn daily yields.
 
-Operators will be able to assign yield credits to each PKT infrastructure node. Instead of all yield credits competing for one bucket of yields, there will be one bucket for each of the 5 types of infrastructure in the PKT network. One lockup can assign yield credits to multiple units of infrastructure, but one unit of infrastructure can only be assigned yield credits from one lockup.
+Operators are able to assign yield credits to each PKT infrastructure node. Instead of all yield credits competing for one bucket of yields, there will be one bucket for each of the 5 types of infrastructure in the Packet Network. One lockup can assign yield credits to multiple units of infrastructure, but one unit of infrastructure can only be assigned yield credits from one lockup.
 
 ### Cjdns Nodes
 40% of all yields will go to cjdns nodes which have an open port and public peering credentials, so anyone can connect.

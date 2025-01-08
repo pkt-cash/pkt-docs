@@ -102,9 +102,6 @@ The script parses command-line arguments to set various flags:
 #### Configuration Modification:
 Based on the parsed flags, the script modifies the configuration: Sets the VPN exit status based on *no_vpn_flag*. Enables or disables PKTD based on *with_pktd_flag*. Generates a random PKTD password if none is provided. Updates the PKTD username and password in the configuration.
 
-#### PKT Wallet Initialization:
-Starts the PKT Wallet daemon and checks if a wallet already exists. If not, it creates a new wallet and unlocks it.
-
 #### VPN Server Configuration:
 Retrieves the PKT Wallet secret for the VPN server and ensures the `cjdroute.conf` configuration file is valid. If the file does not exist, it generates a new one and seeds it with the retrieved secret.
 
@@ -303,3 +300,12 @@ The sniproxy is using the `sniproxy.conf` file to route the requests to the corr
 The server contains the default configuration for the sniproxy and is being edited by the `adddomain.sh` and `removedomain.sh` scripts which are used by the AnodeVPN API to add and remove domains respectively from the proxy.
 
 For troubleshooting you can view the sniproxy logs. The access log is stored in `vpn_data/sniproxy-access.log` and the error log is stored in `vpn_data/sniproxy-error.log`.
+
+### Setup a Domain Node
+When you own a PKT vanity domain, it enables sovereignty for PKT websites. More information on how to set up a Domain Node will be available prior to Infrastructure Day on October 30, 2024.
+
+### Setup a Nameserver Node
+Packet Network has DNS (Domain Name System) that leverages the Packet Network to map domain names to cjdns IP addresses. More information on how to set up a Nameserver Node will be available in 2025.
+
+### Setup a Route Server Node
+The route server is used to route traffic on the Packet network. More information on how to set up a Route Server Node will be available in 2025.

@@ -34,8 +34,10 @@ nav:
     - Setup a Domain Node: infra/domain-node.md
     - Setup a Nameserver Node: infra/nameserver.md
     - Setup a Route Server Node: infra/route-server.md
-    - Build a Website in PKT Network: infra/build-web.md
-    - Accessing your cjdns website: infra/cjdns-web.md
+  - Domains:
+    - Claim Domain: domains/claim-domain.md
+    - Build a Website in PKT Network: domains/build-web.md
+    - Accessing your cjdns website: domains/cjdns-web.md
   - Tokenomics:
     - Tokenomics: tokenomics/introduction.md
     - Initial Distribution: tokenomics/initial-distribution.md
@@ -50,6 +52,7 @@ nav:
   - Utility:
     - Introduction: utility.md
     - Content & Media: utility/content.md
+    - Packet Hub: utility/packet-hub.md
     - BIA: utility/bia.md
     - Ecommerce: utility/ecommerce.md
     - Bandwidth Markets: utility/markets.md
