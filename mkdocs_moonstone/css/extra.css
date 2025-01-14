@@ -404,4 +404,8 @@ footer .col > a:focus {
     .md-footer-nav > .md-footer-nav__link--next {
         margin-top: 15px;
     }
+    #main pre {
+        max-width: 100%;
+        white-space: break-spaces;
+    }
 }
