@@ -46,7 +46,7 @@ Your node should appear on [The Cjdns Peer Tester](https://vinny.cjdns.fr/ptest/
 If your node is not showing up enter this command and wait 5 minutes before repeating __Step 3__:
 
 ```
-Systemctl restart cjdns-sh.service
+systemctl restart cjdns-sh.service
 ```
 
 This will restart the cjdns node.
